@@ -13,10 +13,10 @@ def set_logger(cfg):
     cfg
 
     """
-    if not os.path.exists(os.path.join(cfg.model.save_dir,cfg.dataset.name)):
-        os.makedirs(os.path.join(os.getcwd(),cfg.model.save_dir, cfg.dataset.name))
+    if not os.path.exists(os.path.join(cfg.model.save_dir,cfg.data.name)):
+        os.makedirs(os.path.join(os.getcwd(),cfg.model.save_dir, cfg.data.name))
 
-    log_file = os.path.join(cfg.model.save_dir, cfg.dataset.name, 'log.txt')
+    log_file = os.path.join(cfg.model.save_dir, cfg.data.name, 'log.txt')
 
     logging.basicConfig(
         format='%(asctime)s %(levelname)-8s %(message)s',

@@ -6,12 +6,12 @@ import torch
 import JointGT
 
 
-@hydra.main(config_name='config.yaml')
+@hydra.main(config_path="config", config_name='config')
 def main(cfg : DictConfig) -> None:
     set_logger(cfg)
     use_cuda = cfg.model.cuda and torch.cuda.is_available()
-    data_path = os.path.join(cfg.dataset.data_dir, cfg.dataset.name, 'clean')
-    save_path = os.path.join(cfg.model.save_dir, cfg.dataset.name)
+    data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
+    save_path = os.path.join(cfg.model.save_dir, cfg.data.name)
 
     # graph
     e2id = read_id(os.path.join(data_path, 'entities.tsv'))
@@ -23,7 +23,7 @@ def main(cfg : DictConfig) -> None:
     id2r[length_r2id] = 'type'
     t2id = read_id(os.path.join(data_path, 'types.tsv'))
     id2t = read_entity(os.path.join(data_path, 'types.tsv'))
-    if cfg.dataset.name=="FB15kET": mid2name = read_name(os.path.join(data_path, 'mid2name.tsv'))
+    if cfg.data.name=="FB15kET": mid2name = read_name(os.path.join(data_path, 'mid2name.tsv'))
     num_entity = len(e2id)
     num_rels = len(r2id)
     num_types = len(t2id)

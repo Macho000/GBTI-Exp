@@ -1,0 +1,5 @@
+name: FB15kET
+data_dir: data
+overwrite: False
+is_unigraph: False
+change_mid_to_name: True

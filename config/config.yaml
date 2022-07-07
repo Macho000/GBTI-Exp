@@ -1,6 +1,5 @@
-dataset:
-  name: FB15kET # YAGO43kET
-  data_dir: data
+defaults:
+  - data/FB15kET # data/FB15kET or data/YAGO43kET
 preprocess:
   load_ET: True
   load_KG: True
