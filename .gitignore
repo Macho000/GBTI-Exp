@@ -1,2 +1,7 @@
 /data/FB15kET
 /data/YAGO43kET
+/.ipynb_checkpoints
+/__pycache__
+/.vscode
+/outputs
+*.ipynb
