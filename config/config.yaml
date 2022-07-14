@@ -1,23 +1,10 @@
 defaults:
   - data/FB15kET # data/FB15kET or data/YAGO43kET
+  - model/JointGT
 preprocess:
-  load_ET: True
+  load_ET: False
   load_KG: True
   neighbor_sampling: True
   neighbor_num: 10
   num_layers: 1
-model:
-  cuda: False
-  save_dir: save
-  name: JointGT
-  pretrained_model: Bart # T5
-  model_path: None
-  max_epoch: 100
-  train_batch_size: 1
-  test_batch_size: 8
-  temperature: 0.5
-  valid:
-    max_epoch: 100
-optimizer:
-  algorithm: Adam
-  learning_rate: 0.001
+

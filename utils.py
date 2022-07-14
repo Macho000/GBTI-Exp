@@ -163,13 +163,13 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True):
     else:
         head2, e_type2, tail2 = [], [], []
 
-    head = torch.LongTensor(head1 + head2 + tail1 + tail2)
-    tail = torch.LongTensor(tail1 + tail2 + head1 + head2)
+    head = torch.LongTensor(head1 + head2)
+    tail = torch.LongTensor(tail1 + tail2)
     g = dgl.graph((head, tail))
 
     e_type1 = torch.LongTensor(e_type1)
     e_type2 = torch.LongTensor(e_type2)
-    e_type = torch.cat([e_type1, e_type2, e_type1 + len(r2id), e_type2 + len(r2id)], dim=0)
+    e_type = torch.cat([e_type1, e_type2], dim=0)
     g.edata['etype'] = e_type
     if loadET:
         g.ndata['id'] = torch.arange(len(e2id) + len(t2id))

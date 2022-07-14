@@ -5,3 +5,5 @@
 /.vscode
 /outputs
 *.ipynb
+/pretrain_model
+*.pkl

@@ -1,10 +1,16 @@
 import hydra
+import logging
 from dgl.dataloading import NodeDataLoader, MultiLayerFullNeighborSampler, MultiLayerNeighborSampler
 from omegaconf import DictConfig, OmegaConf
 from utils import *
 import torch
-import JointGT
+from JointGT import JointGT
 
+from transformers import BartTokenizer, T5Tokenizer
+from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader
+
+from tqdm import tqdm
+from tqdm import trange
 
 @hydra.main(config_path="config", config_name='config')
 def main(cfg : DictConfig) -> None:
@@ -13,95 +19,24 @@ def main(cfg : DictConfig) -> None:
     data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
     save_path = os.path.join(cfg.model.save_dir, cfg.data.name)
 
-    # graph
-    e2id = read_id(os.path.join(data_path, 'entities.tsv'))
-    id2e = read_entity(os.path.join(data_path, 'entities.tsv'))
-    r2id = read_id(os.path.join(data_path, 'relations.tsv'))
-    id2r = read_entity(os.path.join(data_path, 'relations.tsv'))
-    length_r2id = len(r2id)
-    r2id['type'] = length_r2id
-    id2r[length_r2id] = 'type'
-    t2id = read_id(os.path.join(data_path, 'types.tsv'))
-    id2t = read_entity(os.path.join(data_path, 'types.tsv'))
-    if cfg.data.name=="FB15kET": mid2name = read_name(os.path.join(data_path, 'mid2name.tsv'))
-    num_entity = len(e2id)
-    num_rels = len(r2id)
-    num_types = len(t2id)
-    num_nodes = num_entity + num_types
-    g, train_label, all_true, train_id, valid_id, test_id = load_graph(data_path, e2id, r2id, t2id,
-                                                                       cfg.preprocess.load_ET, cfg.preprocess.load_KG)
+    # Initialize tokenizer
+    if cfg.model.pretrained_model == "Bart":
+        tokenizer = BartTokenizer.from_pretrained(cfg.model.tokenizer_path)
+    elif cfg.model.pretrained_model == "T5":
+        tokenizer = T5Tokenizer.from_pretrained(cfg.model.tokenizer_path)
 
-    if cfg.preprocess.neighbor_sampling:
-        train_sampler = MultiLayerNeighborSampler([cfg.preprocess.neighbor_num] * cfg.preprocess.num_layers)
+    data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
+    train_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "train")
+    valid_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "valid")
 
-    else:
-        train_sampler = MultiLayerFullNeighborSampler(cfg.preprocess.num_layers)
-    test_sampler = MultiLayerFullNeighborSampler(cfg.preprocess.num_layers)
-    train_dataloader = NodeDataLoader(
-        g, train_id, train_sampler,
-        batch_size=cfg.model.train_batch_size,
-        shuffle=False,
-        drop_last=False,
-        num_workers=1
-    )
-    valid_dataloader = NodeDataLoader(
-        g, valid_id, test_sampler,
-        batch_size=cfg.model.test_batch_size,
-        shuffle=False,
-        drop_last=False,
-        num_workers=6
-    )
+    # dataloader
+    train_dataloader = EntityTypingJointGTDataLoader(cfg, train_dataset, "train")
+    valid_dataloader = EntityTypingJointGTDataLoader(cfg, valid_dataset, "valid")
 
-    # preprocess train and valid for language model's input
-    if not os.path.exists(os.path.join(data_path, 'train_input.txt')):
-        # make tuple (subject, relation, object)
-        text_input = []
-        for input_nodes, output_nodes, blocks in train_dataloader:
-            # get name from mid: mid2name[id2e[?]]
-            # get name rels: id2r[?%num_rels]
-            text_tuple = ""
-            for index, entity_id in enumerate(blocks[0].srcdata['_ID']):
-                if index==0:
-                    continue
-                # change id to name
-                # check type or entity
-                if entity_id.item()>=len(e2id):
-                    # if entity_id is type
-                     # check incoming or outcoming graph
-                    if blocks[0].edata["etype"][index-1].item()>=num_rels:
-                        # if outgoing graph
-                        obj = mid2name[id2e[blocks[0].dstdata['_ID'].item()]]
-                        rel = id2r[blocks[0].edata["etype"][index-1].item()%num_rels]
-                        sub = id2t[entity_id.item()%len(e2id)]
-                    else:
-                        # if incoming graph
-                        sub = mid2name[id2e[blocks[0].dstdata['_ID'].item()]]
-                        rel = id2r[blocks[0].edata["etype"][index-1].item()]
-                        obj = id2t[entity_id.item()%len(e2id)]
-                else:
-                    # if entity_id is entity
-                    # check incoming or outcoming graph
-                    if blocks[0].edata["etype"][index-1].item()>=num_rels:
-                        # if outcoming graph
-                        sub = mid2name[id2e[blocks[0].dstdata['_ID'].item()]]
-                        rel = id2r[blocks[0].edata["etype"][index-1].item()%num_rels]
-                        obj = mid2name[id2e[entity_id.item()]]
-                    else:
-                        # if incoming graph
-                        sub = mid2name[id2e[blocks[0].dstdata['_ID'].item()]]
-                        rel = id2r[blocks[0].edata["etype"][index-1].item()]
-                        obj = mid2name[id2e[entity_id.item()]]
-                text_tuple += " <H> "+ sub + " <R> " + rel + " <T> " + obj
-            text_input.append(text_tuple.strip())
-            with open(os.path.join(data_path, 'train_input.txt'), 'w') as f:
-                for item in text_input:
-                    f.write("%s\n" % item)
 
-            
-            break
     # model
     if cfg.model.name == 'JointGT':
-        model = JointGT(cfg, num_nodes, num_rels, num_types)
+        model = JointGT(cfg)
     elif cfg.model.name == 'T5':
         model = T5()
     else:
@@ -115,54 +50,82 @@ def main(cfg : DictConfig) -> None:
     # optimizer
     optimizer = torch.optim.Adam(
         filter(lambda p: p.requires_grad, model.parameters()),
-        lr=cfg.optimizer.learning_rate,
+        lr=cfg.model.optimizer.learning_rate,
     )
 
     # loss
     criterion = torch.nn.BCELoss()
 
     # training
-    # max_valid_mrr = 0
-    # model.train()
-    # for epoch in range(cfg.model.max_epoch):
-    #     log = []
-    #     for input_nodes, output_nodes, blocks in train_dataloader:
-    #         label = train_label[output_nodes, :]
-    #         if use_cuda:
-    #             blocks = [b.to(torch.device('cuda')) for b in blocks]
-    #             label = label.cuda()
-    #         loss = model(blocks)
+    max_valid_loss = 0
+    model.train()
+    train_iterator = trange(int(cfg.model.max_epoch), desc="Epoch")
+    logging.debug('Starting training!')
+    for count_epoch in train_iterator:
+        for batch_index, batch in enumerate(tqdm(train_dataloader, desc="Iteration")):
+            if torch.cuda.is_available():
+                batch = [b.to(torch.device("cuda")) for b in batch]
+            if count_epoch==0 and batch_index==0:
+                for tmp_id in range(9):
+                    logging.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
 
-    #         log.append({
-    #             "loss": loss.item(),
-    #         })
+            if cfg.model.name == 'JointGT':
+                loss = model(batch, is_training=True)
+                if cfg.model.n_gpus > 1:
+                    loss = loss.mean()  # mean() to average on multi-gpu.
+                if torch.isnan(loss).data:
+                    logging.debug("Stop training because loss=%s" % (loss.data))
+                    stop_training = True
+                    break
 
-    #         optimizer.zero_grad()
-    #         loss.backward()
-    #         optimizer.step()
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
 
-    #     avg_loss = sum([_['loss'] for _ in log]) / len(log)
-    #     logging.debug('epoch %d: loss: %f' %
-    #                   (epoch, avg_loss))
+                # Gradient accumulation
+                if count_epoch % cfg.model.gradient_accumulation_steps == 0:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.model.max_grad_norm)
+                    optimizer.step()  # We have accumulated enough gradients
+                    # scheduler.step()
+                    model.zero_grad()
 
-        # if epoch != 0 and epoch % cfg.model.valid.max_epoch == 0:
-        #     torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
-        #     model.eval()
-        #     with torch.no_grad():
-        #         predict = torch.zeros(num_entity, num_types, dtype=torch.half)
-        #         for input_nodes, output_nodes, blocks in valid_dataloader:
-        #             if use_cuda:
-        #                 blocks = [b.to(torch.device('cuda')) for b in blocks]
-        #             # predict[output_nodes] = model(blocks).cpu().half()
-        #         valid_mrr = evaluate(os.path.join(data_path, 'ET_valid.txt'), predict, all_true, e2id, t2id)
-        #     model.train()
-        #     if valid_mrr < max_valid_mrr:
-        #         logging.debug('early stop')
-        #         break
-        #     else:
-        #         torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
-        #         max_valid_mrr = valid_mrr
+                # validation
+                if ( count_epoch != 0 and count_epoch % cfg.model.valid_epoch==0 ) or cfg.model.debug:
+                    #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
+                    model.eval()
+                    with torch.no_grad():
+                        for batch in valid_dataloader:
+                            sources = []
+                            predictions = []
+                            if torch.cuda.is_available():
+                                batch = [b.to(torch.device("cuda")) for b in batch]
 
+                            if cfg.model.save_predictions:
+                                outputs = model.generate(batch)
+                                # Convert ids to tokens
+                                for input_, output in zip(batch[0], outputs):
+                                    source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                    predictions.append(pred.strip())
+                                    sources.append(source.strip())
+                                    pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                    predictions.append(pred.strip())
+                                    valid_loss = evaluate(os.path.join(data_path, "ET_valid.txt"))
 
+                            valid_loss = model(batch, is_training=False)
+                            if valid_loss < max_valid_loss and cfg.model.early_stopping:
+                                logging.debug('early stop')
+                                break
+                            else:
+                                torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
+                                max_valid_loss = valid_loss
+                    
+
+def evaluate(path, all_true, e2id, t2id):
+    logs = []
+    f = open('./rank.txt', 'w', encoding='utf-8')
+    with open(path, 'r', encoding='utf-8') as r:
+        for line in r:
+            e, t = line.strip().split('\t')
+            e, t = e2id[e], t2id[t]
 if __name__=='__main__':
   main()

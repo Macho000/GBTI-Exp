@@ -17,6 +17,7 @@ from transformers.modeling_utils import PreTrainedModel
 from torch_scatter import scatter_mean
 from ot import optimal_transport_dist
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -1968,7 +1969,7 @@ class MyBartForConditionalGeneration(BartForConditionalGeneration):
         return output
 
 class JointGT(nn.Module):
-    def __init__(self, cfg, num_nodes, num_rels, num_types):
+    def __init__(self, cfg):
         """
         Setting for JointGT Model
         
@@ -1980,32 +1981,32 @@ class JointGT(nn.Module):
         -------
         """
         super(JointGT, self).__init__()
+        self.cfg = cfg
 
         if cfg.model.pretrained_model=="Bart":
-            self.model = MyBartPretrain.from_pretrained(cfg.model_path)
+            self.model = MyBartForConditionalGeneration.from_pretrained(cfg.model.model_path)
         elif cfg.model.pretrained_model=="T5":
-            self.model = MyT5Pretrain.from_pretrained(cfg.model_path)
+            self.model = MyT5.from_pretrained(cfg.model.model_path)
         else:
             raise ValueError('No such model')
-        self.num_rels = num_rels
 
-        self.layer = JointGTLayer(num_nodes, num_types, cfg.model.temperature)
+    def forward(self, batch, is_training: bool):
+        return self.model(input_ids=batch[0], attention_mask=batch[1],
+                            decoder_input_ids=batch[2], decoder_attention_mask=batch[3],input_node_ids=batch[4],
+                            input_edge_ids=batch[5], node_length=batch[6], edge_length=batch[7], adj_matrix=batch[8],
+                            is_training=is_training)
 
-        self.device = torch.device('cuda')
+    def generate(self,batch):
+        return self.model.generate(input_ids=batch[0],
+                                 attention_mask=batch[1],
+                                 input_node_ids=batch[4],
+                                 input_edge_ids=batch[5],
+                                 node_length=batch[6],
+                                 edge_length=batch[7],
+                                 adj_matrix=batch[8],
+                                 num_beams=self.cfg.model.valid.num_beams,
+                                 length_penalty=self.cfg.model.valid.length_penalty,
+                                 max_length=self.cfg.model.valid.max_output_length,
+                                 early_stopping=True)
 
-    def forward(self, blocks):
-        self.model()
-        return None
-
-
-class JointGTLayer(nn.Module):
-    def __init__(self, num_nodes, num_types, temperature):
-        super(JointGTLayer, self).__init__()
-        self.num_nodes = num_nodes
-        self.num_types = num_types
-        self.temperature = temperature
-        self.test = False
-
-    def forward(self):
-        return output
 
