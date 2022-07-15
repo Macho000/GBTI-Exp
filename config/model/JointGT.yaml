@@ -31,3 +31,5 @@ valid:
   length_penalty: 1.0
   max_output_length: 128
   clean_up_spaces: True
+test:
+  test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt

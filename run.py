@@ -89,43 +89,61 @@ def main(cfg : DictConfig) -> None:
                     # scheduler.step()
                     model.zero_grad()
 
-                # validation
-                if ( count_epoch != 0 and count_epoch % cfg.model.valid_epoch==0 ) or cfg.model.debug:
-                    #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
-                    model.eval()
-                    with torch.no_grad():
-                        for batch in valid_dataloader:
-                            sources = []
-                            predictions = []
-                            if torch.cuda.is_available():
-                                batch = [b.to(torch.device("cuda")) for b in batch]
+        # validation
+        if ( count_epoch != 0 and count_epoch % cfg.model.valid_epoch==0 ) or cfg.model.debug:
+            #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
+            model.eval()
+            with torch.no_grad():
+                for batch in valid_dataloader:
+                    sources = []
+                    predictions = []
+                    if torch.cuda.is_available():
+                        batch = [b.to(torch.device("cuda")) for b in batch]
 
-                            if cfg.model.save_predictions:
-                                outputs = model.generate(batch)
-                                # Convert ids to tokens
-                                for input_, output in zip(batch[0], outputs):
-                                    source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-                                    predictions.append(pred.strip())
-                                    sources.append(source.strip())
-                                    pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-                                    predictions.append(pred.strip())
-                                    valid_loss = evaluate(os.path.join(data_path, "ET_valid.txt"))
+                    outputs = model.generate(batch)
+                    # Convert ids to tokens
+                    for input_, output in zip(batch[0], outputs):
+                        source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                        sources.append(source.strip())
+                        pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                        predictions.append(pred.strip())
 
-                            valid_loss = model(batch, is_training=False)
-                            if valid_loss < max_valid_loss and cfg.model.early_stopping:
-                                logging.debug('early stop')
-                                break
-                            else:
-                                torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
-                                max_valid_loss = valid_loss
-                    
+                    valid_loss = model(batch, is_training=False)
+                    if valid_loss < max_valid_loss and cfg.model.early_stopping:
+                        logging.debug('early stop')
+                        break
+                    else:
+                        torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
+                        max_valid_loss = valid_loss
 
-def evaluate(path, all_true, e2id, t2id):
+def evaluate(path, predict, all_true, e2id, t2id):
     logs = []
     f = open('./rank.txt', 'w', encoding='utf-8')
     with open(path, 'r', encoding='utf-8') as r:
         for line in r:
             e, t = line.strip().split('\t')
             e, t = e2id[e], t2id[t]
+            tmp = predict[e] - all_true[e]
+            tmp[t] = predict[e, t]
+            argsort = torch.argsort(tmp, descending=True)
+            ranking = (argsort == t).nonzero()
+            assert ranking.size(0) == 1
+            ranking = ranking.item() + 1
+            print(line.strip(), ranking, file=f)
+            logs.append({
+                'MRR': 1.0 / ranking,
+                'MR': float(ranking),
+                'HIT@1': 1.0 if ranking <= 1 else 0.0,
+                'HIT@3': 1.0 if ranking <= 3 else 0.0,
+                'HIT@10': 1.0 if ranking <= 10 else 0.0
+            })
+    MRR = 0
+    for metric in logs[0]:
+        tmp = sum([_[metric] for _ in logs]) / len(logs)
+        if metric == 'MRR':
+            MRR = tmp
+        logging.debug('%s: %f' % (metric, tmp))
+    return MRR
+                    
 if __name__=='__main__':
   main()

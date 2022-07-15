@@ -124,7 +124,7 @@ def load_ET(path, e2id, t2id, r2id):
     return head, e_type, tail
 
 
-def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True):
+def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="ET_test.txt"):
     """
     loading graph from dataset
     
@@ -134,6 +134,7 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True):
     e2id: dict
     r2id: dict
     loadET, loadKG: boolean
+    test_data: string e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
 
     Returns
     -------
@@ -148,11 +149,11 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True):
     train_label = load_labels([os.path.join(data_dir, 'ET_train.txt')], e2id, t2id)
     train_id = train_label.sum(1).nonzero().squeeze()
     valid_id = load_id(os.path.join(data_dir, 'ET_valid.txt'), e2id)
-    test_id = load_id(os.path.join(data_dir, 'ET_test.txt'), e2id)
+    test_id = load_id(os.path.join(data_dir, test_data), e2id)
     all_true = load_labels([
         os.path.join(data_dir, 'ET_train.txt'),
         os.path.join(data_dir, 'ET_valid.txt'),
-        os.path.join(data_dir, 'ET_test.txt'),
+        os.path.join(data_dir, test_data),
     ], e2id, t2id).half()
     if loadKG:
         head1, e_type1, tail1 = load_triple(os.path.join(data_dir, 'train.txt'), e2id, r2id)

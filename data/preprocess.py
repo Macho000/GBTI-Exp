@@ -8,7 +8,6 @@ def get_params():
     args, _ = parser.parse_known_args()
     return args
 
-
 def remove_unobserved_entity_type(entity_set, type_set, src, dst):
     with open(src, encoding='utf-8') as r:
         lines = r.readlines()
@@ -19,6 +18,51 @@ def remove_unobserved_entity_type(entity_set, type_set, src, dst):
                 continue
             if t not in type_set:
                 continue
+            w.write(line)
+
+def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_1_n, dst_unobserved_type):
+    tmp_entity_counter = {}
+    one_to_one_data = []
+    one_to_n_data = []
+    unobserved_type = []
+    with open(src, encoding='utf-8') as r:
+        lines = r.readlines()
+    for line in lines:
+        e, t = line.strip().split()
+        if e not in entity_set:
+            continue
+        # store unobserved type
+        if t not in type_set:
+            unobserved_type.append(line)
+            continue
+        # count test entity
+        if not tmp_entity_counter.get(e):
+            tmp_entity_counter[e] = 1
+        else:
+            tmp_entity_counter[e] += 1
+    for line in lines:
+        e, t = line.strip().split()
+        if e not in entity_set:
+            continue
+        if t not in type_set:
+            continue
+        # store 1 to 1 between test entities and types
+        if tmp_entity_counter.get(e)==1:
+            one_to_one_data.append(line)
+        # store 1 to N between test entities and types
+        else:
+            one_to_n_data.append(line)
+    # save 1 to 1 data
+    with open(dst_1_1, 'w', encoding='utf-8') as w:
+        for line in one_to_one_data:
+            w.write(line)
+    # save 1 to n data
+    with open(dst_1_n, 'w', encoding='utf-8') as w:
+        for line in one_to_n_data:
+            w.write(line)
+    # save unobserved type data
+    with open(dst_unobserved_type, 'w', encoding='utf-8') as w:
+        for line in unobserved_type:
             w.write(line)
 
 
@@ -89,7 +133,13 @@ def main(args):
     with open(f'{args.dataset}/merge/types.txt', 'w', encoding='utf-8') as f:
         for t in types:
             f.write(t + '\n')
-
+    
+    # save 1 to 1 data for test data
+    filter_for_1_to_1_and_n_entity_type(entity, types,
+                                  src=os.path.join(args.dataset, 'original/Entity_Type_test.txt'),
+                                  dst_1_1=os.path.join(args.dataset, 'clean/ET_1_1_test.txt'),
+                                  dst_1_n=os.path.join(args.dataset, 'clean/ET_1_n_test.txt'),
+                                  dst_unobserved_type=os.path.join(args.dataset, 'clean/ET_unobserved_test.txt'))
 
 if __name__ == '__main__':
     args = get_params()
