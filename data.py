@@ -296,7 +296,7 @@ class EntityTypingJointGTDataset(Dataset):
         try:
           tail = self.mid2name[self.id2e[idx]] if self.mid2name is not None else self.id2e[idx]
         except KeyError:
-          head = self.id2e[idx]
+          tail = self.id2e[idx]
         entities_set.add(head)
         entities_set.add(tail)
         relations_set.add(rel)
@@ -331,9 +331,10 @@ class EntityTypingJointGTDataset(Dataset):
     input_ids, input_text, node_ids, edge_ids, cnt_edges, adj_matrix = self.linearize(triples, entity_tokenized_ids_dict,  relation_tokenized_ids_dict, self.head_ids, self.rel_ids, self.tail_ids, cnt_edge, adj_matrix)
 
     # create target_ids
-    type_list = self.train_label[idx].nonzero().squeeze()
+    type_list = self.train_label[idx].nonzero().flatten()
     for type_id in type_list:
-      type_name = self.id2t[type_id.item()]
+      type_id = type_id.item() if torch.is_tensor(type_id) else type_id
+      type_name = self.id2t[type_id]
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
 

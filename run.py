@@ -4,6 +4,7 @@ from dgl.dataloading import NodeDataLoader, MultiLayerFullNeighborSampler, Multi
 from omegaconf import DictConfig, OmegaConf
 from utils import *
 import torch
+import torch.nn as nn
 from JointGT import JointGT
 
 from transformers import BartTokenizer, T5Tokenizer
@@ -14,7 +15,8 @@ from tqdm import trange
 
 @hydra.main(config_path="config", config_name='config')
 def main(cfg : DictConfig) -> None:
-    set_logger(cfg)
+    # set_logger(cfg) # if hydra is not used
+    log = logging.getLogger(__name__)
     use_cuda = cfg.model.cuda and torch.cuda.is_available()
     data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
     save_path = os.path.join(cfg.model.save_dir, cfg.data.name)
@@ -45,7 +47,7 @@ def main(cfg : DictConfig) -> None:
     if use_cuda:
         model = model.to('cuda')
     for name, param in model.named_parameters():
-        logging.debug('Parameter %s: %s, require_grad=%s' % (name, str(param.size()), str(param.requires_grad)))
+        log.debug('Parameter %s: %s, require_grad=%s' % (name, str(param.size()), str(param.requires_grad)))
 
     # optimizer
     optimizer = torch.optim.Adam(
@@ -58,23 +60,23 @@ def main(cfg : DictConfig) -> None:
 
     # training
     max_valid_loss = 0
-    model.train()
     train_iterator = trange(int(cfg.model.max_epoch), desc="Epoch")
-    logging.debug('Starting training!')
+    log.debug('Starting training!')
     for count_epoch in train_iterator:
         for batch_index, batch in enumerate(tqdm(train_dataloader, desc="Iteration")):
+            model.train()
             if torch.cuda.is_available():
                 batch = [b.to(torch.device("cuda")) for b in batch]
             if count_epoch==0 and batch_index==0:
                 for tmp_id in range(9):
-                    logging.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
+                    log.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
 
             if cfg.model.name == 'JointGT':
                 loss = model(batch, is_training=True)
                 if cfg.model.n_gpus > 1:
                     loss = loss.mean()  # mean() to average on multi-gpu.
                 if torch.isnan(loss).data:
-                    logging.debug("Stop training because loss=%s" % (loss.data))
+                    log.debug("Stop training because loss=%s" % (loss.data))
                     stop_training = True
                     break
 
@@ -88,9 +90,10 @@ def main(cfg : DictConfig) -> None:
                     optimizer.step()  # We have accumulated enough gradients
                     # scheduler.step()
                     model.zero_grad()
+            break
 
         # validation
-        if ( count_epoch != 0 and count_epoch % cfg.model.valid_epoch==0 ) or cfg.model.debug:
+        if ( count_epoch % cfg.model.valid.valid_epoch==0 ) or cfg.model.debug:
             #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
             model.eval()
             with torch.no_grad():
@@ -108,11 +111,13 @@ def main(cfg : DictConfig) -> None:
                         pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                         predictions.append(pred.strip())
 
-                    valid_loss = model(batch, is_training=False)
+                    valid_loss = model(batch, is_training=True)
                     if valid_loss < max_valid_loss and cfg.model.early_stopping:
-                        logging.debug('early stop')
+                        log.debug('early stop')
                         break
                     else:
+                        log.debug('epoch is %s' % count_epoch)
+                        log.debug('validation loss is %s' % valid_loss)
                         torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
                         max_valid_loss = valid_loss
 
@@ -142,7 +147,7 @@ def evaluate(path, predict, all_true, e2id, t2id):
         tmp = sum([_[metric] for _ in logs]) / len(logs)
         if metric == 'MRR':
             MRR = tmp
-        logging.debug('%s: %f' % (metric, tmp))
+        log.debug('%s: %f' % (metric, tmp))
     return MRR
                     
 if __name__=='__main__':
