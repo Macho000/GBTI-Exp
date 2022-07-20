@@ -23,4 +23,4 @@ Testing
 python eval.py
 ```
 
-if you change the model e.g. FB15kET to YAGO45kET, then you could change the config.
+if you change the dataset e.g. from FB15kET to YAGO45kET, then you could change the config.
