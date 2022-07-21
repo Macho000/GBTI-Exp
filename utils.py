@@ -124,7 +124,7 @@ def load_ET(path, e2id, t2id, r2id):
     return head, e_type, tail
 
 
-def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="ET_test.txt"):
+def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, train_data="ET_train.txt", valid_data="ET_valid.txt", test_data="ET_test.txt"):
     """
     loading graph from dataset
     
@@ -134,6 +134,8 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="
     e2id: dict
     r2id: dict
     loadET, loadKG: boolean
+    train_data: string e.g. ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+    valid_data: string e.g. ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_valid.txt
     test_data: string e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
 
     Returns
@@ -149,15 +151,15 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="
     test_id: 1 dim tensor
     """
     # load graph with input features, labels and edge type
-    train_label = load_labels([os.path.join(data_dir, 'ET_train.txt')], e2id, t2id)
-    valid_label = load_labels([os.path.join(data_dir, 'ET_valid.txt')], e2id, t2id)
+    train_label = load_labels([os.path.join(data_dir, train_data)], e2id, t2id)
+    valid_label = load_labels([os.path.join(data_dir, valid_data)], e2id, t2id)
     test_label = load_labels([os.path.join(data_dir, test_data)], e2id, t2id)
-    train_id = train_label.sum(1).nonzero().squeeze()
-    valid_id = load_id(os.path.join(data_dir, 'ET_valid.txt'), e2id)
+    train_id = load_id(os.path.join(data_dir, train_data), e2id)
+    valid_id = load_id(os.path.join(data_dir, valid_data), e2id)
     test_id = load_id(os.path.join(data_dir, test_data), e2id)
     all_true = load_labels([
-        os.path.join(data_dir, 'ET_train.txt'),
-        os.path.join(data_dir, 'ET_valid.txt'),
+        os.path.join(data_dir, train_data),
+        os.path.join(data_dir, valid_data),
         os.path.join(data_dir, test_data),
     ], e2id, t2id).half()
     if loadKG:
