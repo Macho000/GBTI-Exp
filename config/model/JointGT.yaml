@@ -4,7 +4,7 @@ save_dir: save
 name: JointGT
 tokenizer_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
 model_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
-train_dataset: data/FB15kET/clean/ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+train_dataset: ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
 pretrained_model: Bart # Bart or T5
 append_another_bos: False
 is_in_edge: True
@@ -33,7 +33,7 @@ valid:
   length_penalty: 1.0
   max_output_length: 128
   clean_up_spaces: True
-  save_outputs: False
+  save_outputs: True
 test:
   test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
   save_outputs: True

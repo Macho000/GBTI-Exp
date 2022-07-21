@@ -39,7 +39,7 @@ class EntityTypingJointGTDataset(Dataset):
     self.g, self.train_label, self.valid_label, self.test_label, self.all_true, self.train_id, self.valid_id, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
                                                                        cfg.model.train_dataset,
-                                                                       cfg.model.valid.test_dataset,
+                                                                       cfg.model.valid.valid_dataset,
                                                                        cfg.model.test.test_dataset)
 
     self.head_ids = self.tokenizer.encode(' [head]', add_special_tokens=False)

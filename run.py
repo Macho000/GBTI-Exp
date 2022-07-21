@@ -97,6 +97,9 @@ def main(cfg : DictConfig) -> None:
             #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
             model.eval()
             logs = []
+            sources = []
+            predictions = []
+            targets = []
             with torch.no_grad():
                 for batch_idx, batch in enumerate(valid_dataloader):
                     if torch.cuda.is_available():
@@ -106,22 +109,27 @@ def main(cfg : DictConfig) -> None:
                         'loss': loss,
                     })
                     if cfg.model.valid.save_outputs:
-                        sources = []
-                        predictions = []
-
                         outputs = model.generate(batch)
                         # Convert ids to tokens
-                        for input_, output in zip(batch[0], outputs):
+                        for input_, output, target in zip(batch[0], outputs, batch[2]):
                             source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                             sources.append(source.strip())
                             pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                             predictions.append(pred.strip())
-                            with open(os.path.join(save_path, 'inputs.txt'), 'w', encoding='utf-8') as f:
-                                for src_txt in sources:
-                                    f.write(src_txt)
-                            with open(os.path.join(save_path, 'outputs.txt'), 'w', encoding='utf-8') as f:
-                                for pred_txt in predictions:
-                                    f.write(pred_txt)
+                            tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                            targets.append(tgt.strip())
+                    break
+                            
+                if cfg.model.valid.save_outputs:
+                    with open(os.path.join(save_path, 'inputs_valid.txt'), 'w', encoding='utf-8') as f:
+                        for src_txt in sources:
+                            f.write(src_txt+"\n")
+                    with open(os.path.join(save_path, 'outputs_valid.txt'), 'w', encoding='utf-8') as f:
+                        for pred_txt in predictions:
+                            f.write(pred_txt+"\n")
+                    with open(os.path.join(save_path, 'targets_valid.txt'), 'w', encoding='utf-8') as f:
+                        for tgt in targets:
+                            f.write(tgt+"\n")
 
 
                 for metric in logs[0]:
