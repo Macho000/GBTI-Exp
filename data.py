@@ -32,6 +32,7 @@ class EntityTypingJointGTDataset(Dataset):
     self.t2id = read_id(os.path.join(data_path, 'types.tsv'))
     self.id2t = read_entity(os.path.join(data_path, 'types.tsv'))
     if cfg.data.name=="FB15kET" and cfg.data.change_mid_to_name: self.mid2name = read_name(os.path.join(data_path, 'mid2name.tsv'))
+    else: self.mid2name = None
     self.num_entity = len(self.e2id)
     self.num_rels = len(self.r2id)
     self.num_types = len(self.t2id)
@@ -344,6 +345,11 @@ class EntityTypingJointGTDataset(Dataset):
     for type_id in type_list:
       type_id = type_id.item() if torch.is_tensor(type_id) else type_id
       type_name = self.id2t[type_id]
+      if self.cfg.data.lowest_level:
+        if self.cfg.data.remove_under_score:
+          type_name = type_name.split("/")[-1].replace("_", " ")
+        else:
+          type_name = type_name.split("/")[-1]
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
 
