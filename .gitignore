@@ -8,5 +8,6 @@
 !cmd_train.ipynb
 /pretrain_model
 *.pkl
-*.txt
+/save
+./*.txt
 mini.sh
