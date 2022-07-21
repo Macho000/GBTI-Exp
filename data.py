@@ -345,6 +345,11 @@ class EntityTypingJointGTDataset(Dataset):
     for type_id in type_list:
       type_id = type_id.item() if torch.is_tensor(type_id) else type_id
       type_name = self.id2t[type_id]
+      if self.cfg.data.lowest_level:
+        if self.cfg.data.remove_under_score:
+          type_name.split("/")[-1].replace("_", " ")
+        else:
+          type_name.split("/")[-1]
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
 

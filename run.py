@@ -118,7 +118,7 @@ def main(cfg : DictConfig) -> None:
                             predictions.append(pred.strip())
                             tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                             targets.append(tgt.strip())
-                    if batch_idx > 10:
+                    if batch_idx > 5:
                         break
                             
                 if cfg.model.valid.save_outputs:
