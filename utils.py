@@ -140,6 +140,9 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="
     -------
     g: Graph
     train_label: 2 dim tensor for representing relation between entity and entity type
+    valid_label: 2 dim tensor for representing relation between entity and entity type
+    test_label: 2 dim tensor for representing relation between entity and entity type
+
     all_true: 2 dim tensor
     train_id: 1 dim tensor for representing entity id having entity type
     valid_id: 1 dim tensor
@@ -147,6 +150,8 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="
     """
     # load graph with input features, labels and edge type
     train_label = load_labels([os.path.join(data_dir, 'ET_train.txt')], e2id, t2id)
+    valid_label = load_labels([os.path.join(data_dir, 'ET_valid.txt')], e2id, t2id)
+    test_label = load_labels([os.path.join(data_dir, test_data)], e2id, t2id)
     train_id = train_label.sum(1).nonzero().squeeze()
     valid_id = load_id(os.path.join(data_dir, 'ET_valid.txt'), e2id)
     test_id = load_id(os.path.join(data_dir, test_data), e2id)
@@ -177,4 +182,4 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, test_data="
     else:
         g.ndata['id'] = torch.arange(len(e2id))
 
-    return g, train_label, all_true, train_id, valid_id, test_id
+    return g, train_label, valid_label, test_label, all_true, train_id, valid_id, test_id

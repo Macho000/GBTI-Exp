@@ -6,3 +6,5 @@ dgl==0.5.3
 hydra==2.4
 omegaconf==2.2.2
 # after installed, run ```pip install hydra-core --upgrade```
+
+# after installed, run ```pip install hydra-core --upgrade```

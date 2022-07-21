@@ -5,5 +5,8 @@
 /.vscode
 /outputs
 *.ipynb
+!cmd_train.ipynb
 /pretrain_model
 *.pkl
+*.txt
+mini.sh
