@@ -12,3 +12,15 @@ cd data
 python preprocess.py --dataset FB15kET
 python preprocess.py --dataset YAGO43kET
 ```
+
+Training
+```bash
+python run.py
+```
+
+Testing
+```bash
+python eval.py
+```
+
+if you change the dataset e.g. from FB15kET to YAGO45kET, then you could change the config.
