@@ -2,6 +2,7 @@ import hydra
 import logging
 from dgl.dataloading import NodeDataLoader, MultiLayerFullNeighborSampler, MultiLayerNeighborSampler
 from omegaconf import DictConfig, OmegaConf
+from torch._C import ThroughputBenchmark
 from utils import *
 import torch
 import torch.nn as nn
@@ -60,6 +61,7 @@ def main(cfg : DictConfig) -> None:
 
     # training
     max_valid_loss = 0
+    early_stop_flg = False
     train_iterator = trange(int(cfg.model.max_epoch), desc="Epoch")
     log.debug('Starting training!')
     for count_epoch in train_iterator:
@@ -136,13 +138,15 @@ def main(cfg : DictConfig) -> None:
                         valid_loss = tmp
                     if valid_loss < max_valid_loss and cfg.model.early_stopping:
                         log.debug('early stop')
+                        early_stop_flg = True
                         break
                     else:
                         log.debug('epoch is %s' % count_epoch)
                         log.debug('validation loss is %s' % valid_loss)
                         torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
                         max_valid_loss = valid_loss
-
+        if early_stop_flg:
+            break
                     
 if __name__=='__main__':
   main()
