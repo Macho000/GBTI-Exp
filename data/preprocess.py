@@ -20,7 +20,7 @@ def remove_unobserved_entity_type(entity_set, type_set, src, dst):
                 continue
             w.write(line)
 
-def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_1_n, dst_unobserved_type):
+def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_1_n, dst_unobserved_type=None):
     tmp_entity_counter = {}
     one_to_one_data = []
     one_to_n_data = []
@@ -61,9 +61,10 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
         for line in one_to_n_data:
             w.write(line)
     # save unobserved type data
-    with open(dst_unobserved_type, 'w', encoding='utf-8') as w:
-        for line in unobserved_type:
-            w.write(line)
+    if dst_unobserved_type is not None:
+        with open(dst_unobserved_type, 'w', encoding='utf-8') as w:
+            for line in unobserved_type:
+                w.write(line)
 
 
 def convert_ET2triples(src, dst):
@@ -133,6 +134,18 @@ def main(args):
     with open(f'{args.dataset}/merge/types.txt', 'w', encoding='utf-8') as f:
         for t in types:
             f.write(t + '\n')
+
+    # save 1 to 1 data for train data
+    filter_for_1_to_1_and_n_entity_type(entity, types,
+                                  src=os.path.join(args.dataset, 'original/Entity_Type_train.txt'),
+                                  dst_1_1=os.path.join(args.dataset, 'clean/ET_1_1_train.txt'),
+                                  dst_1_n=os.path.join(args.dataset, 'clean/ET_1_n_train.txt'))
+
+    # save 1 to 1 data for valid data
+    filter_for_1_to_1_and_n_entity_type(entity, types,
+                                  src=os.path.join(args.dataset, 'original/Entity_Type_valid.txt'),
+                                  dst_1_1=os.path.join(args.dataset, 'clean/ET_1_1_valid.txt'),
+                                  dst_1_n=os.path.join(args.dataset, 'clean/ET_1_n_valid.txt'))
     
     # save 1 to 1 data for test data
     filter_for_1_to_1_and_n_entity_type(entity, types,
