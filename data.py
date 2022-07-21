@@ -32,6 +32,7 @@ class EntityTypingJointGTDataset(Dataset):
     self.t2id = read_id(os.path.join(data_path, 'types.tsv'))
     self.id2t = read_entity(os.path.join(data_path, 'types.tsv'))
     if cfg.data.name=="FB15kET" and cfg.data.change_mid_to_name: self.mid2name = read_name(os.path.join(data_path, 'mid2name.tsv'))
+    else: self.mid2name = None
     self.num_entity = len(self.e2id)
     self.num_rels = len(self.r2id)
     self.num_types = len(self.t2id)
