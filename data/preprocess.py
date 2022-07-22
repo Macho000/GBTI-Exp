@@ -28,7 +28,7 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
     with open(src, encoding='utf-8') as r:
         lines = r.readlines()
     for line in lines:
-        e, t = line.strip().split()
+        e, t = line.strip().split("\t")
         if e not in entity_set:
             continue
         # store unobserved type
@@ -41,7 +41,7 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
         else:
             tmp_entity_counter[e] += 1
     for line in lines:
-        e, t = line.strip().split()
+        e, t = line.strip().split("\t")
         if e not in entity_set:
             continue
         if t not in type_set:

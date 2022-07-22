@@ -1,0 +1,6 @@
+name: YAGO43kET
+data_dir: data
+overwrite: False
+is_unigraph: False
+lowest_level: False
+remove_under_score: True
