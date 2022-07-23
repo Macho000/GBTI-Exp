@@ -4,7 +4,7 @@ save_dir: save
 name: JointGT
 tokenizer_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
 model_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
-train_dataset: ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+train_dataset: ET_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
 pretrained_model: Bart # Bart or T5
 append_another_bos: False
 is_in_edge: True
@@ -27,7 +27,7 @@ optimizer:
   algorithm: Adam
   learning_rate: 0.00001
 valid:
-  valid_dataset: ET_1_1_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
+  valid_dataset: ET_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
   valid_epoch: 1
   num_beams: 5
   length_penalty: 1.0
@@ -36,5 +36,5 @@ valid:
   save_outputs: True
   save_one_batch: True
 test:
-  test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+  test_dataset: ET_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
   save_outputs: True
