@@ -1,0 +1,8 @@
+wordnet commune 108541609
+wordnet club 108227214
+wordnet artist 109812338
+wordnet club 108227214
+wikicat Football clubs in Uruguay
+wordnet administrative district 108491826
+wikicat Football clubs in the Netherlands
+wordnet football team 108080025

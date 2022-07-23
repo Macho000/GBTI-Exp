@@ -1,0 +1,8 @@
+wordnet person 100007846
+wordnet club 108227214
+wikicat American film editors
+wordnet football team 108080025
+wordnet club 108227214
+wordnet person 100007846
+wordnet team 108208560
+wordnet football team 108080025

@@ -1,0 +1,8 @@
+wordnet person 100007846183
+wordnet club 108227214
+wikicat Living people
+wordnet club 108227214
+wikicat Football clubs in Mexico
+wordnet artist 109812338
+wordnet club 108227214
+wikicat European national under-21 association football teams

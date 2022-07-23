@@ -1,0 +1,8 @@
+wordnet location 100027167
+wordnet club 108227214
+wordnet artist 109812338
+wordnet club 108227214
+wordnet club 108227214
+wordnet artist 109812338
+wordnet club 108227214
+wordnet football team 108080025
