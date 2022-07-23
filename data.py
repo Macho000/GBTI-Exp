@@ -42,13 +42,13 @@ class EntityTypingJointGTDataset(Dataset):
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
                                                                        cfg.model.train_dataset)
     elif self.mode=="valid":
-      _, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
+      self.g, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.valid_dataset)
+                                                                       cfg.model.valid.valid_dataset)
     elif self.mode=="test":
-      _, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
+      self.g, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.test_dataset)
+                                                                       cfg.model.test.test_dataset)
     else:
       raise ValueError("mode is train or valid or test")
 

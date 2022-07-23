@@ -109,26 +109,38 @@ def main(cfg : DictConfig) -> None:
                         'loss': loss,
                     })
                     if cfg.model.valid.save_outputs:
-                        outputs = model.generate(batch)
-                        # Convert ids to tokens
-                        for input_, output, target in zip(batch[0], outputs, batch[2]):
-                            source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-                            sources.append(source.strip())
-                            pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-                            predictions.append(pred.strip())
-                            tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-                            targets.append(tgt.strip())
+                        if cfg.model.valid.save_one_batch:
+                            if batch_idx==0:
+                                outputs = model.generate(batch)
+                                # Convert ids to tokens
+                                for input_, output, target in zip(batch[0], outputs, batch[2]):
+                                    source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                    sources.append(source.strip())
+                                    pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                    predictions.append(pred.strip())
+                                    tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                    targets.append(tgt.strip())
+                        else:
+                            outputs = model.generate(batch)
+                            # Convert ids to tokens
+                            for input_, output, target in zip(batch[0], outputs, batch[2]):
+                                source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                sources.append(source.strip())
+                                pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                predictions.append(pred.strip())
+                                tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                                targets.append(tgt.strip())
                     if batch_idx > 5:
                         break
                             
                 if cfg.model.valid.save_outputs:
-                    with open(os.path.join(save_path, 'inputs_valid.txt'), 'w', encoding='utf-8') as f:
+                    with open(os.path.join(save_path, f'inputs_valid_epoch{count_epoch}.txt'), 'w', encoding='utf-8') as f:
                         for src_txt in sources:
                             f.write(src_txt+"\n")
-                    with open(os.path.join(save_path, 'outputs_valid.txt'), 'w', encoding='utf-8') as f:
+                    with open(os.path.join(save_path, f'outputs_valid_epoch{count_epoch}.txt'), 'w', encoding='utf-8') as f:
                         for pred_txt in predictions:
                             f.write(pred_txt+"\n")
-                    with open(os.path.join(save_path, 'targets_valid.txt'), 'w', encoding='utf-8') as f:
+                    with open(os.path.join(save_path, f'targets_valid_epoch{count_epoch}.txt'), 'w', encoding='utf-8') as f:
                         for tgt in targets:
                             f.write(tgt+"\n")
 

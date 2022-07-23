@@ -134,9 +134,10 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, data="ET_tr
     e2id: dict
     r2id: dict
     loadET, loadKG: boolean
-    train_data: string e.g. ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-    valid_data: string e.g. ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_valid.txt
-    test_data: string e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+    data: string 
+    e.g. ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+    e.g. ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_valid.txt
+    e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
 
     Returns
     -------
