@@ -1,0 +1,4584 @@
+writing system
+football team
+employer
+film
+award category
+award category
+award category
+location
+award category
+location
+award category
+organization
+award category
+award category
+award category
+genre
+award category
+time zone
+organization
+tv series
+airline terminal
+football team
+time zone
+topic
+award category
+record label
+treatment category
+location
+award category
+award category
+award category
+sports tournament
+education institution
+instrument
+location
+award category
+award category
+concept
+genre
+medical specialty
+education institution
+award category
+person
+time zone
+tv series
+genre
+award category
+award category
+award category
+football team
+award category
+award category
+medical specialty
+person
+instrument
+genre
+location
+award category
+award category
+tv series
+location
+location
+medical specialty
+industry
+award category
+topic
+time zone
+award category
+tv series
+award category
+award category
+award category
+award category
+location
+genre
+tv series
+award category
+award category
+football team
+medical treatment
+military conflict
+event
+topic
+time zone
+film
+instrument
+location
+award category
+event
+award category
+award category
+genre
+award category
+time zone
+award category
+award category
+award category
+film
+person
+football team
+award category
+genre
+award category
+award category
+medical specialty
+time zone
+award category
+award category
+award category
+award category
+award category
+location
+topic
+award category
+medical institution
+award category
+medical person
+event
+award category
+tv series
+award category
+organization
+event
+award category
+award category
+award category
+award category
+award category
+business organization
+award category
+medical specialty
+company
+football team
+person
+topic
+academic institution
+award category
+football team
+award category
+time zone
+award category
+time zone
+award category
+award category
+award category
+currency
+genre
+time zone
+award category
+award category
+award category
+location
+education program
+award category
+award category
+award category
+award category
+time zone
+football team
+award category
+company
+time zone
+time zone
+tv series
+sports league team
+concept
+award category
+award category
+film
+genre
+award category
+award category
+award category
+football team
+record label
+award category
+award category
+event
+period
+award category
+award category
+award category
+location
+award nominated work
+topic
+instrumentation
+ethnic group
+media company
+award category
+school
+award category
+award category
+employer
+award category
+award category
+award category
+football team
+football team
+employer
+award category
+film
+tv network
+award category
+award category
+instrument
+award category
+award category
+topic
+award category
+award category
+education institution
+event
+football team
+location
+award category
+tv network
+baseball league season
+award category
+award category
+location
+football team
+award category
+award category
+person
+genre
+work
+award category
+event
+film
+business title
+person
+source
+award category
+award category
+award category
+location
+film company
+award category
+award category
+award category
+field of study
+award category
+genre
+award category
+football team
+tv genre
+award category
+sports team
+location
+genre
+award category
+league
+film
+tv genre
+time zone
+event
+film director
+award category
+award category
+award category
+employer
+person
+time zone
+topic
+award category
+school type
+sports team
+location
+legislative session
+tv program
+time zone
+school
+award category
+event
+topic
+tv network
+film
+profession
+award category
+work
+award category
+award category
+concept
+award category
+award category
+award nominated work
+product category
+award category
+award category
+award category
+government office
+sports position
+time zone
+location
+award category
+award category
+medical specialty
+tv program
+legal entity
+award category
+award category
+genre
+instrument
+award category
+tv series
+location
+award category
+time zone
+disease
+person
+award category
+award category
+time zone
+award category
+award category
+award category
+tournament team
+football team
+location
+drug
+award category
+award category
+employer
+award category
+award category
+concept
+person
+location
+award category
+award category
+location
+award category
+sports team
+person
+location
+award category
+sports team
+topic
+location
+person
+death
+sports event
+food category
+sports team
+education institution
+award category
+award category
+sports tournament team
+football team
+education institution
+award category
+topic
+award category
+event
+award category
+award category
+football team
+award category
+award nominated work
+football team
+location
+genre
+risk factor
+award category
+sports position
+award category
+topic
+award category
+person
+tv program
+award category
+football team
+award category
+award category
+food category
+tv network
+industry
+award category
+award category
+award category
+award category
+topic
+award category
+education institution
+award category
+time zone
+education institution
+sports team
+time zone
+film
+award category
+topic
+award category
+award category
+award category
+employer
+education institution
+genre
+event
+award category
+football team
+award category
+football team
+award category
+award category
+award category
+sports position
+person
+tv series
+award category
+award category
+award category
+award category
+topic
+award category
+work
+sports team
+award category
+site
+animal diet
+student
+award category
+employer
+football team
+award category
+film
+football team
+football team
+product category
+award nominated work
+award category
+award category
+award category
+football team
+person
+football team
+football team
+award category
+football team
+award category
+population
+award category
+tv series
+award category
+award category
+award category
+topic
+tv series
+award category
+award category
+food category
+location
+sport
+football team
+award category
+award category
+film
+award category
+award category
+area
+sports team
+education degree
+work
+time zone
+football team
+award category
+industry category
+place
+award category
+award category
+organization
+award category
+location
+medical specialty
+time zone
+award category
+award category
+award category
+award category
+employer
+genre
+genre
+time zone
+football team
+topic
+film release
+academic institution
+computer model
+award category
+topic
+facility
+award category
+award category
+award category
+event
+award category
+record label
+award category
+award category
+food processing process
+award category
+employer
+award category
+film subject
+genre
+award category
+feature film
+award category
+education institution
+time zone
+topic
+award category
+sports team
+award category
+time zone
+award category
+award category
+film
+award category
+genre
+location
+sport
+airline
+event
+award category
+topic
+award category
+award category
+award category
+award category
+tv series
+award category
+award category
+genre
+football team
+event
+military event
+football team
+location
+location
+football team
+award category
+sports team
+collection
+football team
+film
+topic
+time zone
+award category
+topic
+work
+medical institution
+award category
+company
+award category
+award category
+award category
+institution
+award category
+award category
+award category
+education institution
+employer
+topic
+office office
+football team
+award category
+award category
+genre
+person
+instrument
+topic
+location
+football team
+education institution
+organization
+time zone
+award category
+organization
+military combatant
+football team
+award category
+award category
+time zone
+award category
+award category
+shipyard
+film role
+award category
+location
+company
+award category
+award category
+award category
+award category
+location
+award category
+award category
+location
+award category
+record label
+award category
+business organization
+award category
+award category
+legislative session
+location
+sports team
+place
+topic
+education category
+film
+award category
+award category
+award category
+football team
+topic
+item
+award category
+time zone
+education institution
+topic
+event
+award category
+award category
+award category
+football team
+football team
+person
+football team
+topic
+institution
+award category
+tv network
+time zone
+award category
+award category
+fictional universe
+collection
+concept
+location
+award category
+award nominated film
+award category
+award category
+football team
+tv series
+award category
+award category
+royal line
+football team
+event
+award category
+genre
+genre
+location
+award category
+time zone
+award category
+award category
+genre
+location
+award category
+subject
+award category
+award category
+film
+location
+award category
+month
+topic
+award category
+organization
+organization
+topic
+award category
+population
+location
+event
+award category
+award ceremony
+organization
+entity
+award category
+award category
+award category
+award category
+bridge type
+topic
+event
+event
+film
+location
+topic
+award category
+award category
+award category
+topic
+genre
+employer
+award category
+award category
+award category
+government office title
+film
+genre
+business organization
+instrument
+profession
+location
+time zone
+award category
+industry category
+award category
+award category
+award category
+concept
+genre
+award category
+location
+award category
+location
+employer
+government officeholder
+award category
+tv series
+location
+political party
+award category
+school
+area
+award category
+royal line
+time zone
+military conflict
+item
+football team
+award category
+topic
+instrument
+architectural style
+film
+film
+award nominated work
+award category
+event
+award category
+award category
+award category
+work
+tv series
+airline location
+football team
+award category
+employer
+award category
+award category
+sports team
+award category
+award category
+food ingredient
+education type
+genre
+instrument
+film
+character
+award category
+award category
+organization
+award category
+business title
+award category
+award category
+award category
+award category
+film
+award category
+topic
+location
+ethnic group
+film
+award category
+business entity
+film
+award category
+award category
+award category
+location
+award category
+character
+tv series
+award category
+award category
+award category
+location
+award category
+football team
+award category
+person
+award category
+football team
+film
+award category
+record label
+award category
+employer
+school
+time zone
+award category
+time zone
+film
+topic
+award category
+genre
+sports team
+genre
+tv program
+time zone
+award category
+football team
+education institution
+concept
+award category
+award category
+football team
+film
+time zone
+topic
+award category
+award category
+award category
+school
+award category
+instrument
+education institution
+award category
+instrument
+instrument
+education institution
+film
+genre
+award category
+location
+award category
+topic
+genre
+award category
+location
+award category
+time zone
+award category
+award category
+topic
+organization
+business title
+legislative session
+education institution
+genre
+award category
+government officeholder
+award category
+award category
+event
+education institution
+topic
+award category
+academic institution
+employer
+award category
+award category
+award category
+employer
+award nominated film
+record label
+award category
+location
+award category
+tv program
+award category
+award category
+award category
+person
+film
+tv series
+football team
+award category
+instrument
+award category
+football team
+genre
+topic
+award category
+award category
+sports team
+award category
+genre
+award category
+employer
+award category
+genre
+award category
+location
+award category
+award category
+location
+location
+award category
+award category
+award category
+topic
+government body
+award category
+company
+award category
+event
+location
+film
+sports position
+award category
+award category
+award category
+work
+award category
+company
+award category
+location
+award category
+instrument
+football team
+topic
+event
+topic
+legislative session
+award category
+award category
+award category
+award category
+time zone
+topic
+award category
+genre
+award category
+entity
+genre
+film
+currency
+football team
+person
+football team
+population
+award category
+award category
+award category
+language
+award category
+genre
+award category
+award category
+award category
+concept
+award category
+film
+location
+award category
+location
+voiceover artist
+event
+sports league season
+education institution
+award category
+tv program
+award category
+award category
+award category
+award category
+location
+award category
+film
+topic
+award category
+award category
+work
+award category
+award category
+award category
+topic
+award category
+location
+person
+award category
+film
+award category
+topic
+film
+food processing process
+award category
+award category
+award category
+military event
+education level
+award category
+award category
+tv program
+tv series
+award category
+award category
+location
+award category
+award category
+award category
+award category
+award category
+location
+place
+award category
+location
+item
+award category
+topic
+genre
+award category
+tv program
+award category
+award category
+award category
+tv series
+conflict
+genre
+football team
+topic
+legal category
+award category
+airline
+award category
+time zone
+tv series
+football team
+award category
+sports league league
+award category
+award category
+award category
+record label
+film
+award category
+award category
+location
+award category
+topic
+award category
+award category
+award category
+topic
+location
+tv series
+film category
+office of government office
+award category
+location
+award category
+topic
+award category
+location
+tv series
+instrument
+award category
+topic
+time zone
+genre
+football team
+award category
+topic
+genre
+occupation
+genre
+football team
+genre
+time zone
+award category
+football team
+event
+award category
+sports event
+award category
+award category
+location
+film
+football team
+tv network
+award category
+award category
+award category
+language
+award category
+time zone
+topic
+award category
+award category
+football team
+food category
+award category
+program of study
+football team
+topic
+topic
+award category
+football team
+award category
+topic
+topic
+award category
+award category
+education level
+country
+football team
+time zone
+location
+location
+football team
+fictional character
+school of education
+tv genre
+genre
+conflict
+person
+location
+instrument type
+event
+award category
+award category
+award category
+genre
+film
+tv program
+award category
+award category
+film
+topic
+government office
+organization
+medical specialty
+football team
+award category
+person
+football team
+sports team
+award category
+sports team
+location
+award category
+location
+location
+organization
+film
+case
+tv program
+award category
+football team
+food category
+facility
+award category
+award category
+award category
+award category
+genre
+instrument
+industry
+award category
+military command
+event
+product category
+award category
+award category
+football team
+tv series
+award category
+award category
+genre
+tv program
+food biosynthesis
+award category
+award category
+award category
+film role
+genre
+topic
+award category
+time zone
+tv series
+time zone
+award category
+tv series
+organization
+organization
+award category
+genre
+award category
+time zone
+award category
+award category
+government office
+location
+football team
+person
+award category
+food category
+time zone
+media company
+instrument
+sports team
+award category
+award category
+topic
+award category
+football team
+person
+location
+award category
+topic
+tv series
+time zone
+film
+award category
+location
+award category
+award category
+education institution
+person
+topic
+medical specialty
+instrument
+field of study
+language
+award category
+award category
+tv series
+record label
+award category
+industry category
+award category
+computer operating system
+award category
+award category
+award category
+award category
+topic
+concept
+industry
+award category
+event
+military event
+award category
+award category
+time zone
+football team
+football team
+organization
+award category
+award category
+location
+award category
+award category
+industry
+location
+industry
+topic
+film
+football team
+concept
+time zone
+football team
+military conflict
+topic
+football team
+film
+award category
+area
+tv program
+film
+tv program
+military conflict
+football team
+football team
+company
+organization
+product category
+award category
+sports team
+award category
+event
+award category
+award category
+military conflict
+award category
+award category
+award category
+award category
+award category
+tv series
+award category
+genre
+sports league team
+award category
+genre
+work
+tv series
+award category
+award category
+sports league league
+location
+medical institution
+award category
+location
+award category
+football team
+award category
+award category
+football team
+sports team
+award category
+office office
+sports league draft
+topic
+award category
+government office office
+media company
+award category
+education institution
+field of study
+topic
+award category
+record label
+event
+award category
+award category
+location
+award category
+time zone
+award category
+award category
+sports league team
+education institution
+disease type
+sports event
+award category
+location
+award category
+award category
+organization
+genre
+tv series
+award category
+location
+tv series
+genre
+award category
+award category
+award category
+football team
+record label
+person
+award category
+award category
+award category
+award category
+location
+genre
+location
+instrument
+tv genre
+award category
+award category
+football team
+location
+football team
+award category
+award category
+genre
+location
+location
+sports team
+education institution
+football team
+food category
+award category
+sports team
+football player
+award category
+award category
+location
+religion
+tv series
+award category
+football team
+industry
+time zone
+topic
+football team
+award category
+genre
+award category
+award category
+award category
+sports team
+sports tournament
+education institution
+award category
+genre
+government officeholder
+person
+topic
+award category
+military conflict
+tv series
+award category
+genre
+country
+tv series
+topic
+award category
+event
+award category
+award category
+topic
+conflict
+award category
+topic
+award category
+award category
+football team
+award category
+award category
+football team
+award category
+award category
+education level
+award category
+film
+tv program
+award category
+office office
+country
+award category
+topic
+award category
+award category
+award category
+location
+topic
+award category
+office office
+genre
+police organization
+bridge type
+award category
+award category
+award category
+football team
+award category
+sports position
+location
+medical specialty
+award category
+tv program
+location
+film
+field of study
+award category
+award category
+genre
+topic
+award category
+film
+tv series
+tv program
+award category
+political party
+football team
+record label
+film role
+award category
+employer
+sports team
+sports league draft
+employer
+award category
+location
+person
+time zone
+film
+football team
+award category
+award category
+office office
+award category
+award category
+film
+government body
+genre
+award category
+award category
+genre
+award category
+topic
+award category
+award category
+time zone
+award category
+time zone
+award category
+award category
+award category
+genre
+genre
+football team
+academic institution
+award category
+award category
+award category
+event
+office office
+award category
+location
+tv series
+film
+topic
+field of study
+organization
+location
+medical specialty
+award category
+location
+event
+genre
+time zone
+award category
+award category
+political party
+topic
+award category
+award category
+award category
+genre
+film
+award category
+record label
+medical specialty
+film
+award category
+award category
+season
+award category
+sports team
+instrument
+person
+award category
+education institution
+tv series
+football team
+instrument
+award category
+tv program
+academic institution
+sports team
+business title
+award category
+award category
+award category
+award category
+education institution
+football team
+record label
+topic
+location
+location
+location
+award category
+court case
+award category
+sports team
+award category
+award category
+award category
+location
+political party
+award category
+football team
+topic
+education topic
+institution
+time zone
+military service
+site
+genre
+award category
+genre
+award category
+award category
+tv series
+topic
+office office
+award category
+award category
+genre
+award category
+tv series
+award category
+award category
+tv genre
+award category
+school
+award category
+organization
+award category
+award category
+tv series
+topic
+football team
+location
+award category
+award category
+topic
+topic
+education institution
+award category
+award category
+award category
+award category
+topic
+location
+occupation
+design category
+award category
+football team
+award category
+football team
+sports team
+topic
+award category
+topic
+food category
+award category
+genre
+category
+award category
+time zone
+football team
+concept
+sports team
+genre
+award category
+award category
+award category
+award category
+person
+award category
+award category
+education institution
+topic
+school of study
+award category
+location
+award category
+tv series
+feature
+football team
+award category
+award category
+award category
+genre
+instrument
+tv series
+time zone
+football team
+award category
+tv series
+topic
+legislative session
+collection
+award category
+award category
+area
+employer
+topic
+instrument
+time zone
+military conflict
+film
+location
+award category
+topic
+education institution
+sports team
+award category
+award category
+award category
+location
+award category
+place
+award category
+award category
+field of study
+time zone
+award category
+award category
+film
+award category
+award category
+football team
+award category
+event
+tv series
+time zone
+military event
+topic
+operating system
+award category
+award category
+film
+award category
+person
+time zone
+award category
+time zone
+education institution
+education institution
+sports event
+award category
+award category
+computer operating system
+award category
+location
+instrument
+location
+genre
+breed
+award category
+genre
+award category
+site
+location
+language
+collection period
+business title
+award category
+football team
+award category
+award category
+school of music
+award category
+location
+award category
+award category
+award category
+award category
+tv series
+location
+award category
+sports team
+record label
+record label
+film
+award category
+education institution
+genre
+company
+award category
+tv series
+award category
+award category
+specialty
+award category
+award category
+field of study
+film
+award category
+location
+organization
+tv series
+film
+genre
+award category
+football team
+award category
+medical specialty
+award ceremony
+time zone
+award category
+person
+award category
+award category
+award category
+tv series
+topic
+company
+award category
+person
+award category
+award category
+topic
+company
+concept
+industry
+football team
+employer
+award category
+award category
+time zone
+location
+disease
+food category
+award category
+location
+media location
+award category
+time zone
+media company
+military unit
+award category
+organization
+military service
+award category
+award category
+award category
+football team
+award category
+award category
+football team
+location
+award category
+genre
+award category
+award category
+film
+award category
+tv series
+time zone
+academic institution
+award category
+government entity
+person
+award category
+film
+industry
+award category
+location
+award category
+award category
+concept
+industry
+award category
+sports team location
+time zone
+award category
+award category
+location
+person
+football team
+football team
+tv series
+medical specialty
+person
+award category
+award category
+location
+award category
+award category
+award category
+award category
+country
+instrument
+award category
+award category
+award category
+disease
+award category
+genre
+military event
+award category
+award category
+time zone
+award category
+award category
+award category
+location
+location
+time zone
+government office
+location
+genre
+award category
+person
+award category
+sports team
+award category
+award category
+business title
+location
+genre
+award category
+office
+genre
+football team
+award category
+award category
+tv series
+award category
+person
+instrument
+award category
+company
+football team
+mineral
+film
+genre
+award category
+genre
+award category
+award category
+award category
+award category
+award category
+tv program
+football team
+award category
+award category
+event
+record label
+award category
+award category
+award category
+award category
+location
+genre
+genre
+award category
+award category
+film location
+film
+award category
+topic
+media industry
+topic
+award category
+location
+film
+genre
+award category
+location
+award nominated film
+location
+award category
+instrument
+film
+award category
+time zone
+location
+time zone
+football team
+tv series
+award category
+art movement
+award category
+location
+award category
+award category
+topic
+film
+award category
+sports team
+employer
+topic
+person
+employer
+football team
+genre
+award category
+sport
+government entity
+award category
+award category
+award category
+media company
+award category
+award category
+legislative session
+treatment
+film
+record label
+award category
+award category
+award category
+award category
+event
+film
+instrument
+tv series
+occupation
+award category
+instrument
+medical specialty
+award category
+genre
+ethnic group
+company
+time zone
+person
+film
+award category
+award category
+award category
+tv program
+organization
+facility
+award category
+sports team
+award category
+award category
+time zone
+location
+genre
+award category
+award category
+time zone
+award category
+government officeholder
+award category
+award category
+event
+sports team
+award category
+award category
+award category
+award category
+award category
+football team
+award category
+award category
+award category
+award category
+education degree
+food category
+award category
+location
+football team
+football team
+award category
+instrument
+award category
+person
+tv series
+award category
+location
+medical treatment
+location
+award category
+topic
+award category
+award category
+award category
+sports team
+award category
+location
+airline hub
+genre
+tv network
+record label
+award category
+award category
+sports team
+location
+sports team
+field of study
+genre
+genre
+instrument
+award category
+award nominated work
+film
+award category
+award category
+event
+business title
+genre
+government office
+award category
+military conflict
+award category
+award category
+award category
+award category
+time zone
+award category
+award category
+sports team
+occupation
+classification
+event
+person
+tv series
+football team
+award category
+location
+topic
+award category
+genre
+instrument
+organization
+event
+star system
+location
+genre
+award category
+sports team
+award category
+location
+language
+award category
+location
+location
+medical condition
+organization
+time zone
+topic
+topic
+award category
+award category
+location
+award category
+award category
+award category
+award category
+award category
+award category
+location
+person
+award category
+award category
+award category
+award category
+location
+military event
+person
+time zone
+award category
+genre
+location
+award category
+award category
+award category
+award category
+field of study
+football team
+topic
+instrument
+award category
+award category
+football team
+football team
+work
+award category
+company
+award category
+film
+project role
+sports team
+award category
+education institution
+time zone
+award category
+sports team
+film
+award category
+film role
+award category
+topic
+award category
+football team
+person
+award category
+film
+operating system
+award category
+sports team
+award category
+award category
+award category
+language
+topic
+character
+population
+sports team
+award category
+person
+school
+film role
+topic
+sports position
+location
+person
+award category
+institution
+award category
+award category
+genre
+award category
+location
+genre
+award category
+award category
+person
+language
+food category
+award category
+media company
+genre
+award category
+instrument
+artist
+award category
+award category
+food category
+employer
+genre
+food category
+award category
+award category
+award category
+football team
+tv program
+award category
+location
+award category
+tv series
+society
+award category
+award category
+occupation
+time zone
+award category
+award category
+education degree
+location
+time zone
+award category
+genre
+award category
+award category
+fictional universe
+business organization
+location
+award category
+business title
+sports team
+football team
+award category
+genre
+football team
+work
+topic
+award category
+award category
+sports league league
+education institution
+award category
+topic
+agency
+award category
+award category
+organization
+award category
+award category
+topic
+genre
+event
+award category
+award category
+time zone
+film
+award category
+collection system
+employer
+zone
+academic institution
+football team
+award category
+topic
+concept
+award category
+time zone
+topic
+award category
+award category
+genre
+food category
+award category
+location
+genre
+award category
+award category
+football team
+tv program
+award category
+film
+topic
+tv network
+football team
+football team
+location
+football team
+company
+award category
+award category
+film
+topic
+award category
+location
+sports team
+record label
+topic
+location
+time zone
+collection system
+award category
+award category
+military unit
+award category
+award category
+organization
+tv series
+award category
+award category
+award category
+education institution
+field of study
+football team
+tv network
+person
+award category
+award category
+football team
+topic
+award category
+award category
+time zone
+time zone
+award category
+award category
+government entity
+award category
+location
+topic
+award category
+organization
+education institution
+award category
+instrument
+football team
+legislative branch
+award category
+award category
+award category
+award category
+place
+football team
+location
+football team
+award category
+education institution
+organization
+award category
+person
+award category
+military conflict
+award category
+currency category
+government office
+topic
+location
+football team
+location
+concept
+tv program
+topic
+medical specialty
+award category
+award category
+award category
+academic institution
+employer
+award category
+football team
+football team
+person
+time zone
+award category
+military service
+time zone
+sports team
+country
+event
+award category
+location
+concept
+time period
+location
+concept
+award category
+sports league team
+organization
+month
+award category
+genre
+award category
+award category
+award category
+architectural function
+instrument
+tv series
+collection structure
+award category
+award category
+sports tournament
+award category
+award category
+award category
+award category
+time zone
+award category
+location
+education level
+award category
+topic
+location
+award category
+time zone
+location
+award category
+award category
+government office
+football team
+award category
+award category
+film
+student body
+education institution
+award category
+academic institution
+award category
+concept
+award category
+award category
+football team
+genre
+tv genre
+award category
+time zone
+football team
+award category
+football team
+tv program
+sports league draft
+award category
+film
+award category
+education institution
+award category
+person
+award category
+film
+topic
+tv series
+topic
+award category
+sports team
+tv network
+tv series
+topic
+location
+actress
+award category
+football team
+office
+source
+employer
+education institution
+time zone
+award category
+award category
+education institution
+record label
+time zone
+film
+award category
+event
+government office title
+award category
+award category
+person
+award category
+time period
+award nominated work
+award category
+award category
+political party
+employer
+film location
+award category
+production company
+football team
+language
+topic
+football team
+award category
+award category
+company
+award category
+award category
+football team
+award category
+film
+place of work
+award category
+football team
+award category
+film
+football team
+person
+location
+award category
+country
+award category
+topic
+award category
+genre
+topic
+body of body
+location
+award category
+football team
+award category
+award category
+award category
+time zone
+instrument
+award category
+award category
+award category
+location
+award category
+location
+industry
+award category
+award category
+award category
+tv series
+award category
+award category
+award category
+employer
+sports league league
+award category
+medical person
+event
+award category
+topic
+location
+political party
+football team
+film
+award category
+genre
+award category
+genre
+award category
+location
+football team
+football team
+sports team
+award category
+location
+time zone
+topic
+transport mode
+award category
+award category
+topic
+football team
+award category
+area
+award category
+academic institution
+award category
+football team
+award category
+film
+legislative session
+film role
+award category
+military conflict
+topic
+topic
+award category
+award category
+football team
+award category
+facility
+event
+genre
+award category
+award category
+royal family
+award category
+award category
+location
+film
+industry
+football team
+language
+award category
+award nominated work
+organization
+award category
+tv program
+award category
+government
+award category
+time period
+football team
+award category
+time zone
+population
+genre
+education degree
+award category
+award category
+award category
+football team
+sports league league
+award category
+award category
+award category
+government office
+award category
+award category
+media genre
+football team
+topic
+award category
+genre
+award category
+film
+film
+award category
+tv program
+award category
+genre
+award category
+computer program
+education institution
+award category
+award category
+award category
+topic
+government office
+award category
+genre
+location
+sports league league
+location
+organization
+award category
+award category
+person
+award category
+award category
+sports league league league
+film role
+classification category
+award category
+genre
+location
+topic
+award category
+award category
+event
+event
+award category
+location
+person
+award category
+military conflict
+award category
+genre
+location
+time zone
+film role
+award category
+location
+football team
+location
+location
+award category
+award category
+award category
+event
+award category
+award category
+topic
+record label
+award category
+tv program
+football team
+award category
+location
+award category
+education institution
+award category
+award category
+game genre
+film
+topic
+sports team
+award category
+government office
+topic
+film
+award category
+award category
+instrument
+record label
+record label
+film
+award category
+location
+topic
+award category
+location
+occupation
+award category
+film
+award category
+football team
+sports league league league
+award category
+award category
+genre
+award nominated work
+award category
+award category
+tv program
+topic
+fictional universe
+award category
+location
+award category
+topic
+award category
+award category
+award category
+award category
+award category
+award category
+government entity
+award category
+award category
+award category
+location
+ethnicity
+record label
+genre
+award category
+award category
+author
+award category
+award category
+award category
+location
+education institution
+award category
+time zone
+media company
+award category
+employer
+sponsor
+award category
+event
+award category
+location
+topic
+award category
+instrument
+award category
+award category
+topic
+genre
+award category
+food category
+award category
+genre
+award category
+time zone
+award category
+football team
+topic
+football team
+football team
+genre
+award category
+business location
+software license
+product category
+event
+award category
+education institution
+person
+person
+film
+award category
+award category
+award category
+location
+person
+football team
+award category
+education institution
+location
+award category
+company
+business organization
+award category
+time zone
+award category
+person
+record label
+award category
+location
+award category
+award category
+award category
+topic
+award category
+award category
+football team
+award category
+record label
+football team
+genre
+award category
+film
+award category
+film
+award category
+award category
+food category
+genre
+film
+award category
+award category
+tv program
+football team
+topic
+award category
+award category
+location
+industry
+award category
+topic
+business title
+award category
+award category
+tv program
+award category
+genre
+award category
+award category
+award category
+award category
+genre
+film
+award category
+instrument
+football team
+sports position
+award category
+genre
+film
+tv series
+topic
+location
+genre
+location
+ethnic group
+genre
+football team
+location
+award category
+record label
+award category
+award category
+award category
+sports team
+location
+award category
+award category
+award category
+award category
+award category
+football team
+award category
+award category
+record label
+award category
+organization
+government office
+award category
+food category
+award category
+award category
+award category
+award category
+instrument
+award category
+award category
+award category
+time zone
+concept
+genre
+award category
+film
+award category
+award category
+award nominated work
+instrument
+time zone
+award category
+organization
+time zone
+country
+genre
+field of study
+location
+award category
+event
+tv program
+football team
+time zone
+time zone
+topic
+employer
+award category
+product category
+genre
+award category
+award category
+education institution
+award category
+award category
+instrument
+award category
+time zone
+programming language
+location
+tv series
+employer
+location
+genre
+award category
+genre
+award category
+genre
+award category
+computer operating system
+award category
+football team
+award category
+employer
+award category
+award category
+football team
+time zone
+sports team
+award category
+award category
+location
+tv series
+location
+film
+religion
+award category
+football team
+award category
+location
+company
+instrument
+medical specialty
+organization
+award category
+location
+location
+award category
+award category
+award category
+event
+location
+football team
+film
+film
+instrument
+award category
+time zone
+location
+organization
+time zone
+employer
+education type
+location
+time zone
+topic
+government office
+award category
+person
+award category
+event
+award category
+education institution
+football team
+award category
+topic
+award category
+topic
+award category
+government office
+award category
+time zone
+award category
+location
+genre
+football team
+site
+award category
+sports team
+time zone
+location
+education institution
+sports team
+court category
+award category
+award category
+award category
+football team
+football team
+record label
+award category
+topic
+film
+award category
+genre
+football team
+education institution
+film
+location
+award category
+award category
+area
+business organization
+football team
+person
+award category
+event
+location
+award category
+horse
+award category
+location
+genre
+topic
+location
+film
+award category
+location
+time zone
+award category
+employer
+award category
+organization
+type
+sports team
+award category
+award category
+time zone
+employer
+award category
+award category
+award category
+time zone
+event
+genre
+film
+film
+award category
+award nominated work
+award category
+award category
+time zone
+award category
+tv program
+event
+tv program
+tv program
+film
+business location
+military conflict
+award category
+source
+award category
+football team
+industry
+award category
+classification
+time zone
+film
+person
+award nominated work
+award category
+item category
+instrument
+award category
+topic
+genre
+location
+industry location
+film
+type of school
+football team
+universe
+sports league
+award category
+award category
+time zone
+tv program
+location
+award category
+genre
+time zone
+media genre
+person
+company
+topic
+award category
+award category
+time zone
+location
+genre
+football team
+time zone
+award category
+football team
+film
+genre
+location
+film cut
+award category
+award category
+football team
+football team
+award category
+film
+award category
+award category
+award category
+genre
+award category
+award category
+location
+person
+award category
+award category
+award category
+genre
+industry
+award category
+award category
+award category
+industry
+award category
+genre
+school
+award ceremony
+topic
+topic
+food category
+time zone
+time zone
+concept
+award category
+education institution
+restaurant
+education institution
+award ceremony
+award category
+employer
+award category
+time zone
+award category
+tv program
+award category
+location
+award category
+medical specialty
+ethnicity
+award category
+award category
+topic
+award category
+person
+award category
+genre
+award category
+instrument
+medical treatment
+time zone
+sports team
+football team
+employer
+award category
+award category
+football team
+award category
+award category
+award category
+award category
+organization
+event
+education institution
+film
+genre
+award category
+instrument
+topic
+award category
+award category
+genre
+sports team
+award category
+award category
+award category
+location
+award category
+award category
+award category
+location
+interface
+topic
+football team
+product category
+award category
+football team
+award category
+event
+award category
+sports team
+school type
+award category
+location
+tv network
+basketball team
+genre
+award category
+award category
+government entity
+award category
+tv program
+football team
+province
+football team
+award category
+sports team
+education institution
+award category
+award category
+topic
+location
+award category
+film
+award category
+legislative session
+award category
+film
+sports team
+award category
+award category
+award category
+time zone
+football team
+film
+academic institution
+award category
+award category
+person
+location
+person
+award category
+award category
+award category
+topic
+record label
+award category
+production company
+award category
+film
+language
+award category
+genre
+award category
+genre
+religion
+football team
+award category
+award category
+topic
+location
+film
+award category
+genre
+award category
+football team
+employer
+football team
+football team
+industry
+architectural style
+time zone
+location
+education institution
+time zone
+tv program
+genre
+film
+sports league draft
+award category
+event
+football team
+tv genre
+film
+football team
+time zone
+government officeholder
+location
+award category
+award category
+award category
+football team
+location
+genre
+location
+award category
+educational institution
+football team
+award category
+topic
+film
+topic
+medical condition
+award category
+award category
+employer
+employer
+company
+award category
+record label
+population
+person
+tv program
+award category
+location
+award category
+award category
+genre
+genre
+award category
+genre
+company
+football team
+government body
+award category
+film
+award category
+time zone
+award category
+award category
+award category
+topic
+military service
+topic
+location
+award category
+award category
+topic
+award category
+award category
+location
+award category
+award category
+person
+award category
+football league
+award category
+sports league league draft
+instrument
+sports team event
+topic
+sports league draft
+political party
+location
+sports team
+award category
+award category
+location
+industry
+record label
+tv series
+football team
+location
+film
+award category
+topic
+award category
+field of study
+award category
+award category
+location
+location
+time zone
+employer
+award category
+award category
+football team
+football team
+genre
+award category
+award category
+award category
+government office
+award category
+location
+award category
+tv program
+award category
+award category
+military conflict
+sports league league
+award category
+award category
+time zone
+time zone
+government title
+football team
+academic institution
+isine
+award category
+currency
+genre
+award category
+topic
+medical condition
+location
+education level
+industry specialty
+award category
+location
+organization
+award category
+event
+topic
+event
+award category
+event
+tv program
+football team
+award category
+legislative session
+time zone
+award category
+education institution
+instrument
+football team
+award category
+tv series
+film
+genre
+location
+award category
+location
+genre
+language
+award category
+award category
+award category
+award category
+location
+award category
+sports team
+football team
+football team
+film
+location
+award category
+football team
+film
+location
+organization
+topic
+award category
+football team
+location
+award category
+event
+award category
+genre
+award category
+location
+football team
+person
+education institution
+award category
+tv series
+sports position
+award category
+food company
+education program
+record label
+employer
+medical specialty
+football team
+award category
+award category
+film
+topic
+award category
+award category
+education institution
+football team
+award category
+award category
+genre
+medical specialty
+football team
+award category
+award category
+award category
+location
+award category
+award category
+film
+facility
+award category
+sports team
+topic
+company
+award category
+football team
+sports league team
+award category
+award category
+court case
+government title
+award category
+government
+concept
+location
+football team
+award category
+person
+award category
+award category
+award category
+award category
+award category
+medical specialty
+medical specialty
+education institution
+award category
+award category
+award category
+religion
+location
+sports team
+award category
+award category
+education institution
+award category
+award category
+location
+genre
+award category
+language
+award category
+award category
+award category
+award nominated work
+award category
+award category
+organization
+event
+award category
+award category
+instrument
+award category
+topic
+award category
+award category
+topic
+topic
+award category
+film
+location
+topic
+employer
+topic
+location
+award category
+award category
+award category
+concept
+time zone
+award category
+award category
+award category
+location
+football team
+legislative session
+award category
+officeholder
+work
+award category
+award category
+political party
+award category
+location
+award category
+award category
+company
+award category
+industry
+award category
+entity
+time zone
+military event
+award category
+location
+industry
+award category
+award category
+award category
+award category
+award category
+award category
+award category
+time zone
+genre
+employer
+time zone
+sport
+award category
+education institution
+film
+topic
+location
+award category
+football team
+award category
+tv program
+topic
+film
+location
+topic
+person
+award category
+film
+award category
+award category
+award category
+award category
+location
+location
+award category
+event
+genre
+legislative session
+film
+football team
+genre
+award category
+person
+specialty
+award category
+film
+film festival
+award category
+person
+award category
+topic
+award category
+tv series
+genre
+record label
+location
+time zone
+football team
+event
+topic
+topic
+award category
+film
+body
+military event
+education institution
+medical specialty
+award category
+genre
+government officeholder
+military event
+award category
+organization
+location
+award category
+award category
+genre
+sports team
+location
+person
+award category
+genre
+award category
+sports team
+film
+event
+topic
+award category
+location
+award category
+product category
+award category
+genre
+education institution
+location
+event
+football team
+film
+award category
+award category
+sports league draft
+medical specialty
+award category
+tv network
+tv network
+award category
+award category
+award category
+award category
+company
+award category
+time zone
+award category
+employer
+award category
+sports team
+football team
+film director
+football team
+topic
+award category
+location
+award category
+award category
+award category
+sports team
+sports team
+topic
+award category
+award category
+award category
+organization
+award category
+time zone
+award category
+award category
+instrument
+tv series
+topic
+topic
+genre
+award category
+sports league team
+person
+award category
+award category
+location
+award category
+award category
+topic
+entity
+football team
+location
+tv series
+organization
+location
+award category
+award category
+government office
+award category
+education institution
+award category
+football team
+legal entity
+award category
+time zone
+sport
+award category
+genre
+instrument
+military position
+football team
+education institution
+football team
+film
+time zone
+award category
+award category
+location
+football team
+award category
+genre
+football team
+time zone
+award category
+tv program
+award category
+award category
+time zone
+film
+football team
+award category
+genre
+genre
+award category
+location
+award category
+location
+location
+time zone
+record label
+award category
+person
+time zone
+company
+film
+legislative session
+award category
+award category
+ethnic group
+award category
+award category
+award category
+location
+award category
+award category
+award category
+legislative session
+topic
+award category
+time zone
+award category
+award category
+population
+award category
+location
+genre
+award category
+award category
+location
+sports team
+football team
+award category
+award category
+location
+military service
+award category
+education field
+tv series
+award category
+tv program
+tv series
+facility
+instrument
+instrument
+person
+organization
+time zone
+award category
+award category
+ethnic group
+ethnic group
+award category
+person
+film
+topic
+football team
+football team
+award category
+legislative session
+sports team
+product category
+award category
+award category
+instrument
+award category
+award category
+tv series
+tv series
+topic
+award category
+award category
+award category
+chemical compound
+football team
+medical specialty
+award category
+topic
+film
+tv series
+location
+concept
+location
+award category
+award category
+award category
+football team
+location
+football team
+award category
+football team
+sport
+award category
+academic institution
+time zone
+sports league league
+employer
+medical specialty
+time zone
+legislative session
+organization
+award category
+award category
+person
+award category
+film role
+award category
+university of study
+award category
+award nominated work
+organization
+time zone
+record label
+month
+time zone
+genre
+topic
+location
+award category
+tv series
+award category
+location
+topic
+time zone
+sports venue
+film
+award category
+medical school
+tv series
+football team
+location
+company
+film
+topic
+award category
+film
+tv series
+topic
+location
+award nominated work
+film
+topic
+gender
+location
+employer
+record label
+film
+employer
+location
+event
+instrument
+award category
+location
+genre
+football team
+genre
+film
+record label
+award category
+language
+topic
+award category
+location
+award category
+education institution
+food category
+award category
+person
+medical specialty
+office
+award category
+award category
+award category
+person
+award category
+specialty
+award category
+award category
+employer
+film
+film
+football team
+award category
+football team
+film
+genre
+award category
+occupation
+award category
+award category
+time zone
+time zone
+film
+food category
+award category
+award category
+award category
+government officeholder
+tv series
+award category
+award category
+award category
+film
+government office
+award category
+entity
+genre
+award category
+programming language
+football team
+military combatant
+sports team
+topic
+award category
+architectural style
+site
+time zone
+tv network
+time zone
+genre
+event
+film
+award category
+record label
+award category
+award category
+film
+award category
+award category
+football team
+award category
+award category
+tv program
+football team
+award category
+award category
+language
+military service
+football team
+award category
+award category
+genre
+tv series
+organization
+airline
+time zone
+genre
+award category
+award category
+location
+topic
+education institution
+person
+award category
+tv show
+award category
+film
+location
+football team
+location
+genre
+office office
+award category
+location
+film
+award category
+award category
+tv series
+location
+award category
+award category
+award category
+award category
+time zone
+sport
+award category
+industry
+award category
+animal breed
+person
+film
+award category
+location
+language
+time zone
+genre
+award category
+concept
+award category
+event
+government office
+education institution
+award category
+award category
+program
+football team
+site
+instrument
+instrument
+award category
+award category
+award category
+facility
+ethnic group
+film festival
+award category
+award category
+football team
+award category
+award category
+company
+industry
+programming language
+location
+sports team
+film genre
+award category
+football team
+military service
+operator
+award category
+sports team
+topic
+record label
+football team
+award category
+award category
+award category
+genre
+award category
+location
+film company
+topic
+topic
+topic
+concept
+topic
+location
+tv program
+football team
+film
+award category
+band
+architectural style
+location
+location
+time zone
+award category
+award category
+award category
+genre
+award category
+award category
+award category
+sports team
+football team
+government office
+company
+award category
+award category
+football team
+award category
+topic
+medical condition
+location
+award category
+award category
+award category
+award category
+sports team
+film
+award category
+sports team
+award nominated film
+award category
+organization
+award category
+person
+time zone
+education level
+football team
+award category
+event
+time zone
+location
+time zone
+award category
+award category
+work
+genre
+performer
+award category
+award category
+award category
+location
+military conflict
+film location
+location
+award category
+award category
+topic
+award category
+concept
+award category
+genre
+sports team
+topic
+school category
+government office
+sports team
+award category
+location
+time zone
+office of government office
+film
+time zone
+award category
+award category
+award category
+topic
+tv program
+location
+title
+industry
+topic
+award category
+film
+award category
+award category
+film
+genre
+food category
+location
+time zone
+education organization
+location
+football team
+topic
+award category
+medical institution
+genre
+document
+academic institution
+topic
+tv series
+topic
+football team
+award nominated work
+award category
+award category
+award category
+award category
+person
+organization
+football team
+award category
+award category
+tv series
+award category
+award category
+instrument
+award category
+award category
+event
+time zone
+time zone
+film
+sports team
+military service
+sports position
+film
+education institution
+award category
+award category
+award category
+award category
+film
+award category
+award category
+award category
+award category
+topic
+award category
+award category
+award category
+football team
+award category
+football team
+award category
+award category
+award category
+award category
+football team
+concept
+work
+football team
+tv series
+location
+food category
+award category
+award category
+location
+award category
+sports team
+country
+time zone
+award category
+sports team
+company
+time period
+tv program
+person
+location
+employer
+work
+award category
+award category
+award category
+football team
+award category
+football team
+award category
+film
+award category
+award category
+award category
+time zone
+award category
+sports team
+award category
+award category
+award category
+award category
+person
+topic
+genre
+person
+event
+award category
+award category
+award category
+award category
+award category
+event
+genre
+time zone
+food ingredient
+award category
+award category
+film
+football team
+genre
+organization
+genre
+time zone
+medical specialty
+award category
+location
+topic
+company
+academic institution
+genre
+genre
+film company
+award category
+award category
+football team
+genre
+football position
+award category
+concept
+award category
+topic
+sports team
+tv series
+award category
+award category
+topic
+sports league draft
+award category
+religion
+film
+award category
+award category
+employer
+language
+award category
+award category
+topic
+architectural style
+location
+award nominated work
+award category
+award category
+country
+award category
+award category
+genre
+academic institution
+award category
+award category
+sports team
+event
+award category
+military service
+award category
+academic institution
+sports position
+genre
+topic
+location
+sports tournament
+tv program
+award category
+award category
+film
+football team
+location
+person
+location
+award category
+award category
+topic
+award category
+programming language
+sports team
+award category
+tv series
+award category
+award category
+award category
+award category
+award category
+award category
+award category
+award category
+event
+conceptual art
+record label
+award category
+genre
+award category
+award category
+government office
+office office
+award category
+topic
+court case
+time zone
+topic
+event
+award category
+organization
+award ceremony
+award category
+location
+award category
+sports team
+education institution
+award category
+location
+award category
+tv program
+award category
+medical specialty
+award category
+award category
+tv series
+time zone
+government office
+award category
+education institution
+topic
+education institution
+film
+film
+location
+institution
+award category
+event
+award category
+award category
+award category
+fictional character
+film
+location
+award category
+award category
+football team
+time zone
+award category
+education organization
+film
+football team
+award category
+event
+award category
+award category
+tv series
+award category
+film
+military service
+award category
+time zone
+award category
+award category
+person
+population
+legislative session
+award category
+topic
+award category
+location
+sports team
+award category
+location
+person
+award category
+award category
+award category
+award category
+award category
+football team
+award category
+time zone
+football team
+tv series
+person
+film
+award category
+award category
+football team
