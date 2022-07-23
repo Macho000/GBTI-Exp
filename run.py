@@ -22,14 +22,27 @@ def main(cfg : DictConfig) -> None:
     save_path = os.path.join(cfg.model.save_dir, cfg.data.name)
 
     # Initialize tokenizer
-    if cfg.model.pretrained_model == "Bart":
-        tokenizer = BartTokenizer.from_pretrained(cfg.model.tokenizer_path)
-    elif cfg.model.pretrained_model == "T5":
-        tokenizer = T5Tokenizer.from_pretrained(cfg.model.tokenizer_path)
+    if cfg.model.name == 'JointGT':
+        if cfg.model.pretrained_model == "Bart":
+            tokenizer = BartTokenizer.from_pretrained(cfg.model.tokenizer_path)
+        elif cfg.model.pretrained_model == "T5":
+            tokenizer = T5Tokenizer.from_pretrained(cfg.model.tokenizer_path)
+    elif cfg.model.name == "T5":
+        tokenizer = T5Tokenizer.from_pretrained(cfg.model.pretrained_model)
+    elif cfg.model.name == "Bart":
+        tokenizer = BartTokenizer.from_pretrained(cfg.model.pretrained_model)
+    else:
+        raise ValueError("No such model!")
 
-    data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-    train_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "train")
-    valid_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "valid")
+    # set dataset
+    if cfg.model.name == 'JointGT':
+        data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
+        train_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "train")
+        valid_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "valid")
+    elif cfg.model.name == 'T5':
+        data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
+        train_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "train")
+        valid_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "valid")
 
     # dataloader
     train_dataloader = EntityTypingJointGTDataLoader(cfg, train_dataset, "train")
@@ -60,6 +73,7 @@ def main(cfg : DictConfig) -> None:
 
     # training
     max_valid_loss = 0
+    early_stop_flg = False
     train_iterator = trange(int(cfg.model.max_epoch), desc="Epoch")
     log.debug('Starting training!')
     for count_epoch in train_iterator:
@@ -148,12 +162,15 @@ def main(cfg : DictConfig) -> None:
                         valid_loss = tmp
                     if valid_loss < max_valid_loss and cfg.model.early_stopping:
                         log.debug('early stop')
+                        early_stop_flg = True
                         break
                     else:
                         log.debug('epoch is %s' % count_epoch)
                         log.debug('validation loss is %s' % valid_loss)
                         torch.save(model.state_dict(), os.path.join(save_path, 'best_model.pkl'))
                         max_valid_loss = valid_loss
+        if early_stop_flg:
+            break
 
                     
 if __name__=='__main__':
