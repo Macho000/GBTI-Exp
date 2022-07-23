@@ -1,0 +1,3 @@
+YAGO43kET
+訓練では1-1データを用いた。
+出力はwikicat The Football League playersのようにアンダースコアは除外
