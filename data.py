@@ -365,8 +365,9 @@ class EntityTypingJointGTDataset(Dataset):
           type_name = type_name.replace("_", " ")
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
-      target_ids += copy.deepcopy(self.sep_ids)
-      target_text += ' ' + copy.deepcopy(" [sep]")
+      if self.cfg.model.append_sep_token:
+        target_ids += copy.deepcopy(self.sep_ids)
+        target_text += ' ' + copy.deepcopy(" [sep]")
 
 
     input_ids_ar, attn_mask_ar, target_ids, target_attn_mask, input_node_ids_ar, input_edge_ids_ar = \
@@ -801,8 +802,9 @@ class EntityTypingT5Dataset(Dataset):
           type_name = type_name.replace("_", " ")
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
-      target_ids += copy.deepcopy(self.sep_ids)
-      target_text += ' ' + copy.deepcopy(" [sep]")
+      if self.cfg.model.append_sep_token:
+        target_ids += copy.deepcopy(self.sep_ids)
+        target_text += ' ' + copy.deepcopy(" [sep]")
 
 
     input_ids_ar, attn_mask_ar, target_ids, target_attn_mask, input_node_ids_ar, input_edge_ids_ar = \
