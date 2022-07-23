@@ -124,7 +124,7 @@ def load_ET(path, e2id, t2id, r2id):
     return head, e_type, tail
 
 
-def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, train_data="ET_train.txt", valid_data="ET_valid.txt", test_data="ET_test.txt"):
+def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, data="ET_train.txt"):
     """
     loading graph from dataset
     
@@ -134,34 +134,20 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, train_data=
     e2id: dict
     r2id: dict
     loadET, loadKG: boolean
-    train_data: string e.g. ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-    valid_data: string e.g. ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_valid.txt
-    test_data: string e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+    data: string 
+    e.g. ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+    e.g. ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_valid.txt
+    e.g. ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
 
     Returns
     -------
     g: Graph
-    train_label: 2 dim tensor for representing relation between entity and entity type
-    valid_label: 2 dim tensor for representing relation between entity and entity type
-    test_label: 2 dim tensor for representing relation between entity and entity type
-
-    all_true: 2 dim tensor
-    train_id: 1 dim tensor for representing entity id having entity type
-    valid_id: 1 dim tensor
-    test_id: 1 dim tensor
+    label: 2 dim tensor for representing relation between entity and entity type
+    id_list: 1 dim tensor for representing entity id having entity type
     """
     # load graph with input features, labels and edge type
-    train_label = load_labels([os.path.join(data_dir, train_data)], e2id, t2id)
-    valid_label = load_labels([os.path.join(data_dir, valid_data)], e2id, t2id)
-    test_label = load_labels([os.path.join(data_dir, test_data)], e2id, t2id)
-    train_id = load_id(os.path.join(data_dir, train_data), e2id)
-    valid_id = load_id(os.path.join(data_dir, valid_data), e2id)
-    test_id = load_id(os.path.join(data_dir, test_data), e2id)
-    all_true = load_labels([
-        os.path.join(data_dir, train_data),
-        os.path.join(data_dir, valid_data),
-        os.path.join(data_dir, test_data),
-    ], e2id, t2id).half()
+    label = load_labels([os.path.join(data_dir, data)], e2id, t2id)
+    id_list = load_id(os.path.join(data_dir, data), e2id)
     if loadKG:
         head1, e_type1, tail1 = load_triple(os.path.join(data_dir, 'train.txt'), e2id, r2id)
     else:
@@ -184,4 +170,4 @@ def load_graph(data_dir, e2id, r2id, t2id, loadET=True, loadKG=True, train_data=
     else:
         g.ndata['id'] = torch.arange(len(e2id))
 
-    return g, train_label, valid_label, test_label, all_true, train_id, valid_id, test_id
+    return g, label, id_list

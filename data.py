@@ -37,11 +37,20 @@ class EntityTypingJointGTDataset(Dataset):
     self.num_rels = len(self.r2id)
     self.num_types = len(self.t2id)
     self.num_nodes = self.num_entity + self.num_types
-    self.g, self.train_label, self.valid_label, self.test_label, self.all_true, self.train_id, self.valid_id, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
+    if self.mode=="train":
+      self.g, self.train_label, self.train_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.train_dataset,
-                                                                       cfg.model.valid.valid_dataset,
+                                                                       cfg.model.train_dataset)
+    elif self.mode=="valid":
+      self.g, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
+                                                                       cfg.preprocess.load_ET, cfg.preprocess.load_KG,
+                                                                       cfg.model.valid.valid_dataset)
+    elif self.mode=="test":
+      self.g, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
+                                                                       cfg.preprocess.load_ET, cfg.preprocess.load_KG,
                                                                        cfg.model.test.test_dataset)
+    else:
+      raise ValueError("mode is train or valid or test")
 
     self.head_ids = self.tokenizer.encode(' [head]', add_special_tokens=False)
     self.rel_ids = self.tokenizer.encode(' [relation]', add_special_tokens=False)
@@ -350,6 +359,9 @@ class EntityTypingJointGTDataset(Dataset):
           type_name = type_name.split("/")[-1].replace("_", " ")
         else:
           type_name = type_name.split("/")[-1]
+      else:
+        if self.cfg.data.remove_under_score:
+          type_name = type_name.replace("_", " ")
       target_ids += self.tokenizer.encode(" {}".format(type_name), add_special_tokens=False)
       target_text += ' ' + copy.deepcopy(type_name)
 

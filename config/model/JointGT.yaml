@@ -15,7 +15,7 @@ max_epoch: 100 # default: 100
 train_batch_size: 8
 valid_batch_size: 8
 test_batch_size: 8
-num_workers: 8 # debug 0
+num_workers: 4 # debug 0
 temperature: 0.5
 n_gpus: 1
 max_input_length: 256
@@ -25,7 +25,7 @@ max_grad_norm: 1.0
 early_stopping: True
 optimizer:
   algorithm: Adam
-  learning_rate: 0.001
+  learning_rate: 0.0001
 valid:
   valid_dataset: ET_1_1_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
   valid_epoch: 1
@@ -33,7 +33,8 @@ valid:
   length_penalty: 1.0
   max_output_length: 128
   clean_up_spaces: True
-  save_outputs: False
+  save_outputs: True
+  save_one_batch: True
 test:
   test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
   save_outputs: True
