@@ -1,0 +1,8 @@
+wordnet family 108552138
+wordnet club 108227214
+wikicat Populated places in Los Angeles
+wikicat Football clubs in Chile
+wordnet club 108227214
+wikicat American women
+wordnet club 108227214
+wordnet football team 108080025

@@ -25,7 +25,7 @@ max_grad_norm: 1.0
 early_stopping: True
 optimizer:
   algorithm: Adam
-  learning_rate: 0.00001
+  learning_rate: 0.000001
 valid:
   valid_dataset: ET_1_1_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
   valid_epoch: 1
