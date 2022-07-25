@@ -1,5 +1,5 @@
 defaults:
-  - data/FB15kET # data/FB15kET or data/YAGO43kET
+  - data/YAGO43kET # data/FB15kET or data/YAGO43kET
   - model/JointGT
 preprocess:
   load_ET: False
