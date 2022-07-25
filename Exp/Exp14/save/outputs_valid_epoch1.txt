@@ -1,0 +1,8 @@
+/user/narphorium/people/topic /tv/tv_actor /film/person_or_entity_appearing_in_film /base/popstra/sww_base /music/artist /people/person
+/periodicals/newspaper_circulation_area /location/location /base/aareas/schema/us/county
+/award/award_nominated_work /media_common/netflix_title /film/film /base/academyawards/topic
+/sports/sports_team /soccer/football_team
+/user/narphorium/people/topic /book/author /people/deceased_person /tv/tv_actor
+/base/aareas/schema/administrative_area /periodicals/newspaper_circulation_area
+/user/narphorium/people/topic /tv/tv_actor /film/person_or_entity_appearing_in_film /base/popstra/sww_base /people/person /award/award_nominee
+/organization/organization /cvg/cvg_publisher /base/ontologies/ontology_instance /business/issuer /film/film_distributor /basetagit/concept

@@ -1,0 +1,8 @@
+/user/narphorium/people/topic /book/author /people/deceased_person /tv/tv_actor /film/actor /base/popstra/sww_base
+/periodicals/newspaper_circulation_area /location/location /base/aareas/schema/us/county
+/award/award_nominated_work /media_common/netflix_title /film/film /base/academyawards/topic
+/sports/sports_team /base/schemastaging/topic
+/user/narphorium/people/topic /book/author /people/deceased_person /tv/tv_actor
+/base/biblioness/bibs_location /location/location /user/alust/default_domain/processed_with_review_queue
+/user/narphorium/people/topic /book/author /people/deceased_person /tv/tv_actor /film/actor /base/schemastaging/person_extra /film_costumer_extra
+/organization/organization /cvg/computer_videogame_publisher /business/business_operation /base/skosbase/vocabulary_equivalent_topic /user/alust/default_domain/processed_with_review_queue

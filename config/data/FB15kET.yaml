@@ -3,5 +3,5 @@ data_dir: data
 overwrite: False
 is_unigraph: False
 change_mid_to_name: True
-lowest_level: True
-remove_under_score: True
+lowest_level: False
+remove_under_score: False
