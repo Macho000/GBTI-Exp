@@ -1,9 +1,9 @@
 cuda: False
 debug: True
 save_dir: save
-name: T5
+name: Bart
 train_dataset: ET_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-pretrained_model: bart-base # t5-small or t5-base
+pretrained_model: facebook/bart-base # facebook/bart-base
 append_another_bos: False
 append_sep_token: True
 is_in_edge: True
@@ -17,7 +17,7 @@ temperature: 0.5
 repetition_penalty: 1.5
 n_gpus: 0
 max_input_length: 256
-max_output_length: 128
+max_output_length: 256
 gradient_accumulation_steps: 1
 max_grad_norm: 1.0
 early_stopping: False

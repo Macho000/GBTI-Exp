@@ -7,10 +7,10 @@ import torch
 import torch.nn as nn
 from JointGT import JointGT
 from T5 import T5
-
+from Bart import Bart
 
 from transformers import BartTokenizer, T5Tokenizer
-from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader
+from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader, EntityTypingBartDataset, EntityTypingBartDataLoader
 
 from tqdm import tqdm
 from tqdm import trange
@@ -53,6 +53,14 @@ def main(cfg : DictConfig) -> None:
         # dataloader
         train_dataloader = EntityTypingT5DataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingT5DataLoader(cfg, valid_dataset, "valid")
+    elif cfg.model.name == 'Bart':
+        data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
+        train_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "train")
+        valid_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "valid")
+
+        # dataloader
+        train_dataloader = EntityTypingBartDataLoader(cfg, train_dataset, "train")
+        valid_dataloader = EntityTypingBartDataLoader(cfg, valid_dataset, "valid")
 
 
     # model
@@ -60,6 +68,8 @@ def main(cfg : DictConfig) -> None:
         model = JointGT(cfg)
     elif cfg.model.name == 'T5':
         model = T5(cfg)
+    elif cfg.model.name == 'Bart':
+        model = Bart(cfg)
     else:
         raise ValueError('No such model')
 
@@ -92,6 +102,9 @@ def main(cfg : DictConfig) -> None:
                     for tmp_id in range(9):
                         log.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
                 elif cfg.model.name == 'T5':
+                    for tmp_id in range(4):
+                        log.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
+                elif cfg.model.name == 'Bart':
                     for tmp_id in range(4):
                         log.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
 
