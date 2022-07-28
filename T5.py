@@ -1,4 +1,5 @@
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+import torch.nn as nn
 
 
 class T5(nn.Module):
@@ -21,15 +22,19 @@ class T5(nn.Module):
       raise ValueError("No such model!")
 
   def forward(self, batch, is_training:bool):
-    return self.model(input_ids=)
+    outputs = self.model(
+      input_ids=batch[0],
+      attention_mask=batch[1],
+      decoder_attention_mask=batch[3],
+      labels=batch[2])
+    return outputs[0]
 
 
-  def generate(self,batch)
+  def generate(self,batch):
     return self.model.generate(
-      input_ids=batch,
-      attention_mask=attention_mask,
-      cross_attention_mask=cross_attention_mask,
-      decoder_input_ids=decoder_input_ids,
-      decoder_attention_mask=decoder_attention_mask,
-      labels=labels,
+      input_ids=batch[0], 
+      attention_mask=batch[1], 
+      max_length=self.cfg.model.max_output_length,
+      temperature=1.0,
+      repetition_penalty=1.5
     )

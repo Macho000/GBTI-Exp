@@ -601,10 +601,6 @@ class EntityTypingT5Dataset(Dataset):
         nodes.extend([entity_tokenized_ids_dict[tail][1]] * len(entity_tokenized_ids_dict[tail][0]))
         edges.extend([-1] * len(entity_tokenized_ids_dict[tail][0]))
 
-        if entity_tokenized_ids_dict[head][1] < len(adj_matrix) and entity_tokenized_ids_dict[tail][1] < len(adj_matrix):
-                    adj_matrix[entity_tokenized_ids_dict[head][1]][entity_tokenized_ids_dict[tail][1]] = cnt_edge
-
-        cnt_edge += 1
     assert len(input_ids) == len(nodes) == len(edges)
     return input_ids, input_text, nodes, edges
 
@@ -700,9 +696,8 @@ class EntityTypingT5Dataset(Dataset):
     Batch: list
     [0]: input_ids
     [1]: attn_mask
-    [2]: decoder_input_ids
+    [2]: labels (target ids) 
     [3]: decoder_attention_mask
-    [4]: labels (target ids) 
     """
 
     if self.mode=="train":
@@ -778,7 +773,7 @@ class EntityTypingT5Dataset(Dataset):
     # get entity_tokenized_ids relation_tokenized_ids and numbering
     entity_tokenized_ids_dict, relation_tokenized_ids_dict = self.get_change_per_sample(triples, entities_set, relations_set)
 
-    input_ids, input_text, node_ids, edge_ids, cnt_edges, adj_matrix = self.linearize(triples, entity_tokenized_ids_dict,  relation_tokenized_ids_dict, self.head_ids, self.rel_ids, self.tail_ids, cnt_edge, adj_matrix)
+    input_ids, input_text, _, _ = self.linearize(triples, entity_tokenized_ids_dict,  relation_tokenized_ids_dict, self.head_ids, self.rel_ids, self.tail_ids)
 
     # create target_ids
     if self.mode=="train":
@@ -807,65 +802,31 @@ class EntityTypingT5Dataset(Dataset):
         target_text += ' ' + copy.deepcopy(" [sep]")
 
 
-    input_ids_ar, attn_mask_ar, target_ids, target_attn_mask, input_node_ids_ar, input_edge_ids_ar = \
+    input_ids_ar, attn_mask_ar, target_ids, target_attn_mask, _, _ = \
             self.prep_data(target_ids, input_ids, self.add_bos_id, self.graph_ids,
                               self.text_ids, node_ids, edge_ids)
 
-    node_length_ar = max(input_node_ids_ar) + 1
-    edge_length_ar = max(input_edge_ids_ar) + 1
-
-    def masked_fill(src, masked_value, fill_value):
-        """
-        ids within src will be replaced by fill_value conditioned on id==masked_value
-
-        Parameter
-
-        src: list (e.g. [-1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, -1, -1, -1, ...])
-        masked_value: int (e.g. -1)
-        fill_value: int (e.g. 50)
-
-        Return
-
-        list (e.g. [50, 50, 50, 50, 50, 50, 50, 50, 0, 0, 0, 50, 50, 50, ...])
-        """
-        return [src[src_id] if src[src_id] != masked_value and src[src_id] < fill_value else fill_value for src_id
-                in range(len(src))]
-
-    input_node_ids_ar, input_edge_ids_ar = masked_fill(input_node_ids_ar, -1, self.cfg.model.max_node_length), \
-                                            masked_fill(input_edge_ids_ar, -1, self.cfg.model.max_edge_length)
-
-    def masked_fill_matrix(adj_matrix_input, masked_value, fill_value):
-        """
-        ids within src will be replaced by fill_value conditioned on id==masked_value
-
-        Parameter
-
-        src: list (e.g. [[-1, 0, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], [-1, -1, -1, -1, -1, -1, -1, -1, -1, ...], ...])
-        masked_value: int (e.g. -1)
-        fill_value: int (e.g. 60)
-
-        Return
-
-        list (e.g. [[60, 0, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], [60, 60, 60, 60, 60, 60, 60, 60, 60, ...], ...])
-        """
-        adj_matrix_tmp = copy.deepcopy(adj_matrix_input)
-        for a_id in range(len(adj_matrix_tmp)):
-            for b_id in range(len(adj_matrix_tmp)):
-                if adj_matrix_tmp[a_id][b_id] == masked_value or adj_matrix_tmp[a_id][b_id] > fill_value:
-                    adj_matrix_tmp[a_id][b_id] = fill_value
-        return adj_matrix_tmp
-
-    adj_matrix_ar = masked_fill_matrix(adj_matrix, -1, self.cfg.model.max_edge_length)
-
-    assert len(input_ids_ar) == len(attn_mask_ar) == self.cfg.model.max_input_length == len(input_node_ids_ar) == len(
-        input_edge_ids_ar)
+    assert len(input_ids_ar) == len(attn_mask_ar)
     assert len(target_ids) == len(target_attn_mask) == self.cfg.model.max_output_length
 
     input_ids_ar = torch.LongTensor(input_ids_ar)
     attn_mask_ar = torch.LongTensor(attn_mask_ar)
-    decoder_ids = torch.LongTensor(target_ids)
+    labels = torch.LongTensor(target_ids)
     decoder_attn_mask = torch.LongTensor(target_attn_mask)
-    labels = torch.LongTensor(input_node_ids_ar)
 
-    return input_ids_ar, attn_mask_ar, decoder_ids, decoder_attn_mask, \
-            labels
+    return input_ids_ar, attn_mask_ar,  labels, decoder_attn_mask
+            
+class EntityTypingT5DataLoader(DataLoader):
+
+  def __init__(self, cfg, dataset, mode):
+    if mode=="train":
+      sampler = RandomSampler(dataset)
+      batch_size = cfg.model.train_batch_size
+    elif mode=="valid":
+      sampler = SequentialSampler(dataset)
+      batch_size = cfg.model.valid_batch_size
+    elif mode=="test":
+      sampler = SequentialSampler(dataset)
+      batch_size = cfg.model.test_batch_size
+
+    super(EntityTypingT5DataLoader, self).__init__(dataset, sampler=sampler, batch_size=batch_size, num_workers=cfg.model.num_workers)

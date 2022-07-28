@@ -1,23 +1,20 @@
 cuda: False
 debug: True
 save_dir: save
-name: JointGT
-tokenizer_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
-model_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
+name: T5
 train_dataset: ET_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-pretrained_model: Bart # Bart or T5
+pretrained_model: t5-base # t5-small or t5-base
 append_another_bos: False
 append_sep_token: True
 is_in_edge: True
 is_out_edge: True
-max_node_length: 50
-max_edge_length: 60
 max_epoch: 1 # default: 100
 train_batch_size: 1
 valid_batch_size: 4
 test_batch_size: 4
 num_workers: 0 # debug
 temperature: 0.5
+repetition_penalty: 1.5
 n_gpus: 0
 max_input_length: 256
 max_output_length: 128
