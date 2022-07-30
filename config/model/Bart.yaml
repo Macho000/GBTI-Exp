@@ -1,0 +1,38 @@
+cuda: True
+debug: False
+save_dir: save
+name: Bart
+train_dataset: ET_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
+pretrained_model: facebook/bart-base # facebook/bart-base
+append_another_bos: False
+append_sep_token: True
+is_in_edge: True
+is_out_edge: True
+max_epoch: 1 # default: 100
+train_batch_size: 8
+valid_batch_size: 8
+test_batch_size: 8
+num_workers: 0 # debug
+temperature: 0.5
+repetition_penalty: 1.5
+n_gpus: 1
+max_input_length: 256
+max_output_length: 256
+gradient_accumulation_steps: 1
+max_grad_norm: 1.0
+early_stopping: False
+optimizer:
+  algorithm: Adam
+  learning_rate: 1.0e-04
+valid:
+  valid_dataset: ET_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
+  valid_epoch: 1
+  num_beams: 5
+  length_penalty: 1.0
+  max_output_length: 128
+  clean_up_spaces: True
+  save_outputs: True
+  save_one_batch: True
+test:
+  test_dataset: ET_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+  save_outputs: True
