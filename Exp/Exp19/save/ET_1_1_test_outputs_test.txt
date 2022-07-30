@@ -1,0 +1,4584 @@
+language
+sports team
+education
+film
+award category
+award category
+film
+adjoining
+award category
+/location/country-capital
+award category
+gbo
+award category
+award category
+award category
+genre
+award category
+olympics
+education
+film
+airport
+sports team
+-common/topic
+ad agency
+award category
+award category
+cancer of the oesophageal duct [relation]
+GB and NI [relation] /location/location
+award category
+award category
+award category
+ncaa tournament
+education
+group
+hud_county place
+award category
+award category
+Authour [relation]
+genre
+influence node
+academic
+award category
+people/marriage union type
+swiss national geographic area
+film
+film
+award category
+award category
+award category
+sports team
+award category
+award category
+disease
+people/marriage union type
+music
+film
+adjoining
+award category
+award category
+tv
+administrative division capital
+people/places_lived.
+disease
+annotation category
+award category
+education
+hud_county-place
+award category
+genre
+award category
+award category
+award category
+award category
+administrative division capital
+award category
+film
+award category
+award category
+academic
+disease
+military coalition
+film
+UNESCO world heritage sites
+ad-supported version
+film
+acclaim
+adjoining
+film
+Olympic track
+award category
+award category
+film
+award category
+bibs_location
+film
+award category
+award category
+film
+people/profession
+sports team
+academic education
+academies
+award category
+award category
+symptom
+-a-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se-m-c-se
+award category
+award category
+award category
+award category
+award category
+administrative division capital structure
+tsegaran
+award category
+academic
+award category
+award category
+Olympic athletics
+award category
+genre
+award category
+academic
+Olympic track and field
+award category
+award category
+award category
+film category
+award category
+ad-hoc committee
+award category
+disease
+film
+team
+film
+mlb sports
+academic
+award category
+sports team
+award category
+-second level division
+award category
+adjoining relations
+award category
+award category
+award category
+hud_county place
+genre
+travel/travel-destination
+award category
+award category
+award category
+administrative division
+education
+award category
+award category
+film
+award category
+people/places_lived.
+football team
+award category
+ad agency
+adjoining
+hud_county-place
+tv network
+sports league draft
+annotation
+award category
+award category
+film
+genre
+award category
+award category
+film
+team
+music/artist-founded
+award category
+award category
+cause
+visual art
+award category
+award category
+film
+administrative division capital
+film
+twinnedtowns
+music
+people/person-ethnicity [tail]
+artist
+award category
+sports league draft picks
+award category
+award category
+education
+award category
+film
+film
+sports team
+sports team
+tsegaran
+award category
+film
+tv station
+award category
+award category
+track
+award category
+award category
+aareas
+award category
+award category
+education
+Olympic medals
+sports team
+/location/location-mailing_address/citytown
+award category
+tv network
+team
+award category
+award category
+administrative area
+sports team
+award category
+award category
+people with this profession
+film
+ad
+award category
+athletes.
+film
+award category
+ad-supported.com
+influence node
+award category
+award category
+award category
+travel destination
+award category
+award category
+award category
+award category
+academe
+award category
+film
+award category
+team
+tv series
+award category
+sports team
+adjoining
+film
+award category
+adjoining
+film
+genre
+bibs_location
+Olympic medal
+film
+award category
+award category
+award category
+employment contract
+people/ethnicity
+annotation
+birth
+award category
+school
+sports team
+administrative division
+legislative session
+film
+adjoining
+education
+award category
+cultural event
+award category
+tv network
+film
+people/profession
+award category
+influence node
+award category
+celebrity
+film
+award category
+award category
+film
+cvg/computer-videogames
+award category
+award category
+award category
+a national event
+sports team
+movie
+administrative division capital
+award category
+award category
+cancer
+film
+adjoining
+award category
+award category
+genre
+award category
+crime type
+award category
+/location/country
+award category
+administrative division
+disease agent
+people_with-this_profession
+ad-supported category
+award category
+/location/organization/place_founded
+award category
+award category
+award category
+ncaa men's basketball tournament
+sports team
+administrative division
+drug
+award category
+award category
+award category
+award category
+award category
+bibs_location
+award category
+births in the uk: more than 200,000 people have registered for a marriage union.
+award category
+award category
+adjoining
+award category
+sports teams
+people with this profession
+bibs
+award category
+sports team
+influenced by influence
+/location/location/contains
+people with this profession
+cause of death
+Olympic swimming
+food
+sports team
+education
+award category
+award category
+sports event
+sports team
+education
+award category
+film
+award category
+medal category
+award category
+MLB All-Star Games [graph]
+sports team
+award category
+film
+sports league
+ac.ua's website
+genre
+disease
+award category
+sports team
+award category
+film
+award category
+people_with-this-profession
+tv network
+award category
+sports team
+award category
+award category
+nutrition
+tv network
+business
+award category
+award category
+award category
+award category
+influenced by a influence node
+education
+academic
+award category
+hud-county-accounty.gov
+academics
+athletes
+hud_county-place of death
+film
+award category
+UNESCO world heritage sites
+award category
+award category
+award category
+sports league
+education
+genre
+athletes.
+ncaa tournament
+sports roster position
+genre
+sports team
+award category
+award category
+award category
+sports team
+death
+award category
+film
+award category
+award category
+award category
+academics
+award category
+music
+sports team
+award category
+protected_sites/cultural-site-designation
+food
+tv star dubbing performance
+award category
+business/employment_tenure
+sports team
+award category
+film
+sports team
+medals
+annotation
+award category
+award category
+award category
+award category
+team
+people/person-profession
+college
+sports team
+award category
+sports team
+award category
+people/ethnicity
+award category
+film
+award category
+award category
+award category
+sports league
+tv actor
+award category
+award category
+food nutrition
+adjoining
+athletes
+sports team
+award category
+award category
+film
+award category
+award category
+bibs_location
+sports team
+education
+influence node
+/m/08mbj32
+sports team
+award category
+annotation
+bibs
+award category
+award category
+a college
+award category
+-m/08mbj32
+disease
+adjoining
+award category
+film
+award category
+award category
+sports league
+genre
+genre
+-location
+sports team
+location
+film
+-education
+computer/os-compatibility/operating_system
+award category
+academies
+hudcountyplace.gov
+award category
+award category
+award category
+medals
+award category
+music/artist/label
+award category
+award category
+nutrition
+award category
+employment tenure
+award category
+film
+genre
+award category
+film
+award category
+sports league draft pick
+hud county
+/m/08mbj5d
+award category
+comedy group
+award category
+a national association of marriage and legal services
+award category
+award category
+film
+award category
+genre
+location
+athletes.
+airport
+athletes
+award category
+hud-foreclosures.gov
+award category
+award category
+award category
+award category
+award category
+award category
+award category
+genre
+sports team
+athletes
+military combat group
+sports team
+administrative parent
+aareas
+sports team
+award category
+athletes
+taxonomy
+sports team
+award category
+acclaim.com
+people/places_lived./people/place-lived/location
+award category
+annexation of the Dominican Republic
+visual art period-movement
+academics
+award category
+VOiP
+award category
+award category
+award category
+college
+award category
+award category
+award category
+a college
+academics
+influenced by a people with this profession
+-common category
+sports team
+award category
+award category
+genre
+tv series
+music
+annotation
+birth
+sports league
+education
+organization
+adjoining relations
+award category
+organization type
+military conflict
+sports team
+film
+award category
+-twilight zone
+award category
+award category
+organization/organization_relationship/child.html
+film
+award category
+bibs_location
+business operations
+award category
+award category
+award category
+award category
+adjoining
+award category
+award category
+adjoining
+award category
+/m-08mbj5d
+award category
+award category
+award category
+award category
+legislative session
+sports team
+sports team
+location
+academics
+school category
+film
+award category
+award category
+award category
+sports team
+film
+bibs
+award category
+time zone
+education
+ad-supported.com
+Olympic athletics
+annotation
+award category
+award category
+sports team
+sports team
+people_with this profession
+sports team
+academic
+education
+education
+tv network
+bibslocation.com
+award category
+award category
+tv series
+taxonomy
+cbos
+adjoining
+award category
+film
+award category
+school category
+sports team
+tv network
+award category
+award category
+royal family of Japan
+sports team
+Olympic olympics
+award category
+genre
+genre
+adjoining
+accrediting institution
+administrative area
+film
+award category
+film
+ITALY
+film
+education
+award category
+award category
+film
+unions
+award category
+travel destination
+people/place_of-birth
+award category
+organization board
+board_membership
+academics
+tv awards
+hudcounty place
+/location/country
+celebrity
+award category
+film
+organization
+administrative division
+award category
+award category
+award category
+award category
+bridge type
+aareas
+administrative division capital
+event
+film
+hudcountyplace.gov
+sports league draft picks
+award category
+award category
+film/performance
+academics
+genre
+employment contract
+award category
+film
+award category
+government position
+film
+genre
+ad-supported content
+genre
+sports coach
+film
+/location/country
+award category
+annotation
+award category
+award category
+award category
+groucho variety
+award category
+award category
+administrative division capital
+film
+adjoining
+academics
+legislative session
+award category
+film
+location
+political party
+tv series
+academics
+hud_county place
+award category
+royal line
+bibslocation.common
+military conflict
+annotation
+sports team
+award category
+/location/location
+genre
+architectural style
+film
+film
+film
+award category
+entity
+award category
+award category
+award category
+film
+genre
+aviation
+sports team
+award category
+a college
+award category
+award category
+sports team
+award category
+award category
+drug
+school
+film
+acoustic group
+film
+character performance
+award category
+award category
+organization
+award category
+award category
+award category
+award category
+award category
+award category
+film
+award category
+film/performance
+adjoining
+people/person-ethnicity [tail]
+film
+award category
+business/acquisition acquisition
+film
+award category
+award category
+award category
+administrative division
+award category
+fictional character creator
+genre
+award category
+award category
+award category
+mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-mlb-
+athletes
+sports team
+award category
+people with this type
+award category
+sports team
+award category
+award category
+music
+award category
+university
+sports league draft picks
+hud_county-places
+award category
+adjoining
+film
+people with this profession
+academics
+award category
+sports league
+genre
+award category
+location
+award category
+sports team
+education/education
+people/profession-specialization_of [tail] Rt Rev'd (relation) /people/profession
+award category
+film
+sports team
+film
+october 1
+annotation
+award category
+award category
+award category
+sports league draft pick
+award category
+performance
+sports league
+award category
+music
+performance
+education
+film
+genre
+award category
+hud county office
+award category
+UNESCO world heritage sites
+genre
+award category
+people/place_of-birth
+award category
+displaced persons
+award category
+award category
+people/people_with-this_profession
+leadership
+award category
+legislative session
+education
+film
+award category
+government position
+award category
+award category
+award category
+academic branch
+education
+award category
+academic degree
+academies
+award category
+award category
+award category
+employment contract
+film
+award
+award category
+administrative division
+award category
+ad genre
+award category
+award category
+award category
+people_with-this_profession
+film
+tv series
+sports team
+award category
+music
+genre
+sports team
+genre
+education
+award category
+award category
+sports team
+award category
+genre
+award category
+news report
+award category
+genre
+award category
+GB and NI [relation] /location/location-containedby (tail)
+award category
+award category
+adjoining
+sports team
+award category
+award category
+award category
+academics
+government position
+award category
+business operations
+award category
+athletes
+/location
+film
+sports team
+award category
+award category
+award category
+film
+award category
+organization
+award category
+film
+award category
+group
+sports team
+aareas
+athletes
+bibs_location
+legislative session
+award category
+ad-supported film
+award category
+award category
+bibs
+a college
+award category
+genre
+award category
+film
+genre
+film
+measurement unit
+sports team
+people with this type
+sports team
+asian americans of all races [graph]
+award category
+award category
+award category
+film
+award category
+film
+award category
+award category
+award category
+influence
+award category
+film
+adjoining
+award category
+adjoining
+people/person-profession
+Olympic track and field [relation]
+team
+academic
+award category
+tv series
+film
+award category
+award category
+award category
+adjoining
+award category
+film
+influence node
+award category
+award category
+art form
+award category
+award category
+award category
+tv series
+award category
+/location/location
+people/profession
+award category
+award category
+award category
+adjoining
+film
+nutrition
+award category
+film
+award category
+military casualties
+education
+academic academies
+award category
+tv program
+award category
+award category
+award category
+adjoining
+award category
+award category
+award category
+award category
+education
+adjoining
+hudcountyplace.com
+award category
+vacation choice
+ad-hoc.com
+award category
+tsegaran
+award category
+award category
+tv program
+award category
+award category
+award category
+award category
+military conflict group
+award category
+sports team
+z
+court
+award category
+airport
+award category
+adjoining
+film
+sports team
+award category
+sports league
+award category
+award category
+award category
+music
+film
+award category
+award category
+people/places_lived.
+award category
+taxonomy
+award category
+award category
+award category
+alumni
+csu-moonstar.com
+tv program
+film
+SA
+award category
+location
+award category
+film
+award category
+adjoining
+film
+genre
+award category
+ad-supported category
+hud.gov
+film
+sports team
+award category
+UNESCO world heritage sites
+genre
+businesswomen [relation] /people-profession_specializations
+film
+sports roster position
+genre
+/location/location/containedby
+award category
+sports team
+Olympic track and field [relation]
+film
+athletes
+sports league draft picks
+award category
+people born in the UK.
+film
+sports team
+tv network
+award category
+award category
+award category
+film
+award category
+hud_county place
+religion
+award category
+award category
+sports team
+diet
+award category
+academic program
+sports team
+-address
+-marriage union type
+award category
+sports team
+award category
+annotation_category
+/people/places_lived.
+award category
+award category
+education
+administrative area
+sports team
+bibslocation.common-topic
+adjoining
+GB and NI [relation]
+sports team
+character performance
+school
+tv program
+genre
+military conflict
+Authour
+adjoining
+performance/group
+athletes.
+award category
+award category
+film
+award category
+film
+film
+award category
+award category
+film
+school
+ad-hoc committee
+academics
+disease
+sports team
+award category
+people/cause_of-death
+sports team
+/location/location
+award category
+sports team
+-topic
+award category
+GB and NI [relation] /location/location-containedby (tail)
+location
+organization type
+film
+crime type
+film
+award category
+sports team
+nutrition
+hud-foreclosure
+award category
+award category
+award category
+award category
+genre
+/m/08mbj32
+ad-supported business
+movie
+military command
+TUAS [text] TUAS [relationship]
+annotation
+award category
+award category
+sports team
+film
+award category
+award category
+film
+award category
+nutrition
+award category
+award category
+award category
+film
+genre
+annotation category
+award category
+annotation
+film
+-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two-minute-two
+award category
+film
+organization
+annotation
+award category
+award category
+award category
+/common-topic-webpage
+academics
+award category
+government position
+adjoining
+sports team
+people/profession
+award category
+nutrition
+administrative divisions
+film
+genre
+sports team
+award category
+award category
+academic
+award category
+sports team
+unions of this type
+adjoining capital structure
+award category
+film
+award category
+time zone
+film
+award category
+sa-global.com
+award category
+award category
+education
+film
+education
+cancer
+music
+a liberal arts degree
+language
+award category
+award category
+tv series
+genre
+award category
+phone number
+award category
+os compatibility/operating system
+award category
+award category
+award category
+award category
+religion
+influence
+ag
+award category
+adjoining relations
+military command
+award category
+award category
+location
+sports team
+sports team
+award category
+award category
+film
+location
+award category
+award category
+ad-hoc
+location
+business unit
+ad-hoc
+film
+sports team
+influenced by
+-fc.gov/sbc/sbc/sbc/sbc_sbc.htm
+sports team
+military conflict
+university
+football team
+film
+award category
+administrative area
+film
+film
+tv
+military conflict
+sports team
+football
+business
+organization
+brand
+award category
+sports team
+film
+Olympic sports
+award category
+award category
+military conflict
+award category
+award category
+award category
+award category
+award category
+tv program
+award category
+genre
+sports team
+award category
+genre
+author/school_or-movement
+tv series
+academics
+award category
+sports league draft
+UNESCO world heritage sites
+academics
+award category
+administrative division capital structure
+award category
+sports league draft
+award category
+award category
+team
+sports team
+award category
+congressional senate
+sports league
+people/person-profession
+award category
+government position
+film
+award category
+academics
+education/education
+UNESCO world heritage sites
+award category
+artist
+Olympic track
+award category
+award category
+-location
+award category
+-address
+award category
+award category
+sports league
+academic institution
+disease
+athletes
+award category
+administrative area
+award category
+award category
+organization
+award category
+tv series
+award category
+administrative area
+film
+genre
+award category
+award category
+award category
+sports team
+music/artist/label
+people/person/nationality [tail]
+award category
+award category
+award category
+award category
+adjoining
+genre
+administrative area
+performance category
+film
+award category
+award category
+team
+adjoining
+sports team
+award category
+award category
+genre
+hud_county place
+people/places_lived./people-place_of_birth
+ncaa tournament
+sports league
+sports team
+nutrition
+education
+sports team
+athletes
+award category
+award category
+adjoining
+religion
+award category
+award category
+sports team
+business
+hud county
+sports league
+sports team
+award category
+genre
+award category
+award category
+award category
+sports team
+ncaa men's basketball tournament
+academic
+award category
+genre
+111th congress
+people/person-profession
+aareas
+award category
+military conflict
+film
+team
+genre
+aareas
+film/performance
+academic
+award category
+c-sci-fc.com/cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-cbs-c
+award category
+award category
+people born in the year 1890.
+military conflict
+award category
+sports league draft picks
+award category
+award category
+sports team
+award category
+award category
+sports team
+award category
+education
+education
+film/performance
+film
+film
+award category
+ac.uk
+administrative parent
+award category
+aareas
+award category
+award category
+award category
+adjoining
+hud_county place
+award category
+administrative division
+genre
+security force [graph] /dataworld/gardening_hint/split_to
+bridge type
+award category
+award category
+award category
+sports team
+award category
+sports team
+adjoining
+cancer
+award category
+tv star dubbing performance
+adjoining
+film
+academia
+award category
+award category
+genre
+acme
+award category
+film
+film
+tv program
+award category
+political party
+sports team
+artist
+film
+award category
+education
+sports
+sports league draft
+academic
+award category
+adjoining
+people/nationality
+adjoining
+film
+sports team
+award category
+award category
+administrative division capital of.
+award category
+film
+film
+government position
+award category
+award category
+award category
+film
+award category
+annotation
+award category
+award category
+adjoining
+award category
+hudcounty.gov
+award category
+award category
+award category
+film
+genre
+sports team
+academic discipline
+award category
+award category
+award category
+athletes
+government position
+award category
+annotation
+tv series
+film
+philosopher
+education/education
+ad-hoc.com
+adjoining
+disease
+award category
+adjoining
+festival
+genre
+administrative divisions
+award category
+award category
+political party
+annotation
+award category
+award category
+award category
+genre
+film
+award category
+adobe.com
+dna screening
+film
+award category
+award category
+/baseball/lifetime_batting-statistics/starting season
+award category
+athletes
+genre
+ad
+award category
+education
+tv series
+sports team
+genre
+sports league draft picks
+snl season
+academics
+adjoining relations
+award category
+award category
+award category
+award category
+award category
+university president
+sports team
+adverb
+location
+film
+hudcountyplace
+adjoining
+award category
+criminal sentence
+award category
+sports team
+award category
+award category
+award category
+LOCODE:USHNL
+political party
+award category
+sports league
+film
+education
+campus
+administrative division
+military service
+a natural or cultural site listing
+award category
+award category
+award category
+award category
+award category
+film
+academics
+government
+accrediting
+film
+genre
+award category
+film
+award category
+award category
+genre
+award category
+sports league draft pick
+film
+tv
+award category
+award category
+film/dubbing performance
+academic
+sports team
+film
+film
+award category
+ad-hoc.com
+sports league draft picks
+education
+award category
+award category
+award category
+award category
+-a-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n-o-n
+bibs
+people/person-profession
+commercial aircraft model
+award category
+sports team
+award category
+sports
+sports team
+bibs
+award category
+/people/place_of-birth
+nutrition
+award category
+film
+geography
+award category
+ad-supported web page
+team
+film
+sports team
+genre
+award category
+education
+award category
+award category
+people/person-profession
+award category
+award category
+education
+tsegaran
+academic
+award category
+adjoining
+award category
+tv program
+geography
+sports team
+award category
+award category
+award category
+film
+music
+film
+administrative division capital
+team
+award category
+adaptation/adapted_from
+iucn-asp.gov/protected_sites
+legislative session
+taxonomy
+award category
+award category
+swiss territorial waterway
+education/educational-institution
+annotation
+music
+fcc.com: time zone
+military casualties
+film
+location
+award category
+ad-hoc regional
+education
+athletes
+award category
+award category
+award category
+adjoining
+award category
+location
+award category
+award category
+accrediting institution
+adjoining
+award category
+award category
+film
+award category
+award category
+sports
+award category
+military conflict
+tv
+people/places_lived.
+military conflict
+administrative divisions
+os-x [relation]
+award category
+award category
+film
+award category
+people/person-profession
+administrative division capital structure
+award category
+-twilight zone
+sports league
+academics
+athletes
+award category
+employment contract
+oclu-ii.com
+award category
+administrative divisions
+instrument
+GB and NI [relation]
+genre
+breeds
+award category
+film
+film
+protected site
+sports team
+language
+film
+award category
+award category
+sports team
+award category
+award category
+education
+award category
+adjoining relations
+award category
+award category
+annotation
+award category
+film
+bibslocation.com
+award category
+sports league
+award category
+genre
+film
+series
+academics
+people/person-profession
+award category
+award category
+tv star dubbing performance
+award category
+award category
+academics
+award category
+award category
+academics
+film
+award category
+administrative divisions
+award category
+film
+film
+genre
+award category
+sports team
+award category
+disease
+festival
+annotation_category
+award category
+people with this profession
+ad-free dating
+award category
+award category
+film
+ad-hoc.com
+business operations
+award category
+people/profession
+award category
+award category
+influence
+ad-tech
+art form
+business category
+sports team
+ad-hoc committee
+award category
+award category
+adjoining
+location
+adolescent brain tumors
+nutrition
+award category
+governmental agency
+tsegaran film
+academics
+hud_county place
+annotation
+royal family of japan
+award category
+secret society
+military service
+award category
+award category
+film
+sports team
+award category
+award category
+sports team
+cctv station
+film
+genre
+award category
+award category
+film
+award category
+tv series
+location
+academics
+award category
+administrative divisions
+people/person-profession
+award category
+film
+ad-hoc committee
+award category
+bibs_location
+award category
+award category
+influence union type
+sgn.exe
+award category
+ctv station
+hud_county
+award category
+award category
+adjoining
+ad-supported.com
+sports team
+sports team
+tv series
+disease
+film
+award category
+award category
+administrative divisions
+award category
+people/places_lived.
+award category
+award category
+administrative division
+genre
+film
+award category
+award category
+cause of death
+award category
+film
+military casualties
+award category
+award category
+government position
+award category
+award category
+award category
+film
+adjoining
+tsegaran
+bibs
+people/places_lived./people/place_lived/location
+genre
+award category
+people with this profession
+award category
+sports team
+award category
+award category
+award category
+people/places_lived.
+genre
+award category
+hud_county-place/county
+award category
+team
+music
+award category
+film
+award category
+cancer
+group
+award category
+film
+sports team
+nutrition
+film
+/dataworld/gardening_hint/split_to [graph]
+award category
+genre
+award category
+award category
+sports league draft
+award category
+award category
+film
+sports team
+award category
+award category
+athletes
+music/artist/label
+awards
+award category
+award category
+award category
+adjoining
+film
+genre
+award category
+award category
+film
+film
+award category
+a college
+industry
+award category
+award category
+/location/country
+film
+genre
+award category
+adjoining
+film
+hudcounty
+award category
+music
+film
+award category
+adjoining relations
+adjoining
+/m/08mbj5d
+sports team
+adaptation/adapted_from [tail] /media_common
+award category
+art_period_movement/associated_artists [graph]
+award category
+adjoining capital relations
+award category
+award category
+unions
+film
+award category
+sports team
+academic
+people/places_lived.
+acquisition
+academics
+sports team
+award category
+award category
+athletes.
+government
+award category
+award category
+award category
+film
+award category
+film
+legislative session
+/medicine/disease/treatments
+film
+ad-focused
+award category
+award category
+award category
+award category
+tsegaran
+film
+genre
+film
+project_participation/role
+award category
+performance
+family
+award category
+genre
+people/person-ethnicity
+business
+Olympic track and field [relation] olympics
+people/profession
+film
+award category
+award category
+film
+film/performance
+education
+-annotation
+award category
+sports team
+celebrity
+award category
+adjoining
+adjoining relations
+genre
+award category
+award category
+bibslocation.common
+award category
+government position
+award category
+award category
+Olympic track
+sports team
+award category
+film
+award category
+award category
+award category
+sports team
+award category
+award category
+award category
+award category
+degree
+nutrition
+award category
+name source
+sports team
+sports league
+award category
+music
+award category
+film/starring./film/performance
+award category
+award category
+adjoining
+disease
+GB and NI [relation]
+award category
+annotation category
+award category
+award category
+award category
+sports team
+award category
+twinnedtowns
+airport
+award category
+award category
+genre
+award category
+award category
+sports team
+/location/location-containedby [tail] Transport in Washington
+sports team
+education
+genre
+genre
+group
+award category
+film
+film
+award category
+award category
+people/places_lived.com
+award category
+genre
+government position
+award category
+military conflict
+award category
+academies
+award category
+award category
+location
+award category
+award category
+sports team
+people/person-profession
+Speceis
+event
+people/person-profession
+film
+sports team
+award category
+people birthed in england on november 1, 1893 [relation]
+UNESCO world heritage sites
+award category
+genre
+music
+leadership
+military conflict
+/astronomy/orbital_relationship
+adjoining
+award category
+award category
+team
+award category
+msc.com
+film
+award category
+administrative division capital-of./location
+/location/location
+disease
+school principal
+marriage union type
+astrology
+religion
+award category
+award category
+bibs_location
+award category
+hud_county-place.gov
+award category
+award category
+award category
+award category
+/location/location
+people with this profession
+award category
+award category
+award category
+award category
+afghanistan
+military casualties
+academics
+-address
+award category
+film
+GB and NI [relation] /location/location-containedby (tail)
+award category
+award category
+award category
+award category
+education/education
+sports team
+location
+acoustic music
+award category
+award category
+team
+sports team
+academic arts
+award category
+organization
+award category
+film
+project_participation/role
+sports team
+film
+education
+bibslocation./common-topic
+award category
+sports team
+film
+award category
+film
+award category
+education
+award category
+sports team
+film
+award category
+film
+os
+award category
+sports team
+award category
+award category
+film
+film
+people/profession
+character powers or abilities
+tsegaran
+team
+award category
+people/profession
+sports league draft picks
+film
+administrative division
+sports team
+administrative area
+/people/profession
+award category
+academics
+award category
+award category
+genre
+award category
+adjoining
+genre
+award category
+award category
+academy
+language
+food nutrition science
+award category
+annotation
+award category
+award category
+award category
+/music/artist/label
+award category
+award category
+nutrition
+a college
+genre
+nutrition
+award category
+award category
+award category
+football roster position
+film
+award category
+hudcounty
+award category
+film
+school type
+award category
+award category
+a town
+/location/location
+award category
+award category
+education
+adjoining
+hud_county-place/place
+award category
+genre
+award category
+award category
+fictional universe
+ad-hoc committee
+adjoining
+award category
+business/employment_tenure
+sports team
+sports team
+award category
+genre
+sports team
+people/places_lived./people/place-of-birth [relation]
+adobe name
+award category
+award category
+sports league
+academics
+award category
+/location/location
+government agency
+award category
+award category
+annotation_category
+award category
+film
+marriage union type
+genre
+athletes
+award category
+academics
+administrative area
+film
+sports league draft picks
+tsegaran/random subject
+education diploma
+afc airport
+academie
+sports team
+award category
+people/places_lived.
+Platonic dialogue
+award category
+birthplace
+people/places_lived./people-place-of-birth
+award category
+award category
+film
+nutrition
+award category
+location
+award category
+award category
+award category
+sports team
+tv program
+award category
+film
+location
+tv network
+sports league
+sports team
+film
+sports
+business/employment_tenure-company
+award category
+film
+film
+-marriage union type
+award category
+tlc regional
+medal category
+music/artist/label
+education
+bibs-location
+adjoining
+tsegaran
+award category
+award category
+military conflict
+award category
+academic
+administrative area
+genre
+award category
+award category
+award category
+oxford university
+education/education
+sports team
+art
+people/marriage union type
+award category
+award category
+sports team
+people/person-profession
+award category
+award category
+hud county
+bibslocation.com
+award category
+award category
+administrative division capital
+award category
+people/places_lived./people/place-with-neighborhoods
+tsegaran
+award category
+organization
+education
+award category
+music
+sports team
+congressional committees
+award category
+award category
+award category
+award category
+hud_county place of death
+sports team
+administrative division capital-of-./location
+sports team
+award category
+education
+adjoining
+award category
+academics
+award category
+military conflict
+award category
+gdp-aaa/administrative_area
+bibs-location.gov
+administrative area
+hud county
+sports team
+annexation of the Dominican Republic (DPR) [relation]
+people/places_lived.
+tv program
+film
+cancer
+award category
+award category
+award category
+college
+business
+award category
+sports team
+sports team
+death
+people/place_of-birth
+award category
+military service
+annotation category
+sport
+olympic sport
+Olympic track
+award category
+adjoining
+/location
+film
+geography
+royal title
+award category
+sports league draft
+organization
+travel destination
+award category
+genre
+award category
+award category
+award category
+/architecture/building_function
+music
+tv network
+tsegaran
+award category
+award category
+ncaa men's basketball team
+award category
+award category
+award category
+award category
+hud_county-place.gov
+award category
+adjoining
+education
+award category
+influenced by film
+people birthed in the year 1890.
+award category
+/m/08mbj32
+administrative division
+award category
+award category
+government position
+sports team
+award category
+award category
+film
+sports team
+school
+award category
+academic
+academic
+organization
+award category
+award category
+sports
+genre
+tv program
+award category
+huniv.gov
+sports team
+award category
+sports team
+film
+draft
+award category
+film
+award category
+academic
+award category
+people/profession
+award category
+film
+address
+film
+-region
+award category
+sports team
+Veronica Mars (TV series)
+film
+annotation_category
+people/places_lived.com
+film
+award category
+sports league participation
+government position
+influence node
+academic
+a college of the arts
+-second level divisions
+award category
+award category
+education
+genre
+-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami-miami
+film
+award category
+location
+government position
+award category
+award category
+people/nationality
+film
+administrative divisions
+tv series
+award category
+award category
+political party
+academics
+film
+performance/group
+film
+sports team
+film
+a college
+sports team
+award category
+award category
+organization
+award category
+award category
+sports team
+award category
+film
+bibs-location.com
+award category
+sports team
+award category
+film
+sports team
+film
+location
+award category
+travel destination
+award category
+annotation
+award category
+film
+academic
+family
+people born in nglaland
+award category
+sports team
+award category
+award category
+award category
+bibslocation.com
+genre
+award category
+award category
+award category
+administrative area
+award category
+military conflict
+film
+film
+award category
+award category
+genre
+award category
+award category
+film
+academic education
+sports league
+award category
+influenced by film
+crime
+award category
+influence/peer-relationship
+/location/location
+political party
+sports team
+film
+award category
+genre
+award category
+genre
+award category
+administrative division
+football team
+sports team
+sports team
+film
+administrative division capital structure
+annotation category
+hudcounty
+travel transport
+award category
+award category
+academic
+sports team
+award category
+neighborhood
+award category
+academic
+award category
+sports
+award category
+film
+legislative session
+film
+award category
+military conflict
+annotation
+film
+award category
+award category
+sports team
+film
+hud county
+athletes
+genre
+award category
+award category
+family
+education
+award category
+location
+film
+real-estate development
+sports team
+language
+award category
+tv series
+organization
+award category
+movie
+award category
+form of government
+academe
+administrative division
+team
+award category
+annotation category
+tsegaran
+genre
+education
+award category
+award category
+award category
+sports team
+sports league
+award category
+award category
+award category
+government office
+award category
+award category
+genre
+sports team
+airport
+award category
+genre
+award category
+film
+film
+award category
+film
+award category
+genre
+award category
+tsegaran
+sports league draft picks
+award category
+award category
+award category
+academies
+governmental position
+award category
+film
+administrative division
+sports league
+adjoining
+organization
+award category
+award category
+people with this profession
+award category
+award category
+sports education
+film
+organism classification
+award category
+genre
+location
+education
+award category
+award category
+military conflict
+location
+cvg
+adjoining
+people/person-place_of_birth
+award category
+military conflict
+award category
+genre
+location
+administrative division
+film
+award category
+adjoining relations
+sports
+adjoining
+sports team
+award category
+award category
+award category
+event
+award category
+award category
+annotation
+music/artist/label
+award category
+tv network
+sports team
+award category
+hud county
+award category
+academic
+award category
+award category
+game genre
+film
+influenced by film
+sports team
+award category
+government position
+film
+film
+award category
+award category
+music
+genre
+music/artist/label
+film
+award category
+marriage union type
+annotation category
+award category
+/location
+people/person-profession
+award category
+film
+award category
+team
+sports league
+award category
+award category
+film
+film
+award category
+award category
+tv series
+academics
+comic book fiction
+award category
+adjoining relations
+award category
+education
+award category
+university
+award category
+award category
+award category
+influenced by a university
+travel transport
+award category
+award category
+award category
+people/places_lived./people-place_lived/location
+ethnicity
+genre
+award category
+award category
+award category
+author
+award category
+award category
+award category
+ad blockbuster
+education
+award category
+-two-minute-zone (tm)
+annotation
+award category
+sports education
+sponsored_recipient
+award category
+athletes
+award category
+administrative division
+taxonomy
+award category
+performance
+administrative division capital
+award category
+people/ethnicity
+genre
+award category
+nutrition
+award category
+film
+award category
+bibs
+award category
+sports team
+influenced by a influence node
+sports team
+sports team
+award category
+award category
+bibs
+/common/annotation_category
+annotation
+u.s. presidential election
+award category
+education
+people/places_lived.
+award category
+film
+award category
+award category
+award category
+administrative division capital
+award category
+team
+award category
+school
+administrative area
+award category
+film
+-phone number
+film
+administrative division capital
+award category
+people/person-profession
+artist/label
+award category
+/location/location
+award category
+award category
+award category
+tsegaran
+award category
+award category
+sports team
+award category
+artist
+sports team
+genre
+award category
+film
+award category
+film
+award category
+award category
+nutrition
+genre
+film
+award category
+award category
+tv star dubbing performance
+sports team
+taxonomy
+award category
+award category
+location
+Yokohama's economy
+award category
+academics
+award category
+award category
+award category
+tv network
+award category
+genre
+award category
+academic school
+award category
+award category
+genre
+film
+award category
+genre
+sports team
+sports team
+award category
+award category
+film
+tv series
+influence node
+adjoining relations
+genre
+adjoining
+people/person-ethnicity [tail]
+genre
+sports team
+hud_county-place/place
+sports league draft picks
+group
+award category
+award category
+award category
+sports team
+administrative area
+award category
+award category
+award category
+award category
+award category
+sports team
+award category
+award category
+genre
+award category
+political party
+government position
+education
+nutrition
+award category
+award category
+award category
+award category
+group
+award category
+award category
+award category
+administrative division capital
+influence node
+genre
+award category
+film
+award category
+award category
+film/performance
+award category
+bibslocation.common-topic
+award category
+ad-hoc.com
+administrative division
+administrative divisions
+genre
+academics
+-tv station
+award category
+film
+series
+sports team
+administrative division capital
+location
+adjoining
+academic
+award category
+annotation_category
+genre
+award category
+award category
+education
+award category
+award category
+music
+award category
+administrative divisions
+.py (file extension)
+people/places_lived.com
+tv network
+entrepreneurship
+-advertising.com
+award category
+award category
+film
+award category
+film
+award category
+os
+award category
+sports team
+film
+sports league
+award category
+award category
+sports
+-common/topic
+team
+award category
+award category
+adjoining relations
+award category
+adjoining
+film
+people/person-religion
+award category
+sports team
+award category
+administrative division capital
+-common/topic
+performance/role
+risk factor
+academic leadership
+award category
+adjoining
+people/place_of-birth
+award category
+award category
+award category
+/m/08mbj32
+adjoining
+sports team
+film
+film
+music
+award category
+administrative division
+adjoining
+organization
+/locations_in_this-time.html
+business
+school
+location
+time zone
+film
+administrative area
+award category
+ad-related
+award category
+event
+award category
+academics
+sports team
+award category
+administrative area
+award category
+annotation
+award category
+political party
+award category
+hud county
+award category
+/location
+film
+sports team
+UNESCO world heritage sites
+award category
+Olympic athletics
+people/places_lived.
+sports team
+education
+sports team
+adjoining
+award category
+award category
+award category
+sports team
+sports league
+music/artist/label
+award category
+academic education
+film
+award category
+award category
+team
+education/education
+film
+adjoining
+award category
+award category
+administrative area
+award category
+sports team
+influenced by film
+award category
+event
+hudcounty.gov
+award category
+racehorse
+award category
+/location/location
+film
+annotation category
+administrative divisions
+film
+award category
+adjoining
+people/places_lived.common-webpage
+award category
+acme
+award category
+organization
+school
+Olympic track and field [relation]
+award category
+award category
+location
+college
+award category
+award category
+award category
+hud.gov
+film
+film
+film
+film
+snl season
+film
+award category
+award category
+ad
+award category
+tv program
+ad-hoc.com
+film
+tv series
+film
+business location
+military combat group
+award category
+metabolite
+award category
+sports history
+tsegaran
+award category
+organism
+adjoining
+film
+people/profession
+film
+award category
+annotation_category
+genre
+award category
+annotation category
+genre
+adjoining
+business
+film
+sports league draft pick
+sports team
+film
+sports league
+award category
+award category
+-second level divisions
+film
+people birthed in the uk on 26 september 1893.
+award category
+genre
+adjoining
+genre
+people/profession
+twinnedtowns
+influence node
+award category
+award category
+annotation
+adjoining
+genre
+sports
+adjoining
+award category
+sports team
+film
+film
+gdp-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-aaa-
+film
+award category
+award category
+sports team
+sports team
+award category
+film
+award category
+award category
+award category
+genre
+award category
+award category
+annotation
+award category
+award category
+award category
+award category
+genre
+business operations
+award category
+award category
+award category
+people/profession
+award category
+award category
+sports league
+film festival
+academic
+/people/places_lived./people/place-lived/location
+nutrition
+adjoining
+adjoining
+film
+award category
+academic education
+award category
+academics
+film
+award category
+education
+award category
+film
+influence/peer-relationship
+award category
+marriage union type
+administrative division
+award category
+disease
+people/ethnicity
+award category
+film
+econometrics
+award category
+people/nationality
+award category
+film
+award category
+music
+disease
+adjoining
+sports team
+sports team
+academic
+award category
+award category
+sports team
+award category
+award category
+award category
+award category
+/organization/organisation_relationship/child.
+Olympic track and field
+sports league
+award category
+film
+award category
+music
+swiss national university of newfoundland
+award category
+award category
+genre
+sports team
+award category
+award category
+award category
+adjoining
+award category
+award category
+award category
+adjoining
+os-compatibility test (ctv)
+a wedding
+team
+ad-hoc.com
+award category
+sports
+award category
+military combat group
+award category
+sports team
+education
+award category
+-a-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c
+tv network
+team
+genre
+award category
+award category
+government position
+award category
+tv program
+sports
+schema
+sports team
+award category
+sports team
+education
+award category
+award category
+ag
+administrative division
+film
+film
+degree
+adjoining resolution
+award category
+film
+sports team
+award category
+award category
+award category
+administrative area
+academic
+film
+sports league
+award category
+award category
+people/person-profession
+hud county
+film/performance
+award category
+award category
+award category
+adl.com
+genre
+award category
+film
+award category
+film
+film
+award category
+film
+award category
+genre
+religion
+sports team
+award category
+award category
+tsegaran
+a college
+film
+award category
+genre
+award category
+sports team
+academic degree
+sports team
+sports team
+business
+architectural style
+annotation
+SA's second-level division of financial services (second level) of the federal government.
+education
+time zone
+film
+academics
+film
+sports league
+award category
+film
+sports team
+tv program
+film
+sports league
+hud county
+government position
+people/places_lived.com
+award category
+award category
+award category
+college
+adjoining
+genre
+bibslocation.com
+administrative parent
+academics
+football player
+award category
+a dog-themed event
+film
+academics
+disease
+award category
+award category
+education
+academic
+film
+award category
+music/artist/label
+people/ethnicity
+people with this profession
+tv program
+award category
+adjoining
+award category
+award category
+award category
+genre
+award category
+genre
+award category
+sports team
+government position
+award category
+film
+award category
+administrative division capital-of-management
+sports league
+film
+award category
+-education
+military service
+-advertising
+adjoining relations
+award category
+award category
+ad-hoc national championships
+award category
+award category
+people/places_lived./people-place_lived/location
+award category
+education
+police chief [relation] /people/person_with_this-profession
+award category
+sports league
+award category
+sports league draft
+genre
+athletes.
+school
+sports league
+political party
+adjoining
+sports team
+award category
+award category
+adjoining
+tsegaran
+genre
+award category
+sports team
+administrative divisions
+film
+award category
+film
+award category
+education
+award category
+award category
+people/place_of-birth [relation] /location/location
+adjoining relations
+/places_lived.com
+military service
+award category
+award category
+football
+sports team
+film
+award category
+award category
+award category
+government position
+award category
+adjoining
+award category
+tv program
+award category
+award category
+military conflict
+sports league
+award category
+award category
+hud_county place of birth
+adjoining divisions
+government position
+sports team
+education
+food
+award category
+measurement unit
+film
+award category
+tsegaran
+medical condition
+-acme.com
+academies
+ad-hoc committee
+award category
+people/places_lived./people/place-lived/location
+administrative area
+award category
+Olympic track
+agro-alimentaire
+athletes
+award category
+Olympic athletics
+tv program
+sports
+award category
+legislative session
+time zone
+award category
+tsegaran
+music
+sports team
+award category
+tv series
+film
+genre
+sports team
+film
+location
+academic
+academics
+award category
+award category
+award category
+award category
+administrative division capital of./location
+award category
+sports teams
+sports team
+sports team
+film
+adjoining
+award category
+sports team
+film
+location
+ad-supported.com
+religion
+award category
+team
+administrative division
+award category
+military conflict group
+award category
+genre
+award category
+adjoining
+sports team
+people/profession
+academics
+award category
+tv network
+sports team
+award category
+business
+education
+artist
+employment contract
+disease
+sports team
+award category
+award category
+film
+academics
+award category
+award category
+education
+sports team
+award category
+award category
+film
+cause
+team
+film
+award category
+award category
+bibs
+award category
+award category
+film
+hud.gov
+award category
+medal category
+oxford-based organization
+award category
+award category
+sports team
+sports league
+award category
+award category
+crime
+government position
+award category
+form of government
+ad-hoc calculus
+people birthed in a origin
+sports
+award category
+film
+award category
+award category
+award category
+award category
+award category
+disease
+medical specialization
+education
+award category
+award category
+honorary title
+religion
+/location/country
+sports team
+academy
+award category
+education
+award category
+award category
+ngland
+film
+award category
+language
+award category
+award category
+tv program
+film
+award category
+award category
+ad-hoc committee
+athletes.com
+award category
+award category
+genre
+film
+college
+award category
+award category
+geography
+academic
+award category
+film
+administrative division capital of./location
+a college
+/education/educational-degree
+location
+administrative division capital
+award category
+academic
+award category
+influenced
+adjoining
+award category
+award category
+award category
+administrative division capital
+team
+legislative session
+award category
+event
+influenced by
+award category
+award category
+political party
+award category
+hud county
+award category
+award category
+film
+award category
+ad-hoc.com
+award category
+administrative area
+adjoining
+military conflict
+academies
+administrative divisions
+ad-hoc committee
+award category
+award category
+award category
+award category
+award category
+econometrics
+award category
+location
+film
+sports league draft picks
+SA
+Olympic team
+award category
+education
+film
+-a-z
+adjoining
+award category
+sports team
+award category
+award category
+ad-hoc.com
+film
+adjoining relations
+administrative area
+people with this type
+award category
+film
+award category
+award category
+people/person-profession
+award category
+city of westminister act 1999 [text] /organization/headquarters./location_mailing_address/citytown
+adjoining
+award category
+Olympic medal
+genre
+legislative session
+film
+sports team
+genre
+award category
+people with this type
+academics
+award category
+film
+film
+award category
+people/profession
+film
+annotation category
+award category
+film
+parent genre
+music/artist
+adjoining
+location
+sports team
+film
+sports
+tsegaran's new abstract system
+film
+film
+birth
+military conflict
+education
+disease
+award category
+film
+government position
+military conflict
+award category
+administrative division
+administrative division capital structure
+award category
+award category
+genre
+sports team
+adjoining
+award category
+award category
+genre
+award category
+ncaa men's basketball team
+film
+celebrity/breakup
+philosopher
+award category
+administrative division capital
+royal order of chivalry
+annotation_category
+education
+genre
+sports league
+adjoining
+family
+sports team
+film
+award category
+team
+sports league
+disease
+award category
+tv network
+tv network
+award category
+award category
+award category
+award category
+business
+award category
+people/places_lived.
+award category
+education
+award category
+athletes.
+sports team
+film
+sports team
+annotation_category
+award category
+nglaland
+award category
+award category
+award category
+sports team
+sports team
+marriage union type
+award category
+award category
+award category
+organization
+award category
+adjoining
+award category
+award category
+performance
+tv network
+taxonomy
+annotation category
+genre
+award category
+sports league
+people/marriage union type
+award category
+award category
+hudcounty
+award category
+award category
+accrediting body
+administrative divisions
+sports
+adjoining
+genre
+annotation
+adjoining
+award category
+award category
+employment contract
+award category
+education
+award category
+team
+legal structure
+award category
+-film
+athletes
+award category
+genre
+genre
+military command
+sports team
+education
+sports team
+film
+adjoining relations
+award category
+award category
+adjoining
+sports team
+award category
+group
+team
+annotation
+author_s
+tv star dubbing performance
+award category
+award category
+
+film
+sports team
+award category
+genre
+film
+award category
+location
+award category
+/location/location
+adjoining
+people/places_lived./people-place_lived/location
+music/artist/label
+award category
+people with this type
+hud_county place
+business operations
+film
+legislative session
+award category
+award category
+people/person-ethnicity [tail]
+award category
+award category
+award category
+adjoining
+award category
+award category
+award category
+legislative session
+tsegaran
+measurement unit
+/location/country/second_level divisions
+award category
+award category
+adjoining
+award category
+location
+film
+award category
+award category
+adjoining
+sports team
+football team
+award category
+education/education
+location
+military service
+award category
+education
+film
+award category
+film
+award category
+measurement unit
+music
+music
+influenced by
+film
+/locations in this time zone
+award category
+award category
+people/person-ethnicity
+military conflict
+award category
+people/profession
+film
+a college degree
+sports team
+sports team
+award category
+legislative session
+sports league drafts
+ad-supported web page
+award category
+award category
+performance
+award category
+award category
+tv star dubbing performance
+genre
+-a-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c-c
+award category
+award category
+award category
+nutrient
+sports team
+disease
+award category
+people/person-ethnicity
+film
+tv series
+/locations
+influence node
+bibs-location
+award category
+award category
+award category
+sports team
+administrative division
+sports team
+award category
+sports team
+athletes.
+award category
+academic
+bibs_location
+sports league
+business
+disease
+/location/location-related-place_of-birth
+government position
+organizations
+award category
+award category
+people born in the u.s.
+team
+film/performance
+award category
+education
+award category
+film
+ad-hoc committee
+senate
+music/artist
+travel destination
+location
+genre
+/people/person-education./education
+bibs-location
+award category
+film
+award category
+film
+religion
+/locations in this time zone
+olympics
+film
+award category
+sports league
+tv series
+sports team
+adjoining
+ad agency
+film
+-webpage
+award category
+film
+tv series
+religion
+location
+film
+film
+accrediting institution
+people/person-gender [tail]
+location
+academic leadership
+genre
+film
+employment contract
+bibslocation.com
+entity
+music
+award category
+adjoining
+genre
+sports team
+genre
+film
+music/artist/label
+award category
+people/ethnicity
+adobe digital health
+award category
+name source
+award category
+education
+nutrition
+award category
+adolescent deaths with autoimmune disease
+medical officer [relation] /people/profession
+hud county
+award category
+award category
+award category
+people born in the u.s.
+academies
+academic
+award category
+award category
+entrepreneurship
+film
+film
+team
+award category
+sports team
+film
+genre
+award category
+people/places_lived./people-place_lived/location
+award category
+award category
+annotation
+religion in
+film
+nutrition
+award category
+award category
+award category
+government position
+tv series
+award category
+award category
+award category
+film
+government position
+award category
+administrative divisions
+genre
+award category
+language
+sports team
+military conflict
+team
+annotation category
+award category
+architectural style
+UNESCO world heritage sites
+film
+award category
+adjoining
+influenced by film
+Olympic athletics
+film
+award category
+music/artist/label
+award category
+ncaa men's basketball team
+film
+film
+award category
+sports team
+award category
+award category
+tv network
+sports team
+award category
+award category
+language
+military command
+sports team
+award category
+award category
+genre
+tv series
+organization
+adm airline
+location
+music
+award category
+award category
+adjoining
+marriage union type
+sports league
+people/marriage union type
+award category
+film
+award category
+film
+/location/location
+sports team
+adjoining
+genre
+government position
+award category
+film
+film
+award category
+award category
+tv star dubbing performance
+unions of this type
+award category
+education
+award category
+award category
+people/places_lived.com
+athletes
+award category
+/business/business_operation/industry
+award category
+film
+film
+film
+award category
+adjoining
+language
+bibslocation.common-topic
+genre
+award category
+people/places_lived
+award category
+academic
+government appointment
+education
+award category
+award category
+academies
+team
+UNESCO world heritage sites
+music
+genre
+award category
+award category
+award category
+hud.gov
+people/person-ethnicity
+film festival
+award category
+award category
+academic & cultural
+award category
+award category
+award category
+film
+language
+tsegaran
+sports
+film
+award category
+sports team
+military service
+annotation category
+award category
+sports league
+sports team
+genre
+sports team
+award category
+award category
+award category
+genre
+award category
+adjoining relations
+film
+adjoining
+nglaland
+Platonic dialogue [relation]
+influenced
+location
+administrative division
+news bulletin
+sports league
+film
+award category
+group
+architectural style
+people/place_of-birth
+people/places_lived
+msa.com
+award category
+award category
+award category
+genre
+award category
+award category
+award category
+sports team
+sports team
+government/government governmental body
+annotation
+award category
+award category
+sports league
+award category
+aareas
+research directions of parkinson's disease
+twinnedtowns.com
+award category
+award category
+award category
+award category
+sports team
+film
+acclaim
+sports team
+film.
+award category
+political party
+film
+ad agency
+SA
+academic
+sports team
+award category
+Olympic track
+ad-supported.com
+location
+adjoining
+award category
+award category
+influence genre
+genre
+music
+film
+award category
+award category
+ad-tech -mailing address
+military coalition
+film
+adjoining relations
+award category
+award category
+geography
+award category
+author
+award category
+genre
+team
+film
+school category
+administrative divisions
+sports team
+award category
+administrative division capital-of./location
+/common-topic-webpage
+government position
+film
+hud_county-place of death
+award category
+award category
+award category
+academics
+ad-quality
+/location/location/containedby [graph] [text] Name of Nepal [relationship map]
+award category
+education
+-government position
+award category
+film
+award category
+award category
+film
+genre
+food
+administrative area
+-advertising.com
+sports league
+adjoining
+sports team
+people/profession
+award category
+-educational degree
+film
+document
+academic leadership
+family
+film
+people/person-profession
+sports team
+film
+award category
+award category
+award category
+influence node
+people/person-profession
+non-profit organization
+sports team
+award category
+award category
+tv series
+award category
+award category
+performance
+award category
+award category
+Olympic track
+people/places_lived.
+annotation category
+film
+sports team
+military service
+sports team
+film
+education
+award category
+award category
+medal
+award category
+film/written_by
+award category
+award category
+accrediting.com
+award category
+vacation choice
+award category
+award category
+award category
+team
+degree
+sports team
+award category
+award category
+award category
+award category
+sports team
+religion
+film
+football team
+tv series
+adjoining
+nutrition
+award category
+award category
+nglaland
+mascot
+sports team
+administrative area
+ad-supported network
+award category
+sports team
+exhibits
+administrative divisions
+film
+people/person-profession
+adjoining
+education
+film
+award category
+award category
+award category
+sports team
+award category
+sports team
+award category
+film
+award category
+award category
+award category
+administrative division
+award category
+sports team
+award category
+award category
+award category
+award category
+film
+influenced
+film
+film
+Activists
+award category
+award category
+award category
+award category
+award category
+athletes.
+genre
+adobe.com
+nutrition
+award category
+award category
+film
+sports team
+genre
+sports
+genre
+adjoining
+disease
+award category
+adjoining
+Assassinations
+ag
+academic
+genre
+film
+film
+genre
+award category
+team
+film
+sports
+award category
+people/person-profession
+award category
+adjoining
+sports team
+character
+film
+award category
+/location/location-contains [relation]
+sports league draft
+award category
+religion
+award category
+tv series
+award category
+academic
+language
+award category
+award category
+ad-verb topic
+UNESCO world heritage sites
+transport in new mexico
+film
+academies
+award category
+military combat group
+award category
+award category
+film
+academic education
+award category
+award category
+award category
+olympics
+award category
+military conflict
+award category
+education
+sports team
+genre
+ad-hoc.gov/public_services
+bibs_location
+ncaa men's basketball team
+award category
+award category
+award category
+film
+sports team
+administrative divisions
+people/place of birth
+sports team
+award category
+award category
+/user/coco/science/concepts_theories/child_concept [graph]
+award category
+programming language
+sports team
+award category
+award category
+award category
+government position
+Olympic sports
+award category
+award category
+award category
+movie
+award category
+military conflict
+art_period_movement
+music/artist/label
+award category
+film
+award category
+award category
+administrative area
+administrative division
+award category
+film
+crime type
+adjoining
+film
+event
+award category
+organization
+film
+award category
+government position
+award category
+sports team
+academic
+award category
+administrative divisions
+award category
+tv series
+award category
+dr. hsc-mcgib
+school
+award category
+film
+annotation
+senate
+award category
+education
+people/place_with-neighborhoods
+academics
+film
+film
+adjoining
+sex education
+award category
+athletes
+award category
+award category
+award category
+tv series
+film
+location
+award category
+award category
+team
+hudcounty.gov
+award category
+academics
+film
+sports team
+employment contract
+medals
+award category
+award category
+tv series
+award category
+film
+military service
+award category
+-two-day-of-the-week
+award category
+award category
+people with this profession
+people/person
+legislative session
+award category
+adobe.com
+award category
+administrative parent
+sports team
+award category
+administrative division
+people with this degree
+award category
+award category
+LL
+award category
+award category
+sports team
+award category
+-location
+sports team
+genre
+people with this profession
+film
+award category
+award category
+sports team

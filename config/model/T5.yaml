@@ -5,7 +5,7 @@ name: T5
 train_dataset: ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
 pretrained_model: t5-base # t5-small or t5-base
 append_another_bos: False
-append_sep_token: True
+append_sep_token: False
 is_in_edge: True
 is_out_edge: True
 max_epoch: 100 # default: 100
