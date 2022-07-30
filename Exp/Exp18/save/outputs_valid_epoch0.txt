@@ -1,0 +1,8 @@
+award category [sep]
+award category [sep]
+adjoining [sep]
+award category [sep]
+award category [sep]
+award category [sep]
+std. [sep]
+award category [sep]

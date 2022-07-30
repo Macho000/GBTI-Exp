@@ -5,9 +5,11 @@ from omegaconf import DictConfig, OmegaConf
 from utils import *
 import torch
 from JointGT import JointGT
+from T5 import T5
+from Bart import Bart
 
 from transformers import BartTokenizer, T5Tokenizer
-from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader
+from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader, EntityTypingBartDataset, EntityTypingBartDataLoader
 
 from tqdm import tqdm
 from tqdm import trange
@@ -23,22 +25,39 @@ def main(cfg : DictConfig) -> None:
   save_path = os.path.join(cfg.model.save_dir, cfg.data.name)
 
   # Initialize tokenizer
-  if cfg.model.pretrained_model == "Bart":
-      tokenizer = BartTokenizer.from_pretrained(cfg.model.tokenizer_path)
-  elif cfg.model.pretrained_model == "T5":
-      tokenizer = T5Tokenizer.from_pretrained(cfg.model.tokenizer_path)
+  if cfg.model.name == 'JointGT': 
+    if cfg.model.pretrained_model == "Bart":
+        tokenizer = BartTokenizer.from_pretrained(cfg.model.tokenizer_path)
+    elif cfg.model.pretrained_model == "T5":
+        tokenizer = T5Tokenizer.from_pretrained(cfg.model.tokenizer_path)
+  elif cfg.model.name == "T5":
+      tokenizer = T5Tokenizer.from_pretrained(cfg.model.pretrained_model)
+  elif cfg.model.name == "Bart":
+      tokenizer = BartTokenizer.from_pretrained(cfg.model.pretrained_model)
+  else:
+      raise ValueError("No such model!")
 
   data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-  test_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "test")
-
-  # dataloader
-  test_dataloader = EntityTypingJointGTDataLoader(cfg, test_dataset, "test")
+  if cfg.model.name == 'JointGT':
+    test_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "test")
+    # dataloader
+    test_dataloader = EntityTypingJointGTDataLoader(cfg, test_dataset, "test")
+  elif cfg.model.name == 'T5':
+    test_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "test")
+    # dataloader
+    test_dataloader = EntityTypingT5DataLoader(cfg, test_dataset, "test")
+  elif cfg.model.name == 'Bart':
+    test_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "test")
+    # dataloader
+    test_dataloader = EntityTypingBartDataLoader(cfg, test_dataset, "test")
 
   # model
   if cfg.model.name == 'JointGT':
       model = JointGT(cfg)
   elif cfg.model.name == 'T5':
-      model = T5()
+      model = T5(cfg)
+  elif cfg.model.name == 'Bart':
+      model = Bart(cfg)
   else:
       raise ValueError('No such model')
 

@@ -1,0 +1,8 @@
+award category [sep]
+award category [sep]
+adjoining relationship [sep]
+award category [sep]
+award category [sep]
+award category [sep]
+std. apc [sep]
+award category [sep]

@@ -20,7 +20,7 @@ max_input_length: 256
 max_output_length: 256
 gradient_accumulation_steps: 1
 max_grad_norm: 1.0
-early_stopping: False
+early_stopping: True
 optimizer:
   algorithm: Adam
   learning_rate: 1.0e-04
