@@ -1,6 +1,6 @@
 defaults:
   - data/FB15kET # data/FB15kET or data/YAGO43kET
-  - model/Bart # model/JointGT or model/T5 or model/Bart
+  - model/JointGT # model/JointGT or model/T5 or model/Bart
 preprocess:
   load_ET: False
   load_KG: True

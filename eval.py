@@ -7,6 +7,7 @@ import torch
 from JointGT import JointGT
 from T5 import T5
 from Bart import Bart
+from bert_score import score
 
 from transformers import BartTokenizer, T5Tokenizer
 from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader, EntityTypingBartDataset, EntityTypingBartDataLoader
@@ -123,8 +124,7 @@ def evaluation(cfg, targets, predictions):
   logging.info("test data set : {}".format(cfg.model.test.test_dataset))
   logging.info("N-grams: 1-{}, 2-{}, 3-{}, 4-{}".format(score_1gram, score_2gram, score_3gram, score_4gram))
 
-  for p,r, f1 in zip(P, R, F1):
-    print("BERT-P:%f, BERT-R:%f, BERT-F1:%f" %(p, r, f1))
+  logging.info("BERT-P:%f, BERT-R:%f, BERT-F1:%f" %(P, R, F1))
 
 def calc_bleu_score(targets, predictions):
     """ BLEUスコアの算出
@@ -163,10 +163,21 @@ def calc_bert_score(targets, predictions):
         predictions ([List[str]]): [比較元の文]
 
     Returns:
-        [(List[float], List[float], List[float])]: [(Precision, Recall, F1スコア)]
+        Precision, Recall, F1スコア
     """
+    total_score_p = 0
+    total_score_r = 0
+    total_score_f1 = 0
     Precision, Recall, F1 = score(predictions, targets, lang="en", verbose=True)
-    return Precision.numpy().tolist(), Recall.numpy().tolist(), F1.numpy().tolist()
+    for p,r,f1 in zip(Precision.numpy().tolist(), Recall.numpy().tolist(), F1.numpy().tolist()):
+        total_score_p += p
+        total_score_r += r
+        total_score_f1 += f1
+    score_p = total_score_p/len(Precision)
+    score_r = total_score_r/len(Recall)
+    score_f1 = total_score_f1/len(F1)
+    return score_p, score_r, score_f1
+
 
 
 if __name__=='__main__':

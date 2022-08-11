@@ -36,3 +36,6 @@ valid:
 test:
   test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
   save_outputs: True
+  get_from_file: True
+  get_from_model: False
+  file_path: Exp/FB15kET/ET_test
