@@ -139,6 +139,19 @@ def main(cfg : DictConfig) -> None:
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
+            
+            elif cfg.model.name == 'Bart':
+                loss = model(batch, is_training=True)
+                if cfg.model.n_gpus > 1:
+                    loss = loss.mean()  # mean() to average on multi-gpu.
+                if torch.isnan(loss).data:
+                    log.debug("Stop training because loss=%s" % (loss.data))
+                    stop_training = True
+                    break
+
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
 
             break
 
