@@ -95,7 +95,6 @@ def main(cfg : DictConfig) -> None:
                 predictions.append(pred.strip())
                 target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                 targets.append(target.strip())
-            break
         if cfg.model.test.save_outputs:
             with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
                 for src_txt in sources:

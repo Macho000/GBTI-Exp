@@ -1,0 +1,9 @@
+Bart-base
+FB15kET
+訓練では1-1データを用いた。
+Learning rate= 1.0e-05
+下位階層のみ
+Early Stop=True
+8データのみ
+N-grams: 1-0.0, 2-0.0, 3-0.0, 4-0.0
+BERT-P:0.705395, BERT-R:0.817310, BERT-F1:0.757228

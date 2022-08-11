@@ -38,4 +38,4 @@ test:
   save_outputs: True
   get_from_file: True
   get_from_model: False
-  file_path: Exp/FB15kET/ET_test
+  file_path: Exp/Exp19/save/ET_1_1_test
