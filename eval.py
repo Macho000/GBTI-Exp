@@ -73,59 +73,101 @@ def main(cfg : DictConfig) -> None:
   )
 
   # test
-  with torch.no_grad():
-    model.load_state_dict(torch.load(os.path.join(save_path, 'best_model.pkl')))
-    model.eval()
-    sources = []
-    predictions = []
-    targets = []
-    for batch in tqdm(test_dataloader, desc="Iteration"):
-      if torch.cuda.is_available():
-          batch = [b.to(torch.device("cuda")) for b in batch]
-      if use_cuda:
-          batch = [b.to(torch.device('cuda')) for b in batch]
-      outputs = model.generate(batch)
-      # Convert ids to tokens
-      for input_, output, target in zip(batch[0], outputs, batch[2]):
-          source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-          sources.append(source.strip())
-          pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-          predictions.append(pred.strip())
-          target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-          targets.append(target.strip())
-    if cfg.model.test.save_outputs:
-        with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
-            for src_txt in sources:
-                f.write(src_txt+"\n")
-        with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_outputs_test.txt'), 'w', encoding='utf-8') as f:
-            for pred_txt in predictions:
-                f.write(pred_txt+"\n")
-        with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
-            for target_txt in targets:
-                f.write(target_txt+"\n")
-    evaluation(cfg, sources, predictions)
+  if cfg.model.test.get_from_model:
+    with torch.no_grad():
+        model.load_state_dict(torch.load(os.path.join(save_path, 'best_model.pkl')))
+        model.eval()
+        sources = []
+        predictions = []
+        targets = []
+        for batch in tqdm(test_dataloader, desc="Iteration"):
+            if torch.cuda.is_available():
+                batch = [b.to(torch.device("cuda")) for b in batch]
+            if use_cuda:
+                batch = [b.to(torch.device('cuda')) for b in batch]
+            outputs = model.generate(batch)
+            # Convert ids to tokens
+            for input_, output, target in zip(batch[0], outputs, batch[2]):
+                source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                sources.append(source.strip())
+                pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                predictions.append(pred.strip())
+                target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                targets.append(target.strip())
+            break
+        if cfg.model.test.save_outputs:
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
+                for src_txt in sources:
+                    f.write(src_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_outputs_test.txt'), 'w', encoding='utf-8') as f:
+                for pred_txt in predictions:
+                    f.write(pred_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
+                for target_txt in targets:
+                    f.write(target_txt+"\n")
+        evaluation(cfg, targets, predictions)
+  elif cfg.model.test.get_from_file:
+    with open(os.path.join(f'{cfg.model.test.file_path}_inputs_test.txt'), 'r', encoding='utf-8') as f:
+        inputs = f.readlines()
+    with open(os.path.join(f'{cfg.model.test.file_path}_outputs_test.txt'), 'r', encoding='utf-8') as f:
+        predictions = f.readlines()
+    with open(os.path.join(f'{cfg.model.test.file_path}_targets_test.txt'), 'r', encoding='utf-8') as f:
+        targets = f.readlines()
+    evaluation(cfg, targets, predictions)
 
-def evaluation(cfg, sources, predictions):
-  assert len(sources)==len(predictions)
-  total_score_1gram = 0
-  total_score_2gram = 0
-  total_score_3gram = 0
-  total_score_4gram = 0
-
-  for src, pred in zip(sources, predictions):
-    hyp = pred.split()
-    ref = src.split()
-    total_score_1gram += bleu.sentence_bleu([ref], hyp, weights=(1,0,0,0))
-    total_score_2gram += bleu.sentence_bleu([ref], hyp, weights=(0,1,0,0))
-    total_score_3gram += bleu.sentence_bleu([ref], hyp, weights=(0,0,1,0))
-    total_score_4gram += bleu.sentence_bleu([ref], hyp, weights=(0,0,0,1))
-  score_1gram = total_score_1gram/len(sources)
-  score_2gram = total_score_2gram/len(sources)
-  score_3gram = total_score_3gram/len(sources)
-  score_4gram = total_score_4gram/len(sources)
+def evaluation(cfg, targets, predictions):
+  assert len(targets)==len(predictions)
+  score_1gram, score_2gram, score_3gram, score_4gram = calc_bleu_score(targets, predictions)
+  P, R, F1 = calc_bert_score(targets, predictions)
 
   logging.info("test data set : {}".format(cfg.model.test.test_dataset))
   logging.info("N-grams: 1-{}, 2-{}, 3-{}, 4-{}".format(score_1gram, score_2gram, score_3gram, score_4gram))
+
+  for p,r, f1 in zip(P, R, F1):
+    print("BERT-P:%f, BERT-R:%f, BERT-F1:%f" %(p, r, f1))
+
+def calc_bleu_score(targets, predictions):
+    """ BLEUスコアの算出
+
+    Args:
+        targets ([List[str]]): [比較対象の文]
+        predictions ([List[str]]): [比較元の文]
+
+    Returns:
+        score_1gram, score_2gram, score_3gram, score_4gram
+    """
+    total_score_1gram = 0
+    total_score_2gram = 0
+    total_score_3gram = 0
+    total_score_4gram = 0
+
+    for tgt, pred in zip(targets, predictions):
+        hyp = pred.split()
+        ref = tgt.split()
+        total_score_1gram += bleu.sentence_bleu([ref], hyp, weights=(1,0,0,0))
+        total_score_2gram += bleu.sentence_bleu([ref], hyp, weights=(0,1,0,0))
+        total_score_3gram += bleu.sentence_bleu([ref], hyp, weights=(0,0,1,0))
+        total_score_4gram += bleu.sentence_bleu([ref], hyp, weights=(0,0,0,1))
+    score_1gram = total_score_1gram/len(targets)
+    score_2gram = total_score_2gram/len(targets)
+    score_3gram = total_score_3gram/len(targets)
+    score_4gram = total_score_4gram/len(targets)
+
+    return score_1gram, score_2gram, score_3gram, score_4gram
+
+def calc_bert_score(targets, predictions):
+    """ BERTスコアの算出
+
+    Args:
+        targets ([List[str]]): [比較対象の文]
+        predictions ([List[str]]): [比較元の文]
+
+    Returns:
+        [(List[float], List[float], List[float])]: [(Precision, Recall, F1スコア)]
+    """
+    Precision, Recall, F1 = score(predictions, targets, lang="en", verbose=True)
+    return Precision.numpy().tolist(), Recall.numpy().tolist(), F1.numpy().tolist()
+
 
 if __name__=='__main__':
   main()

@@ -20,7 +20,7 @@ num_workers: 4 # debug 0
 temperature: 0.5
 n_gpus: 1
 max_input_length: 256
-max_output_length: 128
+max_output_length: 256
 gradient_accumulation_steps: 1
 max_grad_norm: 1.0
 early_stopping: True

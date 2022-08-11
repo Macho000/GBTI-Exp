@@ -32,7 +32,7 @@ class Bart(nn.Module):
     return self.model.generate(
       input_ids=batch[0], 
       attention_mask=batch[1], 
-      max_length=self.cfg.model.max_output_length,
+      max_length=self.cfg.model.test.max_output_length,
       temperature=1.0,
       repetition_penalty=1.5
     )
