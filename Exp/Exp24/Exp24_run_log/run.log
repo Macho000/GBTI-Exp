@@ -1,0 +1,129 @@
+[2022-08-12 08:28:46,864][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:28:47,263][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-vocab.json HTTP/1.1" 200 0
+[2022-08-12 08:28:47,265][filelock][DEBUG] - Attempting to acquire lock 139891165585040 on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-12 08:28:47,265][filelock][DEBUG] - Lock 139891165585040 acquired on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-12 08:28:47,265][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmp3w7b8fiz
+[2022-08-12 08:28:47,267][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:28:47,675][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/roberta-large-vocab.json HTTP/1.1" 200 898823
+[2022-08-12 08:28:48,111][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json in cache at /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-12 08:28:48,112][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-12 08:28:48,113][filelock][DEBUG] - Attempting to release lock 139891165585040 on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-12 08:28:48,113][filelock][DEBUG] - Lock 139891165585040 released on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-12 08:28:48,114][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:28:48,490][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-merges.txt HTTP/1.1" 200 0
+[2022-08-12 08:28:48,492][filelock][DEBUG] - Attempting to acquire lock 139891166825680 on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-12 08:28:48,493][filelock][DEBUG] - Lock 139891166825680 acquired on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-12 08:28:48,493][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmpbf1n5k61
+[2022-08-12 08:28:48,494][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:28:48,928][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/roberta-large-merges.txt HTTP/1.1" 200 456318
+[2022-08-12 08:28:49,277][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt in cache at /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-12 08:28:49,277][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-12 08:28:49,278][filelock][DEBUG] - Attempting to release lock 139891166825680 on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-12 08:28:49,278][filelock][DEBUG] - Lock 139891166825680 released on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-12 08:28:49,278][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-12 08:28:49,278][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-12 08:29:11,109][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:29:11,480][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/facebook/bart-base/config.json HTTP/1.1" 200 0
+[2022-08-12 08:29:11,482][filelock][DEBUG] - Attempting to acquire lock 139889890208720 on /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb.lock
+[2022-08-12 08:29:11,483][filelock][DEBUG] - Lock 139889890208720 acquired on /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb.lock
+[2022-08-12 08:29:11,483][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/facebook/bart-base/config.json not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmp1ulrnrd3
+[2022-08-12 08:29:11,484][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-12 08:29:11,877][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/facebook/bart-base/config.json HTTP/1.1" 200 1553
+[2022-08-12 08:29:11,879][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/facebook/bart-base/config.json in cache at /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb
+[2022-08-12 08:29:11,879][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb
+[2022-08-12 08:29:11,880][filelock][DEBUG] - Attempting to release lock 139889890208720 on /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb.lock
+[2022-08-12 08:29:11,880][filelock][DEBUG] - Lock 139889890208720 released on /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb.lock
+[2022-08-12 08:29:11,880][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/facebook/bart-base/config.json from cache at /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb
+[2022-08-12 08:29:11,881][transformers.configuration_utils][INFO] - Model config BartConfig {
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "extra_pos_embeddings": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "vocab_size": 50265
+}
+
+[2022-08-12 08:29:11,882][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): cdn.huggingface.co:443
+[2022-08-12 08:29:11,977][urllib3.connectionpool][DEBUG] - https://cdn.huggingface.co:443 "HEAD /facebook/bart-base/pytorch_model.bin HTTP/1.1" 200 0
+[2022-08-12 08:29:11,978][filelock][DEBUG] - Attempting to acquire lock 139889890208720 on /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c.lock
+[2022-08-12 08:29:11,978][filelock][DEBUG] - Lock 139889890208720 acquired on /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c.lock
+[2022-08-12 08:29:11,979][transformers.file_utils][INFO] - https://cdn.huggingface.co/facebook/bart-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmph5d7ib96
+[2022-08-12 08:29:11,980][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): cdn.huggingface.co:443
+[2022-08-12 08:29:12,554][urllib3.connectionpool][DEBUG] - https://cdn.huggingface.co:443 "GET /facebook/bart-base/pytorch_model.bin HTTP/1.1" 200 557941479
+[2022-08-12 08:29:30,138][transformers.file_utils][INFO] - storing https://cdn.huggingface.co/facebook/bart-base/pytorch_model.bin in cache at /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c
+[2022-08-12 08:29:30,139][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c
+[2022-08-12 08:29:30,139][filelock][DEBUG] - Attempting to release lock 139889890208720 on /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c.lock
+[2022-08-12 08:29:30,139][filelock][DEBUG] - Lock 139889890208720 released on /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c.lock
+[2022-08-12 08:29:30,139][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/facebook/bart-base/pytorch_model.bin from cache at /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c
+[2022-08-12 08:29:33,285][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+[2022-08-12 08:29:33,285][transformers.modeling_utils][INFO] - All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+[2022-08-12 08:32:30,303][__main__][DEBUG] - epoch is 0
+[2022-08-12 08:32:30,305][__main__][DEBUG] - validation loss is tensor(30575.9551, device='cuda:0')
+[2022-08-12 08:35:36,384][__main__][DEBUG] - epoch is 1
+[2022-08-12 08:35:36,385][__main__][DEBUG] - validation loss is tensor(32820.8633, device='cuda:0')
+[2022-08-12 08:38:33,212][__main__][DEBUG] - early stop
