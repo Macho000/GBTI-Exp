@@ -1,0 +1,502 @@
+[2022-08-13 07:52:46,348][transformers.tokenization_utils_base][INFO] - Model name 'pretrain_model/jointgt_t5' not found in model shortcut name list (t5-small, t5-base, t5-large, t5-3b, t5-11b). Assuming 'pretrain_model/jointgt_t5' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-08-13 07:52:46,350][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/added_tokens.json. We won't load it.
+[2022-08-13 07:52:46,350][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/special_tokens_map.json. We won't load it.
+[2022-08-13 07:52:46,350][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/tokenizer_config.json. We won't load it.
+[2022-08-13 07:52:46,351][transformers.tokenization_utils_base][INFO] - loading file pretrain_model/jointgt_t5/spiece.model
+[2022-08-13 07:52:46,351][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-08-13 07:52:46,351][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-08-13 07:52:46,351][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-08-13 07:52:46,352][transformers.tokenization_utils_base][INFO] - loading file pretrain_model/jointgt_t5/tokenizer.json
+[2022-08-13 07:52:54,423][transformers.configuration_utils][INFO] - loading configuration file pretrain_model/jointgt_t5/config.json
+[2022-08-13 07:52:54,424][transformers.configuration_utils][INFO] - Model config T5Config {
+  "architectures": [
+    "MyT5Pretrain"
+  ],
+  "d_ff": 3072,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "vocab_size": 32128
+}
+
+[2022-08-13 07:52:54,425][transformers.modeling_utils][INFO] - loading weights file pretrain_model/jointgt_t5/pytorch_model.bin
+[2022-08-13 07:53:04,904][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing MyT5ForConditionalGeneration.
+
+[2022-08-13 07:53:04,904][transformers.modeling_utils][INFO] - All the weights of MyT5ForConditionalGeneration were initialized from the model checkpoint at pretrain_model/jointgt_t5.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use MyT5ForConditionalGeneration for predictions without further training.
+[2022-08-13 07:53:08,661][root][DEBUG] - Parameter model.shared.weight: torch.Size([32128, 768]), require_grad=True
+[2022-08-13 07:53:08,661][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,662][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,662][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,662][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,662][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight: torch.Size([32, 12]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,663][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,664][root][DEBUG] - Parameter model.encoder.block.0.layer.0.SelfStructAttention.relative_attention_bias.weight: torch.Size([32, 12]), require_grad=True
+[2022-08-13 07:53:08,664][root][DEBUG] - Parameter model.encoder.block.0.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,664][root][DEBUG] - Parameter model.encoder.block.0.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,664][root][DEBUG] - Parameter model.encoder.block.0.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,664][root][DEBUG] - Parameter model.encoder.block.0.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,665][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,666][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,666][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,666][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,666][root][DEBUG] - Parameter model.encoder.block.1.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,666][root][DEBUG] - Parameter model.encoder.block.1.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.1.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.1.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.1.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,667][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,668][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,668][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,668][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,668][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,668][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,669][root][DEBUG] - Parameter model.encoder.block.2.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,670][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,670][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,670][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,670][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,671][root][DEBUG] - Parameter model.encoder.block.3.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,672][root][DEBUG] - Parameter model.encoder.block.3.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,672][root][DEBUG] - Parameter model.encoder.block.3.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,672][root][DEBUG] - Parameter model.encoder.block.3.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,672][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,672][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,758][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,758][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,758][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,759][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,759][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,759][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,759][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,759][root][DEBUG] - Parameter model.encoder.block.4.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.4.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.4.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.4.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.4.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,760][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,761][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,761][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,761][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,761][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,761][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,762][root][DEBUG] - Parameter model.encoder.block.5.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,763][root][DEBUG] - Parameter model.encoder.block.5.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,763][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,763][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,763][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,764][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,764][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,764][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,764][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,764][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,765][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,765][root][DEBUG] - Parameter model.encoder.block.6.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,765][root][DEBUG] - Parameter model.encoder.block.6.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,765][root][DEBUG] - Parameter model.encoder.block.6.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,765][root][DEBUG] - Parameter model.encoder.block.6.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,766][root][DEBUG] - Parameter model.encoder.block.6.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,766][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,766][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,766][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,766][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,767][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,767][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,767][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,767][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,767][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.7.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.7.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.7.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.7.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.7.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,768][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,769][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,769][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,769][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,769][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,769][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,770][root][DEBUG] - Parameter model.encoder.block.8.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,771][root][DEBUG] - Parameter model.encoder.block.8.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,771][root][DEBUG] - Parameter model.encoder.block.8.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,771][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,771][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,771][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,772][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,773][root][DEBUG] - Parameter model.encoder.block.9.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,773][root][DEBUG] - Parameter model.encoder.block.9.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,773][root][DEBUG] - Parameter model.encoder.block.9.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,773][root][DEBUG] - Parameter model.encoder.block.9.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,773][root][DEBUG] - Parameter model.encoder.block.9.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,774][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,775][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,775][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,775][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,775][root][DEBUG] - Parameter model.encoder.block.10.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,775][root][DEBUG] - Parameter model.encoder.block.10.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.10.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.10.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.10.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,776][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,777][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,777][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,777][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,777][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,777][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.rel_k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.rel_v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.0.SelfStructAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.1.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.1.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,778][root][DEBUG] - Parameter model.encoder.block.11.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,779][root][DEBUG] - Parameter model.encoder.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,779][root][DEBUG] - Parameter model.decoder.block.0.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,779][root][DEBUG] - Parameter model.decoder.block.0.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,779][root][DEBUG] - Parameter model.decoder.block.0.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight: torch.Size([32, 12]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,780][root][DEBUG] - Parameter model.decoder.block.0.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight: torch.Size([32, 12]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,781][root][DEBUG] - Parameter model.decoder.block.0.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,782][root][DEBUG] - Parameter model.decoder.block.1.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,782][root][DEBUG] - Parameter model.decoder.block.1.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,782][root][DEBUG] - Parameter model.decoder.block.1.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,782][root][DEBUG] - Parameter model.decoder.block.1.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,782][root][DEBUG] - Parameter model.decoder.block.1.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,783][root][DEBUG] - Parameter model.decoder.block.1.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,784][root][DEBUG] - Parameter model.decoder.block.1.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,784][root][DEBUG] - Parameter model.decoder.block.1.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,784][root][DEBUG] - Parameter model.decoder.block.2.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,784][root][DEBUG] - Parameter model.decoder.block.2.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,784][root][DEBUG] - Parameter model.decoder.block.2.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,785][root][DEBUG] - Parameter model.decoder.block.2.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.2.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.2.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.2.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.2.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.3.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,786][root][DEBUG] - Parameter model.decoder.block.3.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,787][root][DEBUG] - Parameter model.decoder.block.3.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,787][root][DEBUG] - Parameter model.decoder.block.3.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,787][root][DEBUG] - Parameter model.decoder.block.3.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,787][root][DEBUG] - Parameter model.decoder.block.3.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,787][root][DEBUG] - Parameter model.decoder.block.3.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,788][root][DEBUG] - Parameter model.decoder.block.3.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,789][root][DEBUG] - Parameter model.decoder.block.4.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,789][root][DEBUG] - Parameter model.decoder.block.4.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,789][root][DEBUG] - Parameter model.decoder.block.4.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,789][root][DEBUG] - Parameter model.decoder.block.4.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,789][root][DEBUG] - Parameter model.decoder.block.4.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,790][root][DEBUG] - Parameter model.decoder.block.4.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,791][root][DEBUG] - Parameter model.decoder.block.4.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,791][root][DEBUG] - Parameter model.decoder.block.4.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,791][root][DEBUG] - Parameter model.decoder.block.5.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,791][root][DEBUG] - Parameter model.decoder.block.5.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,791][root][DEBUG] - Parameter model.decoder.block.5.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,792][root][DEBUG] - Parameter model.decoder.block.5.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,793][root][DEBUG] - Parameter model.decoder.block.5.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,793][root][DEBUG] - Parameter model.decoder.block.5.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,793][root][DEBUG] - Parameter model.decoder.block.5.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,793][root][DEBUG] - Parameter model.decoder.block.5.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,793][root][DEBUG] - Parameter model.decoder.block.6.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,794][root][DEBUG] - Parameter model.decoder.block.6.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,795][root][DEBUG] - Parameter model.decoder.block.6.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,796][root][DEBUG] - Parameter model.decoder.block.7.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,796][root][DEBUG] - Parameter model.decoder.block.7.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,796][root][DEBUG] - Parameter model.decoder.block.7.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,796][root][DEBUG] - Parameter model.decoder.block.7.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,796][root][DEBUG] - Parameter model.decoder.block.7.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,797][root][DEBUG] - Parameter model.decoder.block.7.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.7.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.7.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.8.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.8.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.8.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,798][root][DEBUG] - Parameter model.decoder.block.8.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,799][root][DEBUG] - Parameter model.decoder.block.8.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,799][root][DEBUG] - Parameter model.decoder.block.8.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,799][root][DEBUG] - Parameter model.decoder.block.8.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,799][root][DEBUG] - Parameter model.decoder.block.8.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,799][root][DEBUG] - Parameter model.decoder.block.8.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,800][root][DEBUG] - Parameter model.decoder.block.8.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,800][root][DEBUG] - Parameter model.decoder.block.8.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,800][root][DEBUG] - Parameter model.decoder.block.8.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,800][root][DEBUG] - Parameter model.decoder.block.8.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,800][root][DEBUG] - Parameter model.decoder.block.9.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,801][root][DEBUG] - Parameter model.decoder.block.9.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,802][root][DEBUG] - Parameter model.decoder.block.9.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,803][root][DEBUG] - Parameter model.decoder.block.10.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,803][root][DEBUG] - Parameter model.decoder.block.10.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,803][root][DEBUG] - Parameter model.decoder.block.10.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,803][root][DEBUG] - Parameter model.decoder.block.10.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,803][root][DEBUG] - Parameter model.decoder.block.10.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,804][root][DEBUG] - Parameter model.decoder.block.10.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,805][root][DEBUG] - Parameter model.decoder.block.10.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,805][root][DEBUG] - Parameter model.decoder.block.10.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,805][root][DEBUG] - Parameter model.decoder.block.11.layer.0.SelfAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,805][root][DEBUG] - Parameter model.decoder.block.11.layer.0.SelfAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,805][root][DEBUG] - Parameter model.decoder.block.11.layer.0.SelfAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.0.SelfAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.0.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.1.EncDecAttention.q.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.1.EncDecAttention.k.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.1.EncDecAttention.v.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,806][root][DEBUG] - Parameter model.decoder.block.11.layer.1.EncDecAttention.o.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-13 07:53:08,807][root][DEBUG] - Parameter model.decoder.block.11.layer.1.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,807][root][DEBUG] - Parameter model.decoder.block.11.layer.2.DenseReluDense.wi.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-13 07:53:08,807][root][DEBUG] - Parameter model.decoder.block.11.layer.2.DenseReluDense.wo.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-13 07:53:08,807][root][DEBUG] - Parameter model.decoder.block.11.layer.2.layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 07:53:08,807][root][DEBUG] - Parameter model.decoder.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-13 09:37:50,051][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:50,347][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-config.json HTTP/1.1" 200 0
+[2022-08-13 09:37:50,349][filelock][DEBUG] - Attempting to acquire lock 139923646318032 on /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748.lock
+[2022-08-13 09:37:50,349][filelock][DEBUG] - Lock 139923646318032 acquired on /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748.lock
+[2022-08-13 09:37:50,350][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmpmuskkc59
+[2022-08-13 09:37:50,351][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:50,667][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/roberta-large-config.json HTTP/1.1" 200 482
+[2022-08-13 09:37:50,669][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json in cache at /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-08-13 09:37:50,670][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-08-13 09:37:50,671][filelock][DEBUG] - Attempting to release lock 139923646318032 on /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748.lock
+[2022-08-13 09:37:50,671][filelock][DEBUG] - Lock 139923646318032 released on /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748.lock
+[2022-08-13 09:37:50,671][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-08-13 09:37:50,672][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-08-13 09:37:50,675][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:50,959][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-vocab.json HTTP/1.1" 200 0
+[2022-08-13 09:37:50,961][filelock][DEBUG] - Attempting to acquire lock 139924417714192 on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-13 09:37:50,961][filelock][DEBUG] - Lock 139924417714192 acquired on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-13 09:37:50,962][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmp48zjqut8
+[2022-08-13 09:37:50,964][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:51,270][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/roberta-large-vocab.json HTTP/1.1" 200 898823
+[2022-08-13 09:37:51,589][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json in cache at /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-13 09:37:51,589][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-13 09:37:51,590][filelock][DEBUG] - Attempting to release lock 139924417714192 on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-13 09:37:51,590][filelock][DEBUG] - Lock 139924417714192 released on /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b.lock
+[2022-08-13 09:37:51,591][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:51,874][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-merges.txt HTTP/1.1" 200 0
+[2022-08-13 09:37:51,875][filelock][DEBUG] - Attempting to acquire lock 139924418068560 on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-13 09:37:51,876][filelock][DEBUG] - Lock 139924418068560 acquired on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-13 09:37:51,876][transformers.file_utils][INFO] - https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmpstzq_dcb
+[2022-08-13 09:37:51,877][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:52,182][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/roberta-large-merges.txt HTTP/1.1" 200 456318
+[2022-08-13 09:37:52,436][transformers.file_utils][INFO] - storing https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt in cache at /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-13 09:37:52,436][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-13 09:37:52,436][filelock][DEBUG] - Attempting to release lock 139924418068560 on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-13 09:37:52,437][filelock][DEBUG] - Lock 139924418068560 released on /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda.lock
+[2022-08-13 09:37:52,437][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-13 09:37:52,437][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-13 09:37:52,519][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-13 09:37:52,809][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-config.json HTTP/1.1" 200 0
+[2022-08-13 09:37:52,811][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /root/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-08-13 09:37:52,811][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-08-13 09:37:52,813][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): cdn.huggingface.co:443
+[2022-08-13 09:37:52,953][urllib3.connectionpool][DEBUG] - https://cdn.huggingface.co:443 "HEAD /roberta-large-pytorch_model.bin HTTP/1.1" 200 0
+[2022-08-13 09:37:52,955][filelock][DEBUG] - Attempting to acquire lock 139919688096848 on /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536.lock
+[2022-08-13 09:37:52,955][filelock][DEBUG] - Lock 139919688096848 acquired on /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536.lock
+[2022-08-13 09:37:52,955][transformers.file_utils][INFO] - https://cdn.huggingface.co/roberta-large-pytorch_model.bin not found in cache or force_download set to True, downloading to /root/.cache/torch/transformers/tmpi1k3eat9
+[2022-08-13 09:37:52,957][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): cdn.huggingface.co:443
+[2022-08-13 09:37:52,997][urllib3.connectionpool][DEBUG] - https://cdn.huggingface.co:443 "GET /roberta-large-pytorch_model.bin HTTP/1.1" 200 1425941629
+[2022-08-13 09:38:13,360][transformers.file_utils][INFO] - storing https://cdn.huggingface.co/roberta-large-pytorch_model.bin in cache at /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-08-13 09:38:13,360][transformers.file_utils][INFO] - creating metadata file for /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-08-13 09:38:13,361][filelock][DEBUG] - Attempting to release lock 139919688096848 on /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536.lock
+[2022-08-13 09:38:13,361][filelock][DEBUG] - Lock 139919688096848 released on /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536.lock
+[2022-08-13 09:38:13,361][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/roberta-large-pytorch_model.bin from cache at /root/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-08-13 09:38:22,009][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing RobertaModel.
+
+[2022-08-13 09:38:22,010][transformers.modeling_utils][INFO] - All the weights of RobertaModel were initialized from the model checkpoint at roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use RobertaModel for predictions without further training.
+[2022-08-13 09:38:38,696][root][INFO] - test data set : ET_test.txt
+[2022-08-13 09:38:38,697][root][INFO] - N-grams: 1-0.1760608077674442, 2-0.09636341448962105, 3-0.05077641254981587, 4-0.019895455016224757
+[2022-08-13 09:38:38,697][root][INFO] - BERT-P:0.852926, BERT-R:0.893458, BERT-F1:0.872543
