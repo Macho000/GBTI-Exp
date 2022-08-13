@@ -2,10 +2,10 @@ cuda: True
 debug: False
 save_dir: save
 name: JointGT
-tokenizer_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
-model_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
+tokenizer_path: pretrain_model/jointgt_t5 # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
+model_path: pretrain_model/jointgt_t5 # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
 train_dataset: ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-pretrained_model: Bart # Bart or T5
+pretrained_model: T5 # Bart or T5
 append_another_bos: False
 append_sep_token: False
 is_in_edge: True
@@ -39,6 +39,6 @@ valid:
 test:
   test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
   save_outputs: True
-  get_from_file: True
-  get_from_model: False
-  file_path: Exp/Exp12/save/ET_test
+  get_from_file: False
+  get_from_model: True
+  file_path: "" # ex. Exp/Exp12/save/ET_test
