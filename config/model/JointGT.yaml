@@ -13,9 +13,9 @@ is_out_edge: True
 max_node_length: 50
 max_edge_length: 60
 max_epoch: 100 # default: 100
-train_batch_size: 8
-valid_batch_size: 8
-test_batch_size: 8
+train_batch_size: 4
+valid_batch_size: 4
+test_batch_size: 4
 num_workers: 4 # debug 0
 temperature: 0.5
 n_gpus: 1

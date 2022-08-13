@@ -15,12 +15,12 @@ python preprocess.py --dataset YAGO43kET
 
 Training
 ```bash
-python run.py
+python run.py hydra.job.chdir=False hydra.verbose=True
 ```
 
 Testing
 ```bash
-python eval.py
+python eval.py hydra.job.chdir=False hydra.verbose=True
 ```
 
 if you change the dataset e.g. from FB15kET to YAGO45kET, then you could change the config.
