@@ -1,0 +1,7 @@
+Bart-base
+FB15kET
+訓練では1-1データを用いた。
+Learning rate= 1.0e-05
+batch=4
+下位階層のみ
+Early Stop=True
