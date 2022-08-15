@@ -1,0 +1,5 @@
+T5-base
+FB15kET
+Learning rate= 1.0e-06
+Early Stop=True
+
