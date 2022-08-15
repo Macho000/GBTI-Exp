@@ -1,7 +1,6 @@
-Bart-base
+T5-base
 FB15kET
 Learning rate= 1.0e-04
-batch=4
 下位階層のみ
 Early Stop=True
 N-grams: 1-0.17269033762307118, 2-0.10755950933789107, 3-0.057430952101698185, 4-0.022849052502909625
