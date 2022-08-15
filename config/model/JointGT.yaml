@@ -20,13 +20,13 @@ num_workers: 4 # debug 0
 temperature: 0.5
 n_gpus: 1
 max_input_length: 256
-max_output_length: 256
+max_output_length: 128
 gradient_accumulation_steps: 1
 max_grad_norm: 1.0
 early_stopping: True
 optimizer:
   algorithm: Adam
-  learning_rate: 1.0e-04
+  learning_rate: 1.0e-07
 valid:
   valid_dataset: ET_1_1_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
   valid_epoch: 1

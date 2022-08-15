@@ -1,0 +1,5 @@
+JointGT(Bart)
+FB15kET
+Learning rate= 1.0e-04
+Early Stop=True
+
