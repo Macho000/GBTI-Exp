@@ -1,4 +1,4 @@
-T5-base
+Bart-base
 FB15kET
 Learning rate= 1.0e-04
 下位階層のみ
