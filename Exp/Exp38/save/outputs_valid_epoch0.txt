@@ -1,0 +1,8 @@
+topic [sep] tv actor [sep] actor [sep] person or entity appearing in film [sep] sww base [sep] tv program guest [sep] tv personality [sep] snl host [sep] artist [sep] celebrity [sep] person [sep] award nominee [sep] nndb person [sep] influence node [sep]
+administrative area [sep] location [sep] hud foreclosure area [sep] us county [sep] statistical region [sep] dated location [sep] administrative division [sep] county [sep]
+ranked item [sep] award nominated work [sep] adaptation [sep] netflix title [sep] film [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [
+sports team [sep] topic [sep] football team [sep]
+topic [sep] tv actor [sep] actor [sep] person or entity appearing in film [sep] topic [sep] sww base [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] topic [sep] tv personality [sep] snl host [sep] topic [sep] person [
+administrative area [sep] newspaper circulation area [sep] location [sep] hud foreclosure area [sep] us county [sep] statistical region [sep] travel destination [sep] citytown [sep] dated location [sep] capital of administrative division [sep]
+topic [sep] tv actor [sep] actor [sep] person or entity appearing in film [sep] sww base [sep] topic [sep] tv personality [sep] snl host [sep] snl host [sep] artist [sep] celebrity [sep] person [sep] award nominee [sep] nndb person [sep] influence node [
+cvg developer [sep] organization [sep] computer game publisher [sep] business operation [sep] employer [sep]
