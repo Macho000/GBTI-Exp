@@ -1,0 +1,59 @@
+data:
+  name: FB15kET
+  data_dir: data
+  overwrite: false
+  is_unigraph: false
+  change_mid_to_name: true
+  lowest_level: false
+  remove_under_score: true
+model:
+  cuda: true
+  debug: false
+  save_dir: save
+  name: JointGT
+  tokenizer_path: pretrain_model/jointgt_bart
+  model_path: pretrain_model/jointgt_bart
+  train_dataset: ET_1_1_train.txt
+  pretrained_model: Bart
+  append_another_bos: false
+  append_sep_token: false
+  is_in_edge: true
+  is_out_edge: true
+  max_node_length: 50
+  max_edge_length: 60
+  max_epoch: 100
+  train_batch_size: 8
+  valid_batch_size: 8
+  test_batch_size: 8
+  num_workers: 4
+  temperature: 0.5
+  n_gpus: 1
+  max_input_length: 256
+  max_output_length: 128
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+  early_stopping: true
+  optimizer:
+    algorithm: Adam
+    learning_rate: 1.0e-07
+  valid:
+    valid_dataset: ET_1_1_valid.txt
+    valid_epoch: 1
+    num_beams: 5
+    length_penalty: 1.0
+    max_output_length: 128
+    clean_up_spaces: true
+    save_outputs: true
+    save_one_batch: true
+  test:
+    test_dataset: ET_1_1_test.txt
+    save_outputs: true
+    get_from_file: false
+    get_from_model: true
+    file_path: ''
+preprocess:
+  load_ET: false
+  load_KG: true
+  neighbor_sampling: true
+  neighbor_num: 10
+  num_layers: 1
