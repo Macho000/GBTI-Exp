@@ -1,0 +1,4 @@
+/user/narphorium/people/topic [sep] /tv/tv actor [sep] /film/actor [sep] /people/person [sep] /award/award winner [sep] /award/award nominee [sep]
+/periodicals/newspaper circulation area [sep] /location/location [sep] /location/statistical region [sep] /location/dated location [sep] /location/administrative division [sep] /location/administrative division [sep] /location/administrative division [sep] /location/administrative division [sep]
+/award/ranked item [sep] /award/award nominated work [sep]
+/sports/sports team [sep] /base/schemastaging/topic [sep]

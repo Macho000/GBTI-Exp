@@ -1,0 +1,4 @@
+/user/narphorium/people/topic [sep] /tv/tv actor [sep] /film/actor [sep] /people/person [sep] /award/award winner [sep] /award/award nominee [sep]
+/base/aareas/schema/administrative area [sep] /periodicals/newspaper circulation area [sep] /location/location [sep] /location/us county [sep] /location/statistical region [sep] /location/dated location [sep] /location/administrative division [sep]
+/award/ranked item [sep] /award/award nominated work [sep] /media common/netflix title [sep] /film/film [sep] /award/award winning work [sep]
+/sports/sports team [sep] /base/schemastaging/topic [sep] /base/schemastaging/sports team extra [sep]
