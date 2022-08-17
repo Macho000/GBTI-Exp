@@ -39,4 +39,4 @@ test:
   save_outputs: True
   get_from_file: False
   get_from_model: True
-  file_path: Exp/Exp19/save/ET_1_1_test
+  file_path: "" # e.g. Exp/Exp19/save/ET_1_1_test
