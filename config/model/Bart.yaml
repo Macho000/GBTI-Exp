@@ -34,5 +34,10 @@ valid:
   save_outputs: True
   save_one_batch: True
 test:
-  test_dataset: ET_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+  test_dataset: ET_1_1_test.txt # ET_test.txt or ET_1_1_test.txt or ET_1_n_test.txt or ET_unobserved_test.txt
+  unobserved_test_dataset: ET_1_1_unobserved_type_test.txt # ET_unobserved_type_test.txt or ET_1_1_unobserved_type_test.txt or ET_1_n_unobserved_type_test.txt
   save_outputs: True
+  max_output_length: 128
+  get_from_file: False
+  get_from_model: True
+  file_path: save/FB15kET/ET_test

@@ -39,24 +39,24 @@ def main(cfg : DictConfig) -> None:
     # set dataset
     if cfg.model.name == 'JointGT':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingJointGTDataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingJointGTDataLoader(cfg, valid_dataset, "valid")
     elif cfg.model.name == 'T5':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingT5DataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingT5DataLoader(cfg, valid_dataset, "valid")
     elif cfg.model.name == 'Bart':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingBartDataLoader(cfg, train_dataset, "train")
@@ -127,6 +127,7 @@ def main(cfg : DictConfig) -> None:
                     optimizer.step()  # We have accumulated enough gradients
                     # scheduler.step()
                     model.zero_grad()
+                    
             elif cfg.model.name == 'T5':
                 loss = model(batch, is_training=True)
                 if cfg.model.n_gpus > 1:
@@ -139,7 +140,7 @@ def main(cfg : DictConfig) -> None:
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
-            
+
             elif cfg.model.name == 'Bart':
                 loss = model(batch, is_training=True)
                 if cfg.model.n_gpus > 1:
@@ -154,7 +155,6 @@ def main(cfg : DictConfig) -> None:
                 optimizer.step()
 
             break
-
             
 
         # validation
@@ -195,9 +195,8 @@ def main(cfg : DictConfig) -> None:
                                 predictions.append(pred.strip())
                                 tgt = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                                 targets.append(tgt.strip())
-                    if batch_idx > 5:
-                        break
-                            
+                    break  
+                      
                 if cfg.model.valid.save_outputs:
                     with open(os.path.join(save_path, f'inputs_valid_epoch{count_epoch}.txt'), 'w', encoding='utf-8') as f:
                         for src_txt in sources:
