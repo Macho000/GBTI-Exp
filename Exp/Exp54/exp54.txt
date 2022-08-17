@@ -1,0 +1,5 @@
+JointGT(Bart)
+YAGO43kET
+Learning rate= 1.0e-05
+Early Stop=True
+

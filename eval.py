@@ -43,10 +43,20 @@ def main(cfg : DictConfig) -> None:
     test_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingJointGTDataLoader(cfg, test_dataset, "test")
+
+    # unobserved dataset
+    test_unobserved_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
+    # dataloader
+    test_unobserved_dataloader = EntityTypingBartDataLoader(cfg, test_unobserved_dataset, "test")
   elif cfg.model.name == 'T5':
     test_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingT5DataLoader(cfg, test_dataset, "test")
+
+    # unobserved dataset
+    test_unobserved_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
+    # dataloader
+    test_unobserved_dataloader = EntityTypingBartDataLoader(cfg, test_unobserved_dataset, "test")
   elif cfg.model.name == 'Bart':
     test_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
@@ -142,7 +152,7 @@ def main(cfg : DictConfig) -> None:
                     f.write(target_txt+"\n")
         evaluation(cfg, targets, predictions)
 
-        
+
   elif cfg.model.test.get_from_file:
     with open(os.path.join(f'{cfg.model.test.file_path}_inputs_test.txt'), 'r', encoding='utf-8') as f:
         inputs = f.readlines()
