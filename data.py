@@ -507,15 +507,15 @@ class EntityTypingT5Dataset(Dataset):
     if self.mode=="train":
       self.g, self.train_label, self.train_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.train_dataset)
+                                                                       dataset_path)
     elif self.mode=="valid":
       self.g, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.valid.valid_dataset)
+                                                                       dataset_path)
     elif self.mode=="test":
       self.g, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.test.test_dataset)
+                                                                       dataset_path)
     else:
       raise ValueError("mode is train or valid or test")
 
@@ -906,15 +906,15 @@ class EntityTypingBartDataset(Dataset):
     if self.mode=="train":
       self.g, self.train_label, self.train_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.train_dataset)
+                                                                       dataset_path)
     elif self.mode=="valid":
       self.g, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.valid.valid_dataset)
+                                                                       dataset_path)
     elif self.mode=="test":
       self.g, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.test.test_dataset)
+                                                                       dataset_path)
     else:
       raise ValueError("mode is train or valid or test")
 

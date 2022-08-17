@@ -1,0 +1,12 @@
+Bart
+FB15kET
+Learning rate= 1.0e-04 (0.0001)
+Early Stop=True
+
+N-grams: 1-0.0, 2-0.0, 3-0.0, 4-0.0
+BERT-P:0.841802, BERT-R:0.755453, BERT-F1:0.796116
+
+unobserved test
+N-grams: 1-0.0, 2-0.0, 3-0.0, 4-0.0
+BERT-P:0.841802, BERT-R:0.755453, BERT-F1:0.796116
+
