@@ -39,24 +39,24 @@ def main(cfg : DictConfig) -> None:
     # set dataset
     if cfg.model.name == 'JointGT':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingJointGTDataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingJointGTDataLoader(cfg, valid_dataset, "valid")
     elif cfg.model.name == 'T5':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingT5DataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingT5DataLoader(cfg, valid_dataset, "valid")
     elif cfg.model.name == 'Bart':
         data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
-        train_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "train")
-        valid_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "valid")
+        train_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.train_dataset, tokenizer, "train")
+        valid_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.valid.valid_dataset, tokenizer, "valid")
 
         # dataloader
         train_dataloader = EntityTypingBartDataLoader(cfg, train_dataset, "train")

@@ -6,13 +6,14 @@ from utils import *
 import copy
 
 class EntityTypingJointGTDataset(Dataset):
-  def __init__(self, cfg, data_path, tokenizer, mode):
+  def __init__(self, cfg, data_path, dataset_path, tokenizer, mode):
     """
     initialize Entity Typing Dataset
 
     Parameter
     cfg: Dict
     data_path: String
+    dataset_path: String
     tokenizer: transformers.tokenizer
     mode: string (train, valid, test)
     """
@@ -40,15 +41,15 @@ class EntityTypingJointGTDataset(Dataset):
     if self.mode=="train":
       self.g, self.train_label, self.train_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.train_dataset)
+                                                                       dataset_path)
     elif self.mode=="valid":
       self.g, self.valid_label, self.valid_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.valid.valid_dataset)
+                                                                       dataset_path)
     elif self.mode=="test":
       self.g, self.test_label, self.test_id = load_graph(data_path, self.e2id, self.r2id, self.t2id,
                                                                        cfg.preprocess.load_ET, cfg.preprocess.load_KG,
-                                                                       cfg.model.test.test_dataset)
+                                                                       dataset_path)
     else:
       raise ValueError("mode is train or valid or test")
 
@@ -471,13 +472,14 @@ class EntityTypingJointGTDataLoader(DataLoader):
 #############T5 Data########################
 #############T5 Data########################
 class EntityTypingT5Dataset(Dataset):
-  def __init__(self, cfg, data_path, tokenizer, mode):
+  def __init__(self, cfg, data_path, dataset_path, tokenizer, mode):
     """
     initialize Entity Typing Dataset
 
     Parameter
     cfg: Dict
     data_path: String
+    dataset_path: String
     tokenizer: transformers.tokenizer
     mode: string (train, valid, test)
     """
@@ -869,13 +871,14 @@ class EntityTypingT5DataLoader(DataLoader):
 #############Bart Data########################
 #############Bart Data########################
 class EntityTypingBartDataset(Dataset):
-  def __init__(self, cfg, data_path, tokenizer, mode):
+  def __init__(self, cfg, data_path, dataset_path, tokenizer, mode):
     """
     initialize Entity Typing Dataset
 
     Parameter
     cfg: Dict
     data_path: String
+    dataset_path: String
     tokenizer: transformers.tokenizer
     mode: string (train, valid, test)
     """

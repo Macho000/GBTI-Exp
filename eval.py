@@ -40,17 +40,22 @@ def main(cfg : DictConfig) -> None:
 
   data_path = os.path.join(cfg.data.data_dir, cfg.data.name, 'clean')
   if cfg.model.name == 'JointGT':
-    test_dataset = EntityTypingJointGTDataset(cfg, data_path, tokenizer, "test")
+    test_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingJointGTDataLoader(cfg, test_dataset, "test")
   elif cfg.model.name == 'T5':
-    test_dataset = EntityTypingT5Dataset(cfg, data_path, tokenizer, "test")
+    test_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingT5DataLoader(cfg, test_dataset, "test")
   elif cfg.model.name == 'Bart':
-    test_dataset = EntityTypingBartDataset(cfg, data_path, tokenizer, "test")
+    test_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingBartDataLoader(cfg, test_dataset, "test")
+
+    # unobserved dataset
+    test_unobserved_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
+    # dataloader
+    test_unobserved_dataloader = EntityTypingBartDataLoader(cfg, test_unobserved_dataset, "test")
 
   # model
   if cfg.model.name == 'JointGT':
@@ -106,6 +111,38 @@ def main(cfg : DictConfig) -> None:
                 for target_txt in targets:
                     f.write(target_txt+"\n")
         evaluation(cfg, targets, predictions)
+        
+        # unobserved test data
+        sources = []
+        predictions = []
+        targets = []
+        for batch in tqdm(test_unobserved_dataloader, desc="Iteration"):
+            if torch.cuda.is_available():
+                batch = [b.to(torch.device("cuda")) for b in batch]
+            if use_cuda:
+                batch = [b.to(torch.device('cuda')) for b in batch]
+            outputs = model.generate(batch)
+            # Convert ids to tokens
+            for input_, output, target in zip(batch[0], outputs, batch[2]):
+                source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                sources.append(source.strip())
+                pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                predictions.append(pred.strip())
+                target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                targets.append(target.strip())
+        if cfg.model.test.save_outputs:
+            with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
+                for src_txt in sources:
+                    f.write(src_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_outputs_test.txt'), 'w', encoding='utf-8') as f:
+                for pred_txt in predictions:
+                    f.write(pred_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
+                for target_txt in targets:
+                    f.write(target_txt+"\n")
+        evaluation(cfg, targets, predictions)
+
+        
   elif cfg.model.test.get_from_file:
     with open(os.path.join(f'{cfg.model.test.file_path}_inputs_test.txt'), 'r', encoding='utf-8') as f:
         inputs = f.readlines()
