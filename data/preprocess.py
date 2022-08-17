@@ -20,11 +20,14 @@ def remove_unobserved_entity_type(entity_set, type_set, src, dst):
                 continue
             w.write(line)
 
-def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_1_n, dst_unobserved_type=None):
+def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_1_n, dst_unobserved_type=None, dst_1_1_unobserved_type=None, dst_1_n_unobserved_type=None):
     tmp_entity_counter = {}
     one_to_one_data = []
     one_to_n_data = []
     unobserved_type = []
+    tmp_unobserved_entity_counter = {}
+    one_to_one_unobserved_type = []
+    one_to_n_unobserved_type = []
     with open(src, encoding='utf-8') as r:
         lines = r.readlines()
     for line in lines:
@@ -34,6 +37,11 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
         # store unobserved type
         if t not in type_set:
             unobserved_type.append(line)
+            # count test unobserved entity
+            if not tmp_unobserved_entity_counter.get(e):
+                tmp_unobserved_entity_counter[e] = 1
+            else:
+                tmp_unobserved_entity_counter[e] += 1
             continue
         # count test entity
         if not tmp_entity_counter.get(e):
@@ -52,6 +60,12 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
         # store 1 to N between test entities and types
         else:
             one_to_n_data.append(line)
+        # store 1 to 1 between test entities and types for unobserved entity
+        if tmp_entity_counter.get(e)==1:
+            one_to_one_unobserved_type.append(line)
+        # store 1 to N between test entities and types for unobserved entity
+        else:
+            one_to_n_unobserved_type.append(line)
     # save 1 to 1 data
     with open(dst_1_1, 'w', encoding='utf-8') as w:
         for line in one_to_one_data:
@@ -64,6 +78,16 @@ def filter_for_1_to_1_and_n_entity_type(entity_set, type_set, src, dst_1_1, dst_
     if dst_unobserved_type is not None:
         with open(dst_unobserved_type, 'w', encoding='utf-8') as w:
             for line in unobserved_type:
+                w.write(line)
+    # save 1 to 1 data for unobserved data
+    if dst_1_1_unobserved_type is not None:
+        with open(dst_1_1_unobserved_type, 'w', encoding='utf-8') as w:
+            for line in one_to_one_unobserved_type:
+                w.write(line)
+    # save 1 to n data for unobserved data
+    if dst_1_n_unobserved_type is not None:
+        with open(dst_1_n_unobserved_type, 'w', encoding='utf-8') as w:
+            for line in one_to_n_unobserved_type:
                 w.write(line)
 
 
@@ -152,7 +176,9 @@ def main(args):
                                   src=os.path.join(args.dataset, 'original/Entity_Type_test.txt'),
                                   dst_1_1=os.path.join(args.dataset, 'clean/ET_1_1_test.txt'),
                                   dst_1_n=os.path.join(args.dataset, 'clean/ET_1_n_test.txt'),
-                                  dst_unobserved_type=os.path.join(args.dataset, 'clean/ET_unobserved_test.txt'))
+                                  dst_unobserved_type=os.path.join(args.dataset, 'clean/ET_unobserved_test.txt'),
+                                  dst_1_1_unobserved_type=os.path.join(args.dataset, 'clean/ET_1_1_unobserved_test.txt'),
+                                  dst_1_n_unobserved_type=os.path.join(args.dataset, 'clean/ET_1_n_unobserved_test.txt'))
 
 if __name__ == '__main__':
     args = get_params()
