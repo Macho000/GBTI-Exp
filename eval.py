@@ -45,18 +45,18 @@ def main(cfg : DictConfig) -> None:
     test_dataloader = EntityTypingJointGTDataLoader(cfg, test_dataset, "test")
 
     # unobserved dataset
-    test_unobserved_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
+    test_unobserved_dataset = EntityTypingJointGTDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
     # dataloader
-    test_unobserved_dataloader = EntityTypingBartDataLoader(cfg, test_unobserved_dataset, "test")
+    test_unobserved_dataloader = EntityTypingJointGTDataLoader(cfg, test_unobserved_dataset, "test")
   elif cfg.model.name == 'T5':
     test_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
     test_dataloader = EntityTypingT5DataLoader(cfg, test_dataset, "test")
 
     # unobserved dataset
-    test_unobserved_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
+    test_unobserved_dataset = EntityTypingT5Dataset(cfg, data_path, cfg.model.test.unobserved_test_dataset, tokenizer, "test")
     # dataloader
-    test_unobserved_dataloader = EntityTypingBartDataLoader(cfg, test_unobserved_dataset, "test")
+    test_unobserved_dataloader = EntityTypingT5DataLoader(cfg, test_unobserved_dataset, "test")
   elif cfg.model.name == 'Bart':
     test_dataset = EntityTypingBartDataset(cfg, data_path, cfg.model.test.test_dataset, tokenizer, "test")
     # dataloader
