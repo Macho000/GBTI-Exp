@@ -1,4 +1,4 @@
-JointGT(Bart)
+JointGT(T5)
 YAGO43kET
 Learning rate= 1.0e-04
 Early Stop=True
