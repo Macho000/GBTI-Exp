@@ -1,0 +1,7 @@
+JointGT(Bart)
+YAGO43kET
+Learning rate= 1.0e-04
+Early Stop=True
+batch=8
+nan has occured
+
