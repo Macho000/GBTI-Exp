@@ -2,10 +2,10 @@ cuda: True
 debug: False
 save_dir: save
 name: JointGT
-tokenizer_path: pretrain_model/jointgt_t5 # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
-model_path: pretrain_model/jointgt_t5 # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
+tokenizer_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
+model_path: pretrain_model/jointgt_bart # pretrain_model/jointgt_bart or  pretrain_model/jointgt_t5
 train_dataset: ET_1_1_train.txt # ET_train.txt or ET_1_1_train.txt or ET_1_n_train.txt
-pretrained_model: T5 # Bart or T5
+pretrained_model: Bart # Bart or T5
 append_another_bos: False
 append_sep_token: False
 is_in_edge: True
@@ -13,9 +13,9 @@ is_out_edge: True
 max_node_length: 50
 max_edge_length: 60
 max_epoch: 100 # default: 100
-train_batch_size: 4
-valid_batch_size: 4
-test_batch_size: 4
+train_batch_size: 8
+valid_batch_size: 8
+test_batch_size: 8
 num_workers: 4 # debug 0
 temperature: 0.5
 n_gpus: 1
@@ -26,7 +26,7 @@ max_grad_norm: 1.0
 early_stopping: True
 optimizer:
   algorithm: Adam
-  learning_rate: 1.0e-06
+  learning_rate: 1.0e-05
 valid:
   valid_dataset: ET_1_1_valid.txt # ET_valid.txt or ET_1_1_valid.txt or ET_1_n_valid.txt or ET_unobserved_vaild.txt
   valid_epoch: 1
