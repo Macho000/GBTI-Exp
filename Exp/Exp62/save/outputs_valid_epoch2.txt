@@ -1,0 +1,8 @@
+wordnet club 108227214 [sep] wikicat Association football clubs established in 1908 [sep]
+wikicat Hartlepool United F.C. players [sep] wikicat Clyde F.C. players [sep] wikicat Living people [sep] wikicat The Football League players [sep] wikicat St. Mirren F.C. players [sep] wikicat Dunfermline Athletic F.C. players [sep] wikicat Scotland B international footballers [sep] wikicat Scottish expatriates in Ireland [sep] wikicat Association football goalkeepers [
+wordnet person 100007846 [sep] wikicat Screenwriters [sep] wikicat American actors [sep] wikicat 20th-century American male actors [sep] wikicat People from Kansas City, Missouri [sep] wikicat Actors from Missouri [sep] wikicat Film directors from Missouri [sep] wikicat American film directors [sep] wikicat American people of Scottish descent [sep] wikicat American screenwriters [sep] wikicat Male
+wikicat Football Conference players [sep] wikicat Living people [sep] wikicat The Football League players [sep] wikicat Hartlepool United F.C. players [sep] wikicat Peterborough United F.C. players [sep] wikicat St Neots Town F.C. players [sep]
+wikicat Cities in Los Angeles County, California [sep] wikicat Populated places established in 1883 [sep] wordnet administrative district 108491826 [sep]
+wikicat Conflicts in 2009 [sep] wikicat Conflicts in 2010 [sep] wikicat Conflicts in 2011 [sep] wikicat Conflicts in 2012 [sep] wikicat Conflicts in 2013 [sep] wikicat Conflicts in 2014 [sep] wikicat Conflicts in 2013 [sep] wikicat Conflicts in 2008 [sep] wikicat Conflicts in 2013 [sep]
+wikicat Provinces of Flanders [sep] wordnet administrative district 108491826 [sep]
+wordnet county 108546183 [sep] wikicat Michigan counties [sep]
