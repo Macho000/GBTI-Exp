@@ -1,0 +1,349 @@
+[2022-08-21 04:12:01,239][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-21 04:12:01,528][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-vocab.json HTTP/1.1" 200 0
+[2022-08-21 04:12:01,531][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-21 04:12:01,811][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/roberta-large-merges.txt HTTP/1.1" 200 0
+[2022-08-21 04:12:01,813][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /root/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-08-21 04:12:01,813][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /root/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-08-21 04:12:07,559][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[2022-08-21 04:12:07,869][urllib3.connectionpool][DEBUG] - https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/facebook/bart-base/config.json HTTP/1.1" 200 0
+[2022-08-21 04:12:07,873][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/facebook/bart-base/config.json from cache at /root/.cache/torch/transformers/09f4fcaeaf785dd3b97b085d6e3510c7081f586ec8e75981683c6299c0f81d9d.e8d516ad807436d395effad8c2326786872659b7dd1210827ac67c761198a0eb
+[2022-08-21 04:12:07,873][transformers.configuration_utils][INFO] - Model config BartConfig {
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "extra_pos_embeddings": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "vocab_size": 50265
+}
+
+[2022-08-21 04:12:07,875][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): cdn.huggingface.co:443
+[2022-08-21 04:12:07,969][urllib3.connectionpool][DEBUG] - https://cdn.huggingface.co:443 "HEAD /facebook/bart-base/pytorch_model.bin HTTP/1.1" 200 0
+[2022-08-21 04:12:07,971][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/facebook/bart-base/pytorch_model.bin from cache at /root/.cache/torch/transformers/566c05fb6983817e8ad7a4fa51e3099fe9caa3b31730f964bc5198d71c677523.0a3d95c18c1e434448941bc25accea7b122882be6526fb67c8e8fb6d5ebc711c
+[2022-08-21 04:12:13,321][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+[2022-08-21 04:12:13,322][transformers.modeling_utils][INFO] - All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+[2022-08-21 04:12:17,180][root][DEBUG] - Parameter model.model.shared.weight: torch.Size([50265, 768]), require_grad=True
+[2022-08-21 04:12:17,181][root][DEBUG] - Parameter model.model.encoder.embed_positions.weight: torch.Size([1026, 768]), require_grad=True
+[2022-08-21 04:12:17,181][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,181][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,181][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,181][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,182][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,182][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,182][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,182][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,182][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,183][root][DEBUG] - Parameter model.model.encoder.layers.0.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,184][root][DEBUG] - Parameter model.model.encoder.layers.0.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,184][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,184][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,184][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,184][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,185][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,185][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,185][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,185][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,185][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,186][root][DEBUG] - Parameter model.model.encoder.layers.1.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,187][root][DEBUG] - Parameter model.model.encoder.layers.1.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,187][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,187][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,187][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,187][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,188][root][DEBUG] - Parameter model.model.encoder.layers.2.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.2.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.2.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.2.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.2.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,189][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,190][root][DEBUG] - Parameter model.model.encoder.layers.3.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,191][root][DEBUG] - Parameter model.model.encoder.layers.3.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,191][root][DEBUG] - Parameter model.model.encoder.layers.3.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,191][root][DEBUG] - Parameter model.model.encoder.layers.3.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,259][root][DEBUG] - Parameter model.model.encoder.layers.3.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,259][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,260][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,260][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,260][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,261][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,261][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,261][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,261][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,262][root][DEBUG] - Parameter model.model.encoder.layers.4.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.4.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.4.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,263][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,264][root][DEBUG] - Parameter model.model.encoder.layers.5.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,265][root][DEBUG] - Parameter model.model.encoder.layers.5.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,265][root][DEBUG] - Parameter model.model.encoder.layers.5.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,265][root][DEBUG] - Parameter model.model.encoder.layers.5.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,265][root][DEBUG] - Parameter model.model.encoder.layers.5.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,265][root][DEBUG] - Parameter model.model.encoder.layers.5.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,266][root][DEBUG] - Parameter model.model.encoder.layers.5.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,266][root][DEBUG] - Parameter model.model.encoder.layernorm_embedding.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,266][root][DEBUG] - Parameter model.model.encoder.layernorm_embedding.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,266][root][DEBUG] - Parameter model.model.decoder.embed_positions.weight: torch.Size([1026, 768]), require_grad=True
+[2022-08-21 04:12:17,266][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,267][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,267][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,267][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,267][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,267][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,268][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,269][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,270][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,270][root][DEBUG] - Parameter model.model.decoder.layers.0.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,270][root][DEBUG] - Parameter model.model.decoder.layers.0.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,270][root][DEBUG] - Parameter model.model.decoder.layers.0.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,270][root][DEBUG] - Parameter model.model.decoder.layers.0.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.0.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.0.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.0.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,271][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,272][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,273][root][DEBUG] - Parameter model.model.decoder.layers.1.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,273][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,273][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,273][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,274][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,274][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,274][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,274][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,274][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,275][root][DEBUG] - Parameter model.model.decoder.layers.1.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,276][root][DEBUG] - Parameter model.model.decoder.layers.1.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,276][root][DEBUG] - Parameter model.model.decoder.layers.1.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,276][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,276][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,276][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,277][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,277][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,277][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,277][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,277][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,278][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,278][root][DEBUG] - Parameter model.model.decoder.layers.2.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,278][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,278][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,278][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,279][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,279][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,279][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,279][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,279][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,280][root][DEBUG] - Parameter model.model.decoder.layers.2.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,281][root][DEBUG] - Parameter model.model.decoder.layers.2.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,281][root][DEBUG] - Parameter model.model.decoder.layers.2.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,281][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,281][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,281][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,282][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,282][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,282][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,282][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,282][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,283][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,284][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,284][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,284][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,284][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,284][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,285][root][DEBUG] - Parameter model.model.decoder.layers.3.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,285][root][DEBUG] - Parameter model.model.decoder.layers.3.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,285][root][DEBUG] - Parameter model.model.decoder.layers.3.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,285][root][DEBUG] - Parameter model.model.decoder.layers.3.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,285][root][DEBUG] - Parameter model.model.decoder.layers.3.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.3.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.3.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,286][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,287][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,287][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,287][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,287][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,287][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,288][root][DEBUG] - Parameter model.model.decoder.layers.4.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,288][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,288][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,288][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,288][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,289][root][DEBUG] - Parameter model.model.decoder.layers.4.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,290][root][DEBUG] - Parameter model.model.decoder.layers.4.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,290][root][DEBUG] - Parameter model.model.decoder.layers.4.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,290][root][DEBUG] - Parameter model.model.decoder.layers.4.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,290][root][DEBUG] - Parameter model.model.decoder.layers.4.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,291][root][DEBUG] - Parameter model.model.decoder.layers.4.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,291][root][DEBUG] - Parameter model.model.decoder.layers.4.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,291][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,291][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,292][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,292][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,292][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,292][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,292][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,293][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,293][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,293][root][DEBUG] - Parameter model.model.decoder.layers.5.self_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,293][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.k_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,293][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.k_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.v_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.v_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.q_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.q_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.out_proj.weight: torch.Size([768, 768]), require_grad=True
+[2022-08-21 04:12:17,294][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn.out_proj.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,295][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,295][root][DEBUG] - Parameter model.model.decoder.layers.5.encoder_attn_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,295][root][DEBUG] - Parameter model.model.decoder.layers.5.fc1.weight: torch.Size([3072, 768]), require_grad=True
+[2022-08-21 04:12:17,295][root][DEBUG] - Parameter model.model.decoder.layers.5.fc1.bias: torch.Size([3072]), require_grad=True
+[2022-08-21 04:12:17,295][root][DEBUG] - Parameter model.model.decoder.layers.5.fc2.weight: torch.Size([768, 3072]), require_grad=True
+[2022-08-21 04:12:17,296][root][DEBUG] - Parameter model.model.decoder.layers.5.fc2.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,296][root][DEBUG] - Parameter model.model.decoder.layers.5.final_layer_norm.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,296][root][DEBUG] - Parameter model.model.decoder.layers.5.final_layer_norm.bias: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,296][root][DEBUG] - Parameter model.model.decoder.layernorm_embedding.weight: torch.Size([768]), require_grad=True
+[2022-08-21 04:12:17,296][root][DEBUG] - Parameter model.model.decoder.layernorm_embedding.bias: torch.Size([768]), require_grad=True
+[2022-08-21 08:20:17,746][root][INFO] - test data set : ET_test.txt
+[2022-08-21 08:20:17,746][root][INFO] - N-grams: 1-0.05848816023121116, 2-0.014051205265950217, 3-0.006968857044290053, 4-0.00375108806252873

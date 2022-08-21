@@ -96,31 +96,31 @@ def main(cfg : DictConfig) -> None:
         sources = []
         predictions = []
         targets = []
-        # for batch in tqdm(test_dataloader, desc="Iteration"):
-        #     if torch.cuda.is_available():
-        #         batch = [b.to(torch.device("cuda")) for b in batch]
-        #     if use_cuda:
-        #         batch = [b.to(torch.device('cuda')) for b in batch]
-        #     outputs = model.generate(batch)
-        #     # Convert ids to tokens
-        #     for input_, output, target in zip(batch[0], outputs, batch[2]):
-        #         source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-        #         sources.append(source.strip())
-        #         pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-        #         predictions.append(pred.strip())
-        #         target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
-        #         targets.append(target.strip())
-        # if cfg.model.test.save_outputs:
-        #     with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
-        #         for src_txt in sources:
-        #             f.write(src_txt+"\n")
-        #     with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_outputs_test.txt'), 'w', encoding='utf-8') as f:
-        #         for pred_txt in predictions:
-        #             f.write(pred_txt+"\n")
-        #     with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
-        #         for target_txt in targets:
-        #             f.write(target_txt+"\n")
-        # evaluation(cfg, targets, predictions)
+        for batch in tqdm(test_dataloader, desc="Iteration"):
+            if torch.cuda.is_available():
+                batch = [b.to(torch.device("cuda")) for b in batch]
+            if use_cuda:
+                batch = [b.to(torch.device('cuda')) for b in batch]
+            outputs = model.generate(batch)
+            # Convert ids to tokens
+            for input_, output, target in zip(batch[0], outputs, batch[2]):
+                source = tokenizer.decode(input_, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                sources.append(source.strip())
+                pred = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                predictions.append(pred.strip())
+                target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
+                targets.append(target.strip())
+        if cfg.model.test.save_outputs:
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
+                for src_txt in sources:
+                    f.write(src_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_outputs_test.txt'), 'w', encoding='utf-8') as f:
+                for pred_txt in predictions:
+                    f.write(pred_txt+"\n")
+            with open(os.path.join(save_path, f'{cfg.model.test.test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
+                for target_txt in targets:
+                    f.write(target_txt+"\n")
+        evaluation(cfg, targets, predictions)
         
         # unobserved test data
         sources = []
