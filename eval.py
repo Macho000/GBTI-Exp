@@ -7,7 +7,7 @@ import torch
 from JointGT import JointGT
 from T5 import T5
 from Bart import Bart
-from bert_score import score
+from bert_score import BERTScorer
 
 from transformers import BartTokenizer, T5Tokenizer
 from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader, EntityTypingBartDataset, EntityTypingBartDataLoader
@@ -140,6 +140,7 @@ def main(cfg : DictConfig) -> None:
                 predictions.append(pred.strip())
                 target = tokenizer.decode(target, skip_special_tokens=True, clean_up_tokenization_spaces=cfg.model.valid.clean_up_spaces)
                 targets.append(target.strip())
+        evaluation(cfg, targets, predictions)
         if cfg.model.test.save_outputs:
             with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_inputs_test.txt'), 'w', encoding='utf-8') as f:
                 for src_txt in sources:
@@ -150,7 +151,7 @@ def main(cfg : DictConfig) -> None:
             with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_targets_test.txt'), 'w', encoding='utf-8') as f:
                 for target_txt in targets:
                     f.write(target_txt+"\n")
-        evaluation(cfg, targets, predictions)
+            evaluation(cfg, targets, predictions)
 
 
   elif cfg.model.test.get_from_file:
@@ -162,15 +163,24 @@ def main(cfg : DictConfig) -> None:
         targets = f.readlines()
     evaluation(cfg, targets, predictions)
 
+    # unobserved test data
+    with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_inputs_test.txt'), 'r', encoding='utf-8') as f:
+        inputs = f.readlines()
+    with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_outputs_test.txt'), 'r', encoding='utf-8') as f:
+        predictions = f.readlines()
+    with open(os.path.join(save_path, f'{cfg.model.test.unobserved_test_dataset.split(".")[0]}_targets_test.txt'), 'r', encoding='utf-8') as f:
+        targets = f.readlines()
+    evaluation(cfg, targets, predictions)
+
 def evaluation(cfg, targets, predictions):
   assert len(targets)==len(predictions)
   score_1gram, score_2gram, score_3gram, score_4gram = calc_bleu_score(targets, predictions)
-  P, R, F1 = calc_bert_score(targets, predictions)
 
   logging.info("test data set : {}".format(cfg.model.test.test_dataset))
   logging.info("N-grams: 1-{}, 2-{}, 3-{}, 4-{}".format(score_1gram, score_2gram, score_3gram, score_4gram))
 
-  logging.info("BERT-P:%f, BERT-R:%f, BERT-F1:%f" %(P, R, F1))
+#   P, R, F1 = calc_bert_score(targets, predictions)
+#   logging.info("BERT-P:%f, BERT-R:%f, BERT-F1:%f" %(P, R, F1))
 
 def calc_bleu_score(targets, predictions):
     """ BLEUスコアの算出
@@ -214,14 +224,11 @@ def calc_bert_score(targets, predictions):
     total_score_p = 0
     total_score_r = 0
     total_score_f1 = 0
-    Precision, Recall, F1 = score(predictions, targets, lang="en", verbose=True, batch_size=8)
-    for p,r,f1 in zip(Precision.numpy().tolist(), Recall.numpy().tolist(), F1.numpy().tolist()):
-        total_score_p += p
-        total_score_r += r
-        total_score_f1 += f1
-    score_p = total_score_p/len(Precision)
-    score_r = total_score_r/len(Recall)
-    score_f1 = total_score_f1/len(F1)
+    scorer = BERTScorer(lang="en", verbose=True)
+    Precision, Recall, F1 = scorer.score(predictions, targets)
+    score_p = Precision.mean()
+    score_r = Recall.mean()
+    score_f1 = F1.mean()
     return score_p, score_r, score_f1
 
 

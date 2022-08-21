@@ -10,3 +10,5 @@ unobserved test
 N-grams: 1-0.0, 2-0.0, 3-0.0, 4-0.0
 BERT-P:0.841802, BERT-R:0.755453, BERT-F1:0.796116
 
+roberta-large_L17_no-idf_version=0.3.11(hug_trans=3.0.0) P: 0.841802 R: 0.755454 F1: 0.796116
+
