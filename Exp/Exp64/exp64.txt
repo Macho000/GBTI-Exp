@@ -1,0 +1,27 @@
+Bart
+YAGO43kET
+Learning rate= 1.0e-04
+Early Stop=True
+batch=8
+
+N-grams:
+1gram-0.11096955322321791, 
+2gram-0.014126496946703282, 
+3gram-0.004081425715715898, 
+4gram-0.0008057481920609791
+!bert-score -r save/YAGO43kET/ET_test_targets_test.txt -c save/YAGO43kET/ET_test_outputs_test.txt --lang en --use_fast_tokenizer
+Bert-P: 0.845268 
+Bert-R: 0.882784 
+Bert-F1: 0.863363
+
+
+
+unobserved type
+N-grams: 1-0.11096955322321791, 2-0.014126496946703282, 3-0.004081425715715898, 4-0.0008057481920609791
+
+!bert-score -r save/YAGO43kET/ET_test_unobserved_type_targets_test.txt -c save/YAGO43kET/ET_test_unobserved_type_outputs_test.txt --lang en --use_fast_tokenizer
+P: 0.804782 R: 0.849722 F1: 0.826487
+
+
+
+
