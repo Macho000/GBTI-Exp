@@ -981,6 +981,7 @@ class EntityTypingBartDataset(Dataset):
     """
     nodes, edges = [], []
     input_ids = []
+    input_text = ""
 
     # head, value=[relation1, tail2,..]
     for head, value in triples.items():

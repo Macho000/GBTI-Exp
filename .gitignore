@@ -8,3 +8,4 @@
 /pretrain_model
 *.pkl
 *.txt
+!conda_requirements.txt

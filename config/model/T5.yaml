@@ -9,9 +9,9 @@ append_sep_token: True
 is_in_edge: True
 is_out_edge: True
 max_epoch: 1 # default: 100
-train_batch_size: 1
-valid_batch_size: 4
-test_batch_size: 4
+train_batch_size: 8
+valid_batch_size: 8
+test_batch_size: 8
 num_workers: 0 # debug
 temperature: 0.5
 repetition_penalty: 1.5
