@@ -1,22 +1,25 @@
 import hydra
 import logging
-from dgl.dataloading import NodeDataLoader, MultiLayerFullNeighborSampler, MultiLayerNeighborSampler
-from omegaconf import DictConfig, OmegaConf
-from utils import *
+# from dgl.dataloading import NodeDataLoader, MultiLayerFullNeighborSampler, MultiLayerNeighborSampler
+from omegaconf import DictConfig
+# from utils import set_logger
 import torch
-import torch.nn as nn
+import os
+# import torch.nn as nn
 from JointGT import JointGT
 from T5 import T5
 from Bart import Bart
 
 from transformers import BartTokenizer, T5Tokenizer
-from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader, EntityTypingBartDataset, EntityTypingBartDataLoader
+from data import EntityTypingJointGTDataset, EntityTypingJointGTDataLoader, EntityTypingT5Dataset, EntityTypingT5DataLoader
+from data import EntityTypingBartDataset, EntityTypingBartDataLoader
 
 from tqdm import tqdm
 from tqdm import trange
 
+
 @hydra.main(config_path="config", config_name='config')
-def main(cfg : DictConfig) -> None:
+def main(cfg: DictConfig) -> None:
     # set_logger(cfg) # if hydra is not used
     log = logging.getLogger(__name__)
     use_cuda = cfg.model.cuda and torch.cuda.is_available()
@@ -62,7 +65,6 @@ def main(cfg : DictConfig) -> None:
         train_dataloader = EntityTypingBartDataLoader(cfg, train_dataset, "train")
         valid_dataloader = EntityTypingBartDataLoader(cfg, valid_dataset, "valid")
 
-
     # model
     if cfg.model.name == 'JointGT':
         model = JointGT(cfg)
@@ -74,7 +76,7 @@ def main(cfg : DictConfig) -> None:
         raise ValueError('No such model')
 
     # loss
-    criterion = torch.nn.BCELoss()
+    # criterion = torch.nn.BCELoss()
 
     if use_cuda:
         model = model.to('cuda')
@@ -97,7 +99,7 @@ def main(cfg : DictConfig) -> None:
             model.train()
             if torch.cuda.is_available():
                 batch = [b.to(torch.device("cuda")) for b in batch]
-            if count_epoch==0 and batch_index==0:
+            if count_epoch == 0 and batch_index == 0:
                 if cfg.model.name == 'JointGT':
                     for tmp_id in range(9):
                         log.debug('batch %s: %s ' % (str(tmp_id), str(batch[tmp_id])))
@@ -114,7 +116,7 @@ def main(cfg : DictConfig) -> None:
                     loss = loss.mean()  # mean() to average on multi-gpu.
                 if torch.isnan(loss).data:
                     log.debug("Stop training because loss=%s" % (loss.data))
-                    stop_training = True
+                    # stop_training = True
                     break
 
                 optimizer.zero_grad()
@@ -134,7 +136,7 @@ def main(cfg : DictConfig) -> None:
                     loss = loss.mean()  # mean() to average on multi-gpu.
                 if torch.isnan(loss).data:
                     log.debug("Stop training because loss=%s" % (loss.data))
-                    stop_training = True
+                    # stop_training = True
                     break
 
                 optimizer.zero_grad()
@@ -147,19 +149,18 @@ def main(cfg : DictConfig) -> None:
                     loss = loss.mean()  # mean() to average on multi-gpu.
                 if torch.isnan(loss).data:
                     log.debug("Stop training because loss=%s" % (loss.data))
-                    stop_training = True
+                    # stop_training = True
                     break
 
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
 
-            break
-            
+            break 
 
         # validation
-        if ( count_epoch % cfg.model.valid.valid_epoch==0 ) or cfg.model.debug:
-            #torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
+        if (count_epoch % cfg.model.valid.valid_epoch == 0) or cfg.model.debug:
+            # torch.save(model.state_dict(), os.path.join(save_path, 'model.pkl'))
             model.eval()
             logs = []
             sources = []
@@ -175,7 +176,7 @@ def main(cfg : DictConfig) -> None:
                     })
                     if cfg.model.valid.save_outputs:
                         if cfg.model.valid.save_one_batch:
-                            if batch_idx==0:
+                            if batch_idx == 0:
                                 outputs = model.generate(batch)
                                 # Convert ids to tokens
                                 for input_, output, target in zip(batch[0], outputs, batch[2]):
@@ -208,7 +209,6 @@ def main(cfg : DictConfig) -> None:
                         for tgt in targets:
                             f.write(tgt+"\n")
 
-
                 for metric in logs[0]:
                     tmp = sum([_[metric] for _ in logs]) / len(logs)
                     if metric == 'loss':
@@ -226,5 +226,5 @@ def main(cfg : DictConfig) -> None:
             break
 
                     
-if __name__=='__main__':
-  main()
+if __name__ == '__main__':
+    main()

@@ -3,6 +3,7 @@ import os
 import torch
 import dgl
 
+
 def set_logger(cfg):
     """
     setting logging
@@ -13,8 +14,8 @@ def set_logger(cfg):
     cfg
 
     """
-    if not os.path.exists(os.path.join(cfg.model.save_dir,cfg.data.name)):
-        os.makedirs(os.path.join(os.getcwd(),cfg.model.save_dir, cfg.data.name))
+    if not os.path.exists(os.path.join(cfg.model.save_dir, cfg.data.name)):
+        os.makedirs(os.path.join(os.getcwd(), cfg.model.save_dir, cfg.data.name))
 
     log_file = os.path.join(cfg.model.save_dir, cfg.data.name, 'log.txt')
 
@@ -31,6 +32,7 @@ def set_logger(cfg):
     formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
     console.setFormatter(formatter)
     logging.getLogger('').addHandler(console)
+
 
 def read_id(path):
     """
@@ -51,6 +53,7 @@ def read_id(path):
             tmp[e] = int(t)
     return tmp
 
+
 def read_entity(path):
     """
     loading graph from dataset
@@ -70,6 +73,7 @@ def read_entity(path):
             tmp[int(t)] = e
     return tmp
 
+
 def read_name(path):
     tmp = dict()
     with open(path, encoding='utf-8') as r:
@@ -77,6 +81,7 @@ def read_name(path):
             mid, name = (line.strip().split('\t') + [None])[:2]
             tmp[mid] = name
     return tmp
+
 
 def load_labels(paths, e2id, t2id):
     labels = torch.zeros(len(e2id), len(t2id))
@@ -97,6 +102,7 @@ def load_id(path, e2id):
             ret.add(e2id[e])
     return list(ret)
 
+
 def load_triple(path, e2id, r2id):
     head = []
     e_type = []
@@ -109,6 +115,7 @@ def load_triple(path, e2id, r2id):
             e_type.append(r)
             tail.append(t)
     return head, e_type, tail
+
 
 def load_ET(path, e2id, t2id, r2id):
     head = []
