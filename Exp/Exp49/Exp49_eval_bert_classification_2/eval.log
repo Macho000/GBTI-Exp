@@ -1,0 +1,240 @@
+[2022-10-29 23:03:05,904][transformers.tokenization_utils_base][INFO] - Model name 'pretrain_model/jointgt_t5' not found in model shortcut name list (t5-small, t5-base, t5-large, t5-3b, t5-11b). Assuming 'pretrain_model/jointgt_t5' is a path, a model identifier, or url to a directory containing tokenizer files.
+[2022-10-29 23:03:05,905][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/added_tokens.json. We won't load it.
+[2022-10-29 23:03:05,905][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/special_tokens_map.json. We won't load it.
+[2022-10-29 23:03:05,905][transformers.tokenization_utils_base][INFO] - Didn't find file pretrain_model/jointgt_t5/tokenizer_config.json. We won't load it.
+[2022-10-29 23:03:05,906][transformers.tokenization_utils_base][INFO] - loading file pretrain_model/jointgt_t5/spiece.model
+[2022-10-29 23:03:05,906][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-10-29 23:03:05,906][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-10-29 23:03:05,906][transformers.tokenization_utils_base][INFO] - loading file None
+[2022-10-29 23:03:05,907][transformers.tokenization_utils_base][INFO] - loading file pretrain_model/jointgt_t5/tokenizer.json
+[2022-10-29 23:03:26,186][transformers.configuration_utils][INFO] - loading configuration file pretrain_model/jointgt_t5/config.json
+[2022-10-29 23:03:26,195][transformers.configuration_utils][INFO] - Model config T5Config {
+  "architectures": [
+    "MyT5Pretrain"
+  ],
+  "d_ff": 3072,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "vocab_size": 32128
+}
+
+[2022-10-29 23:03:26,196][transformers.modeling_utils][INFO] - loading weights file pretrain_model/jointgt_t5/pytorch_model.bin
+[2022-10-29 23:03:35,416][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing MyT5ForConditionalGeneration.
+
+[2022-10-29 23:03:35,416][transformers.modeling_utils][INFO] - All the weights of MyT5ForConditionalGeneration were initialized from the model checkpoint at pretrain_model/jointgt_t5.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use MyT5ForConditionalGeneration for predictions without further training.
+[2022-10-29 23:03:35,486][root][INFO] - test
+[2022-10-29 23:03:48,542][root][INFO] - test data set : ET_test.txt
+[2022-10-29 23:03:48,542][root][INFO] - N-grams: 1-0.20060158533408567, 2-0.09186034215221034, 3-0.05161855056971185, 4-0.020616535114498236
+[2022-10-29 23:03:49,374][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:03:49,377][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:03:51,799][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /Users/kosukeaigo/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-10-29 23:03:51,799][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /Users/kosukeaigo/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-10-29 23:03:52,652][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:03:52,655][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:03:53,234][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/roberta-large-pytorch_model.bin from cache at /Users/kosukeaigo/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-10-29 23:04:05,017][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing RobertaModel.
+
+[2022-10-29 23:04:05,021][transformers.modeling_utils][INFO] - All the weights of RobertaModel were initialized from the model checkpoint at roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use RobertaModel for predictions without further training.
+[2022-10-29 23:45:35,920][root][INFO] - BERT-P:0.850798, BERT-R:0.883071, BERT-F1:0.866376
+[2022-10-29 23:45:36,865][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:45:36,868][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:45:38,451][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /Users/kosukeaigo/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-10-29 23:45:38,452][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /Users/kosukeaigo/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-10-29 23:45:39,336][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:45:39,338][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:45:39,676][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/roberta-large-pytorch_model.bin from cache at /Users/kosukeaigo/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-10-29 23:45:48,155][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing RobertaModel.
+
+[2022-10-29 23:45:48,155][transformers.modeling_utils][INFO] - All the weights of RobertaModel were initialized from the model checkpoint at roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use RobertaModel for predictions without further training.
+[2022-10-29 23:49:40,481][root][INFO] - test for classified token
+[2022-10-29 23:50:10,678][root][INFO] - test data set : ET_test.txt
+[2022-10-29 23:50:10,679][root][INFO] - N-grams: 1-0.09779325114792191, 2-0.054480598366912915, 3-0.014100919392773146, 4-0.0032499465469317938
+[2022-10-29 23:50:11,509][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:50:11,511][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:50:13,105][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-vocab.json from cache at /Users/kosukeaigo/.cache/torch/transformers/1ae1f5b6e2b22b25ccc04c000bb79ca847aa226d0761536b011cf7e5868f0655.ef00af9e673c7160b4d41cfda1f48c5f4cba57d5142754525572a846a1ab1b9b
+[2022-10-29 23:50:13,105][transformers.tokenization_utils_base][INFO] - loading file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-merges.txt from cache at /Users/kosukeaigo/.cache/torch/transformers/f8f83199a6270d582d6245dc100e99c4155de81c9745c6248077018fe01abcfb.70bec105b4158ed9a1747fea67a43f5dee97855c64d62b6ec3742f4cfdb5feda
+[2022-10-29 23:50:13,982][transformers.configuration_utils][INFO] - loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/roberta-large-config.json from cache at /Users/kosukeaigo/.cache/torch/transformers/c22e0b5bbb7c0cb93a87a2ae01263ae715b4c18d692b1740ce72cacaa99ad184.2d28da311092e99a05f9ee17520204614d60b0bfdb32f8a75644df7737b6a748
+[2022-10-29 23:50:13,984][transformers.configuration_utils][INFO] - Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 50265
+}
+
+[2022-10-29 23:50:14,313][transformers.modeling_utils][INFO] - loading weights file https://cdn.huggingface.co/roberta-large-pytorch_model.bin from cache at /Users/kosukeaigo/.cache/torch/transformers/2339ac1858323405dffff5156947669fed6f63a0c34cfab35bda4f78791893d2.fc7abf72755ecc4a75d0d336a93c1c63358d2334f5998ed326f3b0da380bf536
+[2022-10-29 23:50:23,044][transformers.modeling_utils][INFO] - All model checkpoint weights were used when initializing RobertaModel.
+
+[2022-10-29 23:50:23,046][transformers.modeling_utils][INFO] - All the weights of RobertaModel were initialized from the model checkpoint at roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use RobertaModel for predictions without further training.
+[2022-10-29 23:54:10,906][root][INFO] - BERT-P:0.298664, BERT-R:0.296408, BERT-F1:0.297486
