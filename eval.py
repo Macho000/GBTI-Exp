@@ -19,8 +19,6 @@ from data import EntityTypingBartDataset, EntityTypingBartDataLoader
 
 from tqdm import tqdm
 import nltk.translate.bleu_score as bleu
-
-
 @hydra.main(config_path="config", config_name='config')
 def main(cfg: DictConfig) -> None:
     set_logger(cfg)
@@ -168,7 +166,7 @@ def main(cfg: DictConfig) -> None:
         with open(os.path.join(f'{cfg.model.test.file_path}_targets_test.txt'), 'r', encoding='utf-8') as f:
             targets = f.readlines()
         logging.info("test")
-        # evaluation(cfg, targets, predictions)
+        evaluation(cfg, targets, predictions)
 
         predictions_tokens = []
         targets_tokens = []
@@ -247,7 +245,7 @@ def calc_bert_score(targets, predictions):
     return score_p, score_r, score_f1
 
 
-def bert_classification(predictions_tokens, targets_tokens):
+def bert_classification(predictions_tokens, targets_tokens, all_comb=True):
     """
     input:
     predictions_tokens: 2dim list (num_predictions x num_separated_tokens)
@@ -308,6 +306,7 @@ def bert_classification(predictions_tokens, targets_tokens):
     ['wikicat St. Mirren F.C. players', 'wikicat Film directors from Missouri', 'wikicat Notts County F.C. players',
     'wikicat States and territories established in 1649', 'wikicat Provinces of Belgium']
     """
+    # 全ての組み合わせを格納
     list_all_combination_target = []
     list_all_combination_prediction = []
     list_combination_count = []
@@ -318,11 +317,11 @@ def bert_classification(predictions_tokens, targets_tokens):
                 list_all_combination_prediction.append(predictions_tokens[i][k])
         list_combination_count.append(len(targets_tokens[i]) * len(predictions_tokens[i]))
 
-    logging.info("len list_all_combination_prediction is", str(len(list_all_combination_prediction)))
-
+    # 全ての組み合わせのBERTスコアを取得
     scorer = BERTScorer(lang="en")
-    _, _, F1 = scorer.score(list_all_combination_prediction, list_all_combination_target)
+    Precision, Recall, F1 = scorer.score(list_all_combination_prediction, list_all_combination_target)
 
+    # list_combination_countの累積和を取得
     def cumsum(comb_list: list):
         sum_comb_list = []
         sum = 0
@@ -341,13 +340,18 @@ def bert_classification(predictions_tokens, targets_tokens):
         assert len(tmp_combination_targets) == len(tmp_combination_predictions)
         assert len(tmp_combination_predictions) == len(tmp_F1)
 
+        set_picked_prediction_type = set()
+        set_picked_target_type = set()
+
         # loop until tmp_F1 is null
         while len(tmp_F1) != 0:
             # get max index
             max_index = torch.argmax(tmp_F1)
 
-            # get combination
+            # get combination　（尤もらしい組を格納しておく）
             list_comb.append(tuple((tmp_combination_predictions[max_index], tmp_combination_targets[max_index])))
+            set_picked_prediction_type.add(tmp_combination_predictions[max_index])
+            set_picked_target_type.add(tmp_combination_targets[max_index])
 
             # remove entity from tmp_combination_targets and tmp_combination_predictions
             list_delete_target_index = []
@@ -373,12 +377,21 @@ def bert_classification(predictions_tokens, targets_tokens):
                 elif len(list_delete_target_index) > 0 and i == list_delete_target_index[0]:
                     list_delete_target_index.pop(0)
                 else:
+                    # tmp_F1から削除しないインデックスの保存
                     list_select_index.append(i)
             if len(list_select_index) > 0:
                 tmp_F1 = torch.index_select(tmp_F1, 0, torch.tensor(list_select_index))
                 tmp_combination_targets = [item for i, item in enumerate(tmp_combination_targets) if i in list_select_index]
                 tmp_combination_predictions = [item for i, item in enumerate(tmp_combination_predictions) if i in list_select_index]
             else:
+                if all_comb:
+                    # target, predictのいずれかが多い場合はその組み合わせも取り出す
+                    for index, item in enumerate(tmp_combination_targets):
+                        if item not in set_picked_target_type:
+                            list_comb.append(tuple(("", item)))
+                    for index, item in enumerate(tmp_combination_predictions):
+                        if item not in set_picked_prediction_type:
+                            list_comb.append(tuple((item, "")))
                 tmp_F1 = torch.Tensor()
                 tmp_combination_targets = []
                 tmp_combination_predictions = []
@@ -395,6 +408,7 @@ def bert_classification(predictions_tokens, targets_tokens):
         return predicts, targets
     predicts, targets = get_target_predict(list_comb)
     return predicts, targets
+
 
 
 if __name__ == '__main__':
