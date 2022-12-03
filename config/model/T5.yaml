@@ -39,4 +39,4 @@ test:
   save_outputs: False
   get_from_file: True
   get_from_model: False
-  file_path: Exp/Exp36/save/ET_test # e.g. Exp/Exp19/save/ET_1_1_test or Exp/Exp62/save/ET_unobserved_type_test or Exp/Exp62/save/ET_test
+  file_path: Exp/Exp62/save/ET_test # e.g. Exp/Exp19/save/ET_1_1_test or Exp/Exp62/save/ET_unobserved_type_test or Exp/Exp62/save/ET_test
