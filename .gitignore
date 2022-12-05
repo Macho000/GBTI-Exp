@@ -11,3 +11,4 @@
 /save
 ./*.txt
 mini.sh
+.DS_Store
